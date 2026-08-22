@@ -92,7 +92,7 @@ public class IaService {
     public DiscrepancyResponseDto.DiscrepancyAnalysisDto analyzeDiscrepancy(DiscrepancyRequestDto req) {
         String systemPrompt = "Analyze the discrepancy. Difference is " + req.getDifference() + " kg. " +
                 "Identify pending movements that explain this. " +
-                "Respond ONLY in valid JSON.";
+                "Respond ONLY in valid JSON. All string values like explanation and recommended action MUST be written in Spanish.";
 
         Map<String, Object> schema = Map.of(
             "type", "json_schema",
