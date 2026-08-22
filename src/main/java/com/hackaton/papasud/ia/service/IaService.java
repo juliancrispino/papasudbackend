@@ -1,12 +1,10 @@
 package com.hackaton.papasud.ia.service;
 
-import com.hackaton.papasud.domain.entity.Lote;
-import com.hackaton.papasud.domain.entity.Movimiento;
-import com.hackaton.papasud.ia.dto.IaResponseDto;
+import com.hackaton.papasud.api.dto.DiscrepancyRequestDto;
+import com.hackaton.papasud.api.dto.DiscrepancyResponseDto;
+import com.hackaton.papasud.api.dto.MovementInterpretationDto;
 import com.hackaton.papasud.ia.dto.OpenAiRequestDto;
 import com.hackaton.papasud.ia.dto.OpenAiResponseDto;
-import com.hackaton.papasud.repository.LoteRepository;
-import com.hackaton.papasud.repository.MovimientoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,56 +13,62 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class IaService {
 
-    private final LoteRepository loteRepository;
-    private final MovimientoRepository movimientoRepository;
     private final RestTemplate restTemplate = new RestTemplate();
+    private final ObjectMapper objectMapper;
 
     @Value("${openai.api.key}")
     private String apiKey;
 
-    public IaResponseDto generarHipotesis(Long loteId) {
-        Lote lote = loteRepository.findById(loteId)
-                .orElseThrow(() -> new IllegalArgumentException("Lote no encontrado"));
+    public MovementInterpretationDto parseMovementIntent(String text) {
+        String systemPrompt = "Extract the stock movement intent from the text. Respond ONLY in valid JSON matching the schema. " +
+                "Do not invent lots or locations not mentioned. The action is always 'transfer'.";
 
-        List<Movimiento> movimientos = movimientoRepository.findByLoteIdOrderByFechaDesc(loteId);
-
-        String historial = movimientos.stream()
-                .map(m -> String.format("[%s] %s: %s (Origen: %s, Destino: %s)", 
-                        m.getFecha(), m.getTipo(), m.getCantidad(),
-                        m.getOrigen() != null ? m.getOrigen().getNombre() : "N/A",
-                        m.getDestino() != null ? m.getDestino().getNombre() : "N/A"))
-                .collect(Collectors.joining("\n"));
-
-        String systemPrompt = "Eres un auditor de inventario. Analiza este historial de movimientos. El stock declarado es " 
-                + lote.getStockDeclarado() + ", pero el verificado es " + lote.getStockVerificado() 
-                + ". Formula una hipótesis corta y probable de dónde ocurrió la fuga o falta de registro.";
-                
-        String userPrompt = "Historial:\n" + historial;
-
-        OpenAiRequestDto request = new OpenAiRequestDto(
-                "gpt-4o-mini", // o gpt-3.5-turbo
-                List.of(
-                        new OpenAiRequestDto.Message("system", systemPrompt),
-                        new OpenAiRequestDto.Message("user", userPrompt)
+        Map<String, Object> schema = Map.of(
+            "type", "json_schema",
+            "json_schema", Map.of(
+                "name", "papastock_movement_intent",
+                "strict", true,
+                "schema", Map.of(
+                    "type", "object",
+                    "properties", Map.of(
+                        "action", Map.of("type", "string", "enum", List.of("transfer")),
+                        "lotCode", Map.of("type", "string"),
+                        "quantityKg", Map.of("type", "number"),
+                        "origin", Map.of("type", "string"),
+                        "destination", Map.of("type", "string")
+                    ),
+                    "required", List.of("action", "lotCode", "quantityKg", "origin", "destination"),
+                    "additionalProperties", false
                 )
+            )
         );
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-        headers.setBearerAuth(apiKey);
-
-        HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
+        OpenAiRequestDto request = new OpenAiRequestDto(
+                "gpt-4o-mini",
+                List.of(
+                        new OpenAiRequestDto.Message("system", systemPrompt),
+                        new OpenAiRequestDto.Message("user", text)
+                ),
+                0.0,
+                schema
+        );
 
         try {
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
+            headers.setBearerAuth(apiKey);
+            HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
+
             OpenAiResponseDto response = restTemplate.postForObject(
                     "https://api.openai.com/v1/chat/completions",
                     entity,
@@ -72,13 +76,95 @@ public class IaService {
             );
 
             if (response != null && response.choices() != null && !response.choices().isEmpty()) {
-                String hipotesis = response.choices().get(0).message().content();
-                return new IaResponseDto(hipotesis);
+                String json = response.choices().get(0).message().content();
+                MovementInterpretationDto intent = objectMapper.readValue(json, MovementInterpretationDto.class);
+                intent.setEngine("llm");
+                return intent;
             }
-            return new IaResponseDto("No se pudo generar una hipótesis.");
         } catch (Exception e) {
-            log.error("Error al llamar a OpenAI", e);
-            return new IaResponseDto("Error al generar la hipótesis: " + e.getMessage());
+            log.error("OpenAI intent error", e);
         }
+        
+        // Basic heuristic fallback
+        return null;
+    }
+
+    public DiscrepancyResponseDto.DiscrepancyAnalysisDto analyzeDiscrepancy(DiscrepancyRequestDto req) {
+        String systemPrompt = "Analyze the discrepancy. Difference is " + req.getDifference() + " kg. " +
+                "Identify pending movements that explain this. " +
+                "Respond ONLY in valid JSON.";
+
+        Map<String, Object> schema = Map.of(
+            "type", "json_schema",
+            "json_schema", Map.of(
+                "name", "papastock_discrepancy",
+                "strict", true,
+                "schema", Map.of(
+                    "type", "object",
+                    "properties", Map.of(
+                        "explanation", Map.of("type", "string"),
+                        "explainedQuantity", Map.of("type", "number"),
+                        "unexplainedQuantity", Map.of("type", "number"),
+                        "movementReferences", Map.of("type", "array", "items", Map.of("type", "string")),
+                        "evidence", Map.of("type", "array", "items", Map.of(
+                            "type", "object",
+                            "properties", Map.of(
+                                "type", Map.of("type", "string"),
+                                "reference", Map.of("type", "string"),
+                                "description", Map.of("type", "string")
+                            ),
+                            "required", List.of("type", "reference", "description"),
+                            "additionalProperties", false
+                        )),
+                        "recommendedAction", Map.of("type", "string")
+                    ),
+                    "required", List.of("explanation", "explainedQuantity", "unexplainedQuantity", "movementReferences", "evidence", "recommendedAction"),
+                    "additionalProperties", false
+                )
+            )
+        );
+
+        OpenAiRequestDto request = new OpenAiRequestDto(
+                "gpt-4o-mini",
+                List.of(
+                        new OpenAiRequestDto.Message("system", systemPrompt),
+                        new OpenAiRequestDto.Message("user", "Recent movements: " + req.getRecentMovements())
+                ),
+                0.0,
+                schema
+        );
+
+        try {
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_JSON);
+            headers.setBearerAuth(apiKey);
+            HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
+
+            OpenAiResponseDto response = restTemplate.postForObject(
+                    "https://api.openai.com/v1/chat/completions",
+                    entity,
+                    OpenAiResponseDto.class
+            );
+
+            if (response != null && response.choices() != null && !response.choices().isEmpty()) {
+                String json = response.choices().get(0).message().content();
+                DiscrepancyResponseDto.DiscrepancyAnalysisDto analysis = objectMapper.readValue(json, DiscrepancyResponseDto.DiscrepancyAnalysisDto.class);
+                analysis.setEngine("llm");
+                return analysis;
+            }
+        } catch (Exception e) {
+            log.error("OpenAI discrepancy error", e);
+        }
+
+        // Heuristic fallback
+        return DiscrepancyResponseDto.DiscrepancyAnalysisDto.builder()
+                .engine("heuristic")
+                .explanation("Fallback local: no se pudo analizar.")
+                .explainedQuantity(0.0)
+                .unexplainedQuantity(Math.abs(req.getDifference()))
+                .movementReferences(List.of())
+                .evidence(List.of())
+                .recommendedAction("Revisar manualmente")
+                .build();
     }
 }
