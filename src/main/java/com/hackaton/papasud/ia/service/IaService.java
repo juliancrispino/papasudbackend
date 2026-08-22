@@ -128,7 +128,7 @@ public class IaService {
                 "gemini-3.6-flash",
                 List.of(
                         new OpenAiRequestDto.Message("system", systemPrompt),
-                        new OpenAiRequestDto.Message("user", "Recent movements: " + req.getRecentMovements())
+                        new OpenAiRequestDto.Message("user", "Recent movements: " + req.getMovements())
                 ),
                 0.0,
                 schema
