@@ -54,7 +54,7 @@ public class IaService {
         );
 
         OpenAiRequestDto request = new OpenAiRequestDto(
-                "gemini-2.5-flash",
+                "gemini-3.6-flash",
                 List.of(
                         new OpenAiRequestDto.Message("system", systemPrompt),
                         new OpenAiRequestDto.Message("user", text)
@@ -125,7 +125,7 @@ public class IaService {
         );
 
         OpenAiRequestDto request = new OpenAiRequestDto(
-                "gemini-2.5-flash",
+                "gemini-3.6-flash",
                 List.of(
                         new OpenAiRequestDto.Message("system", systemPrompt),
                         new OpenAiRequestDto.Message("user", "Recent movements: " + req.getRecentMovements())
