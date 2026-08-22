@@ -54,7 +54,7 @@ public class IaService {
         );
 
         OpenAiRequestDto request = new OpenAiRequestDto(
-                "gpt-4o-mini",
+                "gemini-2.5-flash",
                 List.of(
                         new OpenAiRequestDto.Message("system", systemPrompt),
                         new OpenAiRequestDto.Message("user", text)
@@ -70,7 +70,7 @@ public class IaService {
             HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
 
             OpenAiResponseDto response = restTemplate.postForObject(
-                    "https://api.openai.com/v1/chat/completions",
+                    "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
                     entity,
                     OpenAiResponseDto.class
             );
@@ -125,7 +125,7 @@ public class IaService {
         );
 
         OpenAiRequestDto request = new OpenAiRequestDto(
-                "gpt-4o-mini",
+                "gemini-2.5-flash",
                 List.of(
                         new OpenAiRequestDto.Message("system", systemPrompt),
                         new OpenAiRequestDto.Message("user", "Recent movements: " + req.getRecentMovements())
@@ -141,7 +141,7 @@ public class IaService {
             HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
 
             OpenAiResponseDto response = restTemplate.postForObject(
-                    "https://api.openai.com/v1/chat/completions",
+                    "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
                     entity,
                     OpenAiResponseDto.class
             );
