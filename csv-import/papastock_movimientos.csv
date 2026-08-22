@@ -1,0 +1,437 @@
+fecha,tipo_movimiento,estado,remito,variedad,lote,cantidad_kg,origen,destino,cliente,observaciones,hoja_origen,fila_origen,movement_number
+2026-02-13,INBOUND,CONFIRMED,805,Agata,AGATA-224,29120.000,,Dospanca,,bolsa blanca-hilo negro dtv 13250335-4 | Transporte: alvaro arenas,Env a Frio,2,XLS-ENV-A-FRIO-805-R2
+2026-02-13,INBOUND,CONFIRMED,651,Agata,AGATA-224,40520.000,,Santa Ana,,"0,90 ha 14,4 g /15,4 g | Transporte: camillo/mario",Ingreso Tolvas Santa Ana,2,XLS-INGRESO-TOLVAS-SANTA-ANA-651-R2
+2026-02-14,INBOUND,CONFIRMED,806,Agata,AGATA-224,27640.000,,Dospanca,,BOlsa blanca-hilo negro dtv 13252720-2 | Transporte: cerone(raphael),Env a Frio,3,XLS-ENV-A-FRIO-806-R3
+2026-02-14,INBOUND,CONFIRMED,652,Agata,AGATA-224,43220.000,,Santa Ana,,"0,88 ha 14,3g/16,3 g | Transporte: camillo/gaston",Ingreso Tolvas Santa Ana,3,XLS-INGRESO-TOLVAS-SANTA-ANA-652-R3
+2026-02-14,INBOUND,CONFIRMED,653,Agata,AGATA-223,36940.000,,Santa Ana,,14 g campo/16 g planta | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,4,XLS-INGRESO-TOLVAS-SANTA-ANA-653-R4
+2026-02-16,INBOUND,CONFIRMED,807,Agata,AGATA-224,4543.000,,Dospanca,,bolsa blanca-hilo negro dtv 13257973-3 | Transporte: cerone(sotelo),Env a Frio,4,XLS-ENV-A-FRIO-807-R4
+2026-02-16,INBOUND,CONFIRMED,807,Agata,AGATA-223,26434.000,,Dospanca,,bolsa blanca-hilo rojo dtv 13257973-3 | Transporte: cerone(sotelo),Env a Frio,5,XLS-ENV-A-FRIO-807-R5
+2026-02-16,INBOUND,CONFIRMED,808,Agata,AGATA-224,13970.000,,Dospanca,,bolsa blanca-hilo negro dtv 13258734-5 | Transporte: alvaro arenas,Env a Frio,6,XLS-ENV-A-FRIO-808-R6
+2026-02-16,INBOUND,CONFIRMED,808,Agata,AGATA-222,7590.000,,Dospanca,,bolsa blanca-hilo verde dtv 13258734-5 | Transporte: alvaro arenas,Env a Frio,7,XLS-ENV-A-FRIO-808-R7
+2026-02-16,INBOUND,CONFIRMED,654,Agata,AGATA-222,9000.000,,Santa Ana,,16 g campo/19 g planta | Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,5,XLS-INGRESO-TOLVAS-SANTA-ANA-654-R5
+2026-02-16,INBOUND,CONFIRMED,654,Agata,AGATA-224,27680.000,,Santa Ana,,16g campo/19 g planta | Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,6,XLS-INGRESO-TOLVAS-SANTA-ANA-654-R6
+2026-02-18,INBOUND,CONFIRMED,809,Agata,AGATA-223,4554.000,,Dospanca,,bolsa blanca-hilo rojo dtv 13265915-5 | Transporte: alvaro arenas,Env a Frio,8,XLS-ENV-A-FRIO-809-R8
+2026-02-18,INBOUND,CONFIRMED,809,Agata,AGATA-224,5184.000,,Dospanca,,bolsa blanca-hilo negro dtv 13265915-5 | Transporte: alvaro arenas,Env a Frio,9,XLS-ENV-A-FRIO-809-R9
+2026-02-19,INBOUND,CONFIRMED,810,Agata,AGATA-221,20702.000,,Dospanca,,bolsa blanca-hilo blanco dtv 13274816-0 | Transporte: cerone(raphael),Env a Frio,10,XLS-ENV-A-FRIO-810-R10
+2026-02-19,INBOUND,CONFIRMED,810,Agata,AGATA-222,10633.000,,Dospanca,,bolsa blanca-hilo verde dtv 13274816-0 | Transporte: cerone(raphael),Env a Frio,11,XLS-ENV-A-FRIO-810-R11
+2026-02-19,INBOUND,CONFIRMED,655,Agata,AGATA-222,12000.000,,Santa Ana,,"0,95 ha 19 g campo/19 p | Transporte: camillo/gaston",Ingreso Tolvas Santa Ana,7,XLS-INGRESO-TOLVAS-SANTA-ANA-655-R7
+2026-02-19,INBOUND,CONFIRMED,655,Agata,AGATA-221,30620.000,,Santa Ana,,"0,95 ha 19 g campo/19 p | Transporte: camillo/gaston",Ingreso Tolvas Santa Ana,8,XLS-INGRESO-TOLVAS-SANTA-ANA-655-R8
+2026-02-19,INBOUND,CONFIRMED,656,Agata,AGATA-221,38380.000,,Santa Ana,,"19,5 g campo/ 19,8 planta | Transporte: camillo/mario",Ingreso Tolvas Santa Ana,9,XLS-INGRESO-TOLVAS-SANTA-ANA-656-R9
+2026-02-20,INBOUND,CONFIRMED,811,Agata,AGATA-221,27970.000,,Dospanca,,bolsa blanca-hilo blanco dtv 13275968-5 | Transporte: cerone(sotelo),Env a Frio,12,XLS-ENV-A-FRIO-811-R12
+2026-02-20,INBOUND,CONFIRMED,811,Agata,AGATA-221,2470.000,,Dospanca,,bolsa blanca-hilo blanco dtv 13275968-5 | Transporte: cerone(sotelo),Env a Frio,13,XLS-ENV-A-FRIO-811-R13
+2026-02-20,INBOUND,CONFIRMED,657,Agata,AGATA-221,12000.000,,Santa Ana,,14 g campo/17 g planta | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,10,XLS-INGRESO-TOLVAS-SANTA-ANA-657-R10
+2026-02-23,INBOUND,CONFIRMED,659,Agata,AGATA-220,10000.000,,Santa Ana,,20 grados planta | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,11,XLS-INGRESO-TOLVAS-SANTA-ANA-659-R11
+2026-02-26,INBOUND,CONFIRMED,661,Asterix,ASTERIX-820,43360.000,,Santa Ana,,15 grados planta | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,12,XLS-INGRESO-TOLVAS-SANTA-ANA-661-R12
+2026-02-26,INBOUND,CONFIRMED,662,Asterix,ASTERIX-820,29160.000,,Santa Ana,,17 grados planta | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,13,XLS-INGRESO-TOLVAS-SANTA-ANA-662-R13
+2026-02-26,INBOUND,CONFIRMED,662,Asterix,ASTERIX-821,10000.000,,Santa Ana,,17 grados planta | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,14,XLS-INGRESO-TOLVAS-SANTA-ANA-662-R14
+2026-02-26,INBOUND,CONFIRMED,664,Asterix,ASTERIX-821,32020.000,,Santa Ana,,18 grados en planta | Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,15,XLS-INGRESO-TOLVAS-SANTA-ANA-664-R15
+2026-02-27,INBOUND,CONFIRMED,819,Asterix,ASTERIX-821,7605.000,,Dospanca,,bolsa verde-hilo negro | Transporte: cerone(raphael),Env a Frio,14,XLS-ENV-A-FRIO-819-R14
+2026-02-27,INBOUND,CONFIRMED,820,Asterix,ASTERIX-821,30460.000,,Dospanca,,bolsa verde-hilo negro dtv 13312627-9 | Transporte: cerone(raphael),Env a Frio,15,XLS-ENV-A-FRIO-820-R15
+2026-02-27,INBOUND,CONFIRMED,663,Asterix,ASTERIX-821,35520.000,,Santa Ana,,"13,8 grados en planta | Transporte: arenas/jaimez",Ingreso Tolvas Santa Ana,16,XLS-INGRESO-TOLVAS-SANTA-ANA-663-R16
+2026-02-28,INBOUND,CONFIRMED,821,Asterix,ASTERIX-821,28700.000,,Dospanca,,bolsa verde-hilo negro dtv 13324401-8 | Transporte: alvaro arenas,Env a Frio,16,XLS-ENV-A-FRIO-821-R16
+2026-03-02,INBOUND,CONFIRMED,822,Asterix,ASTERIX-821,8700.000,,Dospanca,,bolsa verde-hilo negro dtv 13324451-4 | Transporte: cerone(sotelo),Env a Frio,17,XLS-ENV-A-FRIO-822-R17
+2026-03-02,INBOUND,CONFIRMED,822,Agata,AGATA-240,7878.000,,Dospanca,,bolsa blanca-hilo celeste dtv 13324451-4 | Transporte: cerone(sotelo),Env a Frio,18,XLS-ENV-A-FRIO-822-R18
+2026-03-09,INBOUND,CONFIRMED,1001,Agata,AGATA-241,35160.000,,Dospanca,,b.roja sin tamañar/dtv 13354667-7 | Transporte: serantes-vera,De campo a Frío,2,XLS-DE-CAMPO-A-FRIO-1001-R2
+2026-03-10,INBOUND,CONFIRMED,1002,Agata,AGATA-241,34500.000,,Dospanca,,b.roja y blancas s/tamañar dtv 13359963-0 | Transporte: serantes-vera,De campo a Frío,3,XLS-DE-CAMPO-A-FRIO-1002-R3
+2026-03-11,INBOUND,CONFIRMED,828,Atlantic,ATLANTIC-417,7070.000,,Dospanca,,bolsa roja-hilo marrron dtv 13375303-6 | Transporte: fran cambronera,Env a Frio,19,XLS-ENV-A-FRIO-828-R19
+2026-03-12,DISPATCH,CONFIRMED,674,King Russet,KING-RUSSET-910,28380.000,Santa Ana,,Wemar-mc Cain,directo de santa ana | DTV: 13374249-2 | Calibre: granel,Entregas a clientes 2026,2,XLS-ENTREGAS-A-CLIENTES-2026-674-R2
+2026-03-12,DISPATCH,CONFIRMED,675,King Russet,KING-RUSSET-910,32040.000,Santa Ana,,Wemar-mc Cain,directo de santa ana | DTV: 13374271-9 | Calibre: granel,Entregas a clientes 2026,3,XLS-ENTREGAS-A-CLIENTES-2026-675-R3
+2026-03-12,DISPATCH,CONFIRMED,678,King Russet,KING-RUSSET-910,33780.000,Santa Ana,,Wemar-mc Cain,directo de santa ana | DTV: 13380613-5 | Calibre: granel,Entregas a clientes 2026,4,XLS-ENTREGAS-A-CLIENTES-2026-678-R4
+2026-03-12,INBOUND,CONFIRMED,829,Asterix,ASTERIX-820,6822.000,,Dospanca,,bolsa verde-hilo blanco dtv 13375184-5 | Transporte: cerone(raphael),Env a Frio,20,XLS-ENV-A-FRIO-829-R20
+2026-03-12,INBOUND,CONFIRMED,829,Asterix,ASTERIX-821,19751.000,,Dospanca,,bolsa verde-hilo negro dtv idem | Transporte: cerone(raphael),Env a Frio,21,XLS-ENV-A-FRIO-829-R21
+2026-03-12,INBOUND,CONFIRMED,829,Asterix,ASTERIX-821,925.000,,Dospanca,,bolsa papasud x 25kg cepillada dtv idem | Transporte: cerone(raphael),Env a Frio,22,XLS-ENV-A-FRIO-829-R22
+2026-03-12,INBOUND,CONFIRMED,830,Atlantic,ATLANTIC-417,31540.000,,Dospanca,,bolsa roja-hilo marrron dtv 13380469-2 | Transporte: cerone(sotelo),Env a Frio,23,XLS-ENV-A-FRIO-830-R23
+2026-03-13,INBOUND,CONFIRMED,1005,King Russet,KING-RUSSET-910,3008.000,,Galpón,,desc.bolsa blanca h.blanco. | Transporte: serantes-vera,De campo a Frío,4,XLS-DE-CAMPO-A-FRIO-1005-R4
+2026-03-14,DISPATCH,CONFIRMED,679,King Russet,KING-RUSSET-910,28640.000,Santa Ana,,Wemar-mc Cain,directo de santa ana | DTV: 13382859-1 | Calibre: granel,Entregas a clientes 2026,5,XLS-ENTREGAS-A-CLIENTES-2026-679-R5
+2026-03-16,INBOUND,CONFIRMED,24,Spunta,SPUNTA-14,36629.000,,Trevelin,,F2/G2 | Transporte: s.garcia(verdicchio),Ingreso  Trevelin,2,XLS-INGRESO-TREVELIN-24-R2
+2026-03-25,INBOUND,CONFIRMED,28,Atlantic,ATLANTIC-11,32440.000,,Trevelin,,F7/G7 | Transporte: coronado lautaro,Ingreso  Trevelin,7,XLS-INGRESO-TREVELIN-28-R7
+2026-03-25,DISPATCH,CONFIRMED,1106,Agata,AGATA-241,29080.000,Dospanca,,,"Retiro de frío. bolsa roja-hilo blanco sin tamañar 48,46 kg | Transporte: cerone(raphael)",Ret Frio,2,XLS-RET-FRIO-1106-R2
+2026-03-26,INBOUND,CONFIRMED,25,Spunta,SPUNTA-14,35380.000,,Trevelin,,F3/G3 | Transporte: s.garcia(scho),Ingreso  Trevelin,3,XLS-INGRESO-TREVELIN-25-R3
+2026-03-26,INBOUND,CONFIRMED,26,Spunta,SPUNTA-14,35960.000,,Trevelin,,F4/G4 | Transporte: s.garcia(stadler),Ingreso  Trevelin,4,XLS-INGRESO-TREVELIN-26-R4
+2026-03-26,DISPATCH,CONFIRMED,1107,Agata,AGATA-241,29000.000,Dospanca,,,"Retiro de frío. bolsa roja-hilo blanco sin tamañar 48,17 kg | Transporte: cerone(sotelol)",Ret Frio,3,XLS-RET-FRIO-1107-R3
+2026-03-27,INBOUND,CONFIRMED,1006,Spunta,SPUNTA-300,35980.000,,Dospanca,,b.blanca-dtv 13451462-0 | Transporte: Camillo Gastón,De campo a Frío,5,XLS-DE-CAMPO-A-FRIO-1006-R5
+2026-03-27,INBOUND,CONFIRMED,27,Spunta,SPUNTA-14,17400.000,,Trevelin,,F5/G5 | Transporte: s.garcia(verdicchio),Ingreso  Trevelin,5,XLS-INGRESO-TREVELIN-27-R5
+2026-03-27,INBOUND,CONFIRMED,27,Asterix,ASTERIX-18,18143.000,,Trevelin,,F6/G6 | Transporte: s.garcia(verdicchio),Ingreso  Trevelin,6,XLS-INGRESO-TREVELIN-27-R6
+2026-03-27,INBOUND,CONFIRMED,29,Atlantic,ATLANTIC-11,24155.000,,Trevelin,,F10/G10 | Transporte: pizzuti,Ingreso  Trevelin,10,XLS-INGRESO-TREVELIN-29-R10
+2026-03-27,INBOUND,CONFIRMED,29,Spunta,SPUNTA-14,5195.000,,Trevelin,,F8/G8 | Transporte: pizzuti,Ingreso  Trevelin,8,XLS-INGRESO-TREVELIN-29-R8
+2026-03-27,INBOUND,CONFIRMED,29,Asterix,ASTERIX-18,4927.000,,Trevelin,,F9/G9 | Transporte: pizzuti,Ingreso  Trevelin,9,XLS-INGRESO-TREVELIN-29-R9
+2026-03-28,INBOUND,CONFIRMED,1007,Spunta,SPUNTA-300,35920.000,,Dospanca,,b.blanca-hilo blanco | Transporte: serantes-vera,De campo a Frío,6,XLS-DE-CAMPO-A-FRIO-1007-R6
+2026-03-28,INBOUND,CONFIRMED,31,Spunta,SPUNTA-13,33500.000,,Trevelin,,F12/G12 | Transporte: rastellini (godoy),Ingreso  Trevelin,12,XLS-INGRESO-TREVELIN-31-R12
+2026-03-28,INBOUND,CONFIRMED,32,Spunta,SPUNTA-13,34495.000,,Trevelin,,F13/G13 | Transporte: rastellini (luis),Ingreso  Trevelin,13,XLS-INGRESO-TREVELIN-32-R13
+2026-03-28,INBOUND,CONFIRMED,32,Atlantic,ATLANTIC-11,967.000,,Trevelin,,F14/G14 | Transporte: rastellini(luis),Ingreso  Trevelin,14,XLS-INGRESO-TREVELIN-32-R14
+2026-03-29,INBOUND,CONFIRMED,1009,Asterix,ASTERIX-811,25000.000,,Galpón,,b.blanca-hilo blanco | Transporte: serantes-vera,De campo a Frío,10,XLS-DE-CAMPO-A-FRIO-1009-R10
+2026-03-29,INBOUND,CONFIRMED,1009,Spunta,SPUNTA-300,10200.000,,Galpón,,b.blanca-hilo blanco | Transporte: Camillo Gastón,De campo a Frío,9,XLS-DE-CAMPO-A-FRIO-1009-R9
+2026-03-30,INBOUND,CONFIRMED,1008,Agata,AGATA-225,27132.000,,Dospanca,,b.varias-hilo amarillo dtv 13462918-5 | Transporte: serantes-vera,De campo a Frío,7,XLS-DE-CAMPO-A-FRIO-1008-R7
+2026-03-30,INBOUND,CONFIRMED,1008,Agata,AGATA-230,10200.000,,Dospanca,,b.varias-hilo verde dtv 13462918-5 | Transporte: serantes-vera,De campo a Frío,8,XLS-DE-CAMPO-A-FRIO-1008-R8
+2026-03-30,INBOUND,CONFIRMED,1010,Memphis,MEMPHIS-511,10703.000,,Dospanca,,hilo amarillo | Transporte: serantes-vera,De campo a Frío,11,XLS-DE-CAMPO-A-FRIO-1010-R11
+2026-03-30,INBOUND,CONFIRMED,1010,Memphis,MEMPHIS-510,14651.000,,Dospanca,,hilo verde | Transporte: Arenas,De campo a Frío,12,XLS-DE-CAMPO-A-FRIO-1010-R12
+2026-03-30,INBOUND,CONFIRMED,1010,Sunred,SUNRED-520,11560.000,,Dospanca,,hilo blanco | Transporte: serantes-vera,De campo a Frío,13,XLS-DE-CAMPO-A-FRIO-1010-R13
+2026-03-30,INBOUND,CONFIRMED,30,Spunta,SPUNTA-13,33220.000,,Trevelin,,F11/G11 | Transporte: coronado santiago,Ingreso  Trevelin,11,XLS-INGRESO-TREVELIN-30-R11
+2026-03-30,INBOUND,CONFIRMED,34,Atlantic,ATLANTIC-11,22180.000,,Trevelin,,F15/G15 | Transporte: s.garcia(navarro),Ingreso  Trevelin,15,XLS-INGRESO-TREVELIN-34-R15
+2026-03-30,INBOUND,CONFIRMED,34,Daifla,DAIFLA-15,13457.000,,Trevelin,,F16/G16 | Transporte: s.garcia (navarro),Ingreso  Trevelin,16,XLS-INGRESO-TREVELIN-34-R16
+2026-03-31,INBOUND,CONFIRMED,1011,Agata,AGATA-230,36540.000,,Dospanca,,bolsa blanca -hilo verde s/tamañar | Transporte: serantes-vera,De campo a Frío,14,XLS-DE-CAMPO-A-FRIO-1011-R14
+2026-03-31,INBOUND,CONFIRMED,1012,Agata,AGATA-230,10050.000,,Dospanca,,bolsa blanca-hilo verde s/tamañar | Transporte: serantes-vera,De campo a Frío,15,XLS-DE-CAMPO-A-FRIO-1012-R15
+2026-03-31,INBOUND,CONFIRMED,1012,Quintera,QUINTERA-561,26688.000,,Dospanca,,bolsa marron | Transporte: Camillo Gastón,De campo a Frío,16,XLS-DE-CAMPO-A-FRIO-1012-R16
+2026-04-01,INBOUND,CONFIRMED,s/remito,Asterix,ASTERIX-810,27700.000,,Galpón,,b.verde-h.verde  vuelve al galpon p/brasil | Transporte: cerone(raphael),Env a Frio,24,XLS-ENV-A-FRIO-S-REMITO-R24
+2026-04-01,INBOUND,CONFIRMED,36,Agata,AGATA-2,5983.000,,Trevelin,,F17/G17 | Transporte: el salvador,Ingreso  Trevelin,17,XLS-INGRESO-TREVELIN-36-R17
+2026-04-01,INBOUND,CONFIRMED,36,Spunta,SPUNTA-3,12397.000,,Trevelin,,F18/G18 | Transporte: el salvador,Ingreso  Trevelin,18,XLS-INGRESO-TREVELIN-36-R18
+2026-04-01,INBOUND,CONFIRMED,36,King Russet,KING-RUSSET-10,3880.000,,Trevelin,,F19/G19 | Transporte: el salvador,Ingreso  Trevelin,19,XLS-INGRESO-TREVELIN-36-R19
+2026-04-01,INBOUND,CONFIRMED,36,Ludmilla,LUDMILLA-6,1132.000,,Trevelin,,F20/G20 | Transporte: el salvador,Ingreso  Trevelin,20,XLS-INGRESO-TREVELIN-36-R20
+2026-04-01,INBOUND,CONFIRMED,36,Alverstone,ALVERSTONE-42,2425.000,,Trevelin,,F21/G21 | Transporte: el salvador,Ingreso  Trevelin,21,XLS-INGRESO-TREVELIN-36-R21
+2026-04-01,INBOUND,CONFIRMED,36,Markies,MARKIES-4,1725.000,,Trevelin,,F22/G22 | Transporte: el salvador,Ingreso  Trevelin,22,XLS-INGRESO-TREVELIN-36-R22
+2026-04-01,INBOUND,CONFIRMED,36,Daifla,DAIFLA-5,3072.000,,Trevelin,,F23/G23 | Transporte: el salvador,Ingreso  Trevelin,23,XLS-INGRESO-TREVELIN-36-R23
+2026-04-01,INBOUND,CONFIRMED,36,7 Four 7,7-FOUR-7-7,754.000,,Trevelin,,F24/G24 | Transporte: el salvador,Ingreso  Trevelin,24,XLS-INGRESO-TREVELIN-36-R24
+2026-04-01,INBOUND,CONFIRMED,36,Ikarus,IKARUS-51,2857.000,,Trevelin,,F25/G25 | Transporte: el salvador,Ingreso  Trevelin,25,XLS-INGRESO-TREVELIN-36-R25
+2026-04-01,INBOUND,CONFIRMED,36,Edison,EDISON-9,1994.000,,Trevelin,,F26/G26 | Transporte: el salvador,Ingreso  Trevelin,26,XLS-INGRESO-TREVELIN-36-R26
+2026-04-01,INBOUND,CONFIRMED,36,Atlantic,ATLANTIC-1-B,54.000,,Trevelin,,F27/G27 | Transporte: el salvador,Ingreso  Trevelin,27,XLS-INGRESO-TREVELIN-36-R27
+2026-04-01,DISPATCH,CONFIRMED,1108,Agata,AGATA-241,19520.000,Dospanca,,,"Retiro de frío. bolsa roja-hilo blanco sin tamañar 48,81 kg | Transporte: cerone(sotelol)",Ret Frio,4,XLS-RET-FRIO-1108-R4
+2026-04-02,INBOUND,CONFIRMED,838,Spunta,SPUNTA-300,6854.000,,Cecive,,bolsa blanca-hilo blanco | Transporte: cerone(sotelo),Env a Frio,25,XLS-ENV-A-FRIO-838-R25
+2026-04-02,INBOUND,CONFIRMED,839,Spunta,SPUNTA-700,19857.000,,Dospanca,,bolsa amarilla-hilo amarillo dtv 13488644-7 | Transporte: cerone(raphael),Env a Frio,26,XLS-ENV-A-FRIO-839-R26
+2026-04-02,INBOUND,CONFIRMED,839,Asterix,ASTERIX-811,5500.000,,Dospanca,,bolsa verde-hilo amarillo | Transporte: cerone(raphael),Env a Frio,27,XLS-ENV-A-FRIO-839-R27
+2026-04-02,INBOUND,CONFIRMED,37,Sagitta,SAGITTA-40,6980.000,,Trevelin,,F28/G28 | Transporte: walter gonzalez,Ingreso  Trevelin,28,XLS-INGRESO-TREVELIN-37-R28
+2026-04-02,INBOUND,CONFIRMED,37,7 Four 7,7-FOUR-7-7,714.000,,Trevelin,,F29/G29 | Transporte: walter gonzalez,Ingreso  Trevelin,29,XLS-INGRESO-TREVELIN-37-R29
+2026-04-02,INBOUND,CONFIRMED,37,Ludmilla,LUDMILLA-6,3188.000,,Trevelin,,F30/G30 | Transporte: walter gonzalez,Ingreso  Trevelin,30,XLS-INGRESO-TREVELIN-37-R30
+2026-04-02,INBOUND,CONFIRMED,37,Asterix,ASTERIX-8,3737.000,,Trevelin,,F31/G31 | Transporte: walter gonzalez,Ingreso  Trevelin,31,XLS-INGRESO-TREVELIN-37-R31
+2026-04-02,INBOUND,CONFIRMED,37,Sinatra,SINATRA-30,2143.000,,Trevelin,,F32/G32 | Transporte: walter gonzalez,Ingreso  Trevelin,32,XLS-INGRESO-TREVELIN-37-R32
+2026-04-02,INBOUND,CONFIRMED,37,Noha,NOHA-48,3023.000,,Trevelin,,F33/G33 | Transporte: walter gonzalez,Ingreso  Trevelin,33,XLS-INGRESO-TREVELIN-37-R33
+2026-04-02,INBOUND,CONFIRMED,37,Farida,FARIDA-44,1814.000,,Trevelin,,F34/G34 | Transporte: walter gonzalez,Ingreso  Trevelin,34,XLS-INGRESO-TREVELIN-37-R34
+2026-04-02,INBOUND,CONFIRMED,37,Beo,BEO-50,1264.000,,Trevelin,,F35/G35 | Transporte: walter gonzalez,Ingreso  Trevelin,35,XLS-INGRESO-TREVELIN-37-R35
+2026-04-02,INBOUND,CONFIRMED,37,Sunred,SUNRED-45,2033.000,,Trevelin,,F36/G36 | Transporte: walter gonzalez,Ingreso  Trevelin,36,XLS-INGRESO-TREVELIN-37-R36
+2026-04-02,INBOUND,CONFIRMED,37,Picus,PICUS-53,1539.000,,Trevelin,,F37/G37 | Transporte: walter gonzalez,Ingreso  Trevelin,37,XLS-INGRESO-TREVELIN-37-R37
+2026-04-02,INBOUND,CONFIRMED,37,Linus,LINUS-52,440.000,,Trevelin,,F38/G38 | Transporte: walter gonzalez,Ingreso  Trevelin,38,XLS-INGRESO-TREVELIN-37-R38
+2026-04-02,INBOUND,CONFIRMED,37,Primus,PRIMUS-54,2418.000,,Trevelin,,F39/G39 | Transporte: walter gonzalez,Ingreso  Trevelin,39,XLS-INGRESO-TREVELIN-37-R39
+2026-04-02,INBOUND,CONFIRMED,37,Quintera,QUINTERA-43,1648.000,,Trevelin,,F40/G40 | Transporte: walter gonzalez,Ingreso  Trevelin,40,XLS-INGRESO-TREVELIN-37-R40
+2026-04-02,INBOUND,CONFIRMED,37,Memphis,MEMPHIS-46,1758.000,,Trevelin,,F41/G41 | Transporte: walter gonzalez,Ingreso  Trevelin,41,XLS-INGRESO-TREVELIN-37-R41
+2026-04-02,INBOUND,CONFIRMED,37,Sababa,SABABA-41,3517.000,,Trevelin,,F42/G42 | Transporte: walter gonzalez,Ingreso  Trevelin,42,XLS-INGRESO-TREVELIN-37-R42
+2026-04-03,INBOUND,CONFIRMED,38,Tilbury,TILBURY-47,1051.000,,Trevelin,,F43/G43 | Transporte: el salvador,Ingreso  Trevelin,43,XLS-INGRESO-TREVELIN-38-R43
+2026-04-03,INBOUND,CONFIRMED,38,Sababa,SABABA-41,14776.000,,Trevelin,,F44/G44 | Transporte: el salvador,Ingreso  Trevelin,44,XLS-INGRESO-TREVELIN-38-R44
+2026-04-03,INBOUND,CONFIRMED,38,Red Magic,RED-MAGIC-49,830.000,,Trevelin,,F45/G45 | Transporte: el salvador,Ingreso  Trevelin,45,XLS-INGRESO-TREVELIN-38-R45
+2026-04-03,INBOUND,CONFIRMED,38,Orchestra,ORCHESTRA-31,1245.000,,Trevelin,,F46/G46 | Transporte: el salvador,Ingreso  Trevelin,46,XLS-INGRESO-TREVELIN-38-R46
+2026-04-03,INBOUND,CONFIRMED,38,Acoustic,ACOUSTIC-32,1024.000,,Trevelin,,F47/G47 | Transporte: el salvador,Ingreso  Trevelin,47,XLS-INGRESO-TREVELIN-38-R47
+2026-04-03,INBOUND,CONFIRMED,38,Rock,ROCK-33,913.000,,Trevelin,,F48/G48 | Transporte: el salvador,Ingreso  Trevelin,48,XLS-INGRESO-TREVELIN-38-R48
+2026-04-03,INBOUND,CONFIRMED,38,Sound,SOUND-34,1134.000,,Trevelin,,F49/G49 | Transporte: el salvador,Ingreso  Trevelin,49,XLS-INGRESO-TREVELIN-38-R49
+2026-04-03,INBOUND,CONFIRMED,38,7 Four 7,7-FOUR-7-17,16436.000,,Trevelin,,F50/G50 | Transporte: el salvador,Ingreso  Trevelin,50,XLS-INGRESO-TREVELIN-38-R50
+2026-04-03,DISPATCH,CONFIRMED,1109,Agata,AGATA-241,2934.000,Dospanca,,,"Retiro de frío. bolsa roja-hilo blanco sin tamañar 48,90 kg | Transporte: cerone(raphael)",Ret Frio,5,XLS-RET-FRIO-1109-R5
+2026-04-06,INBOUND,CONFIRMED,33,Atlantic,ATLANTIC-11,1413.000,,Trevelin,,F51/G51 | Transporte: nazer,Ingreso  Trevelin,51,XLS-INGRESO-TREVELIN-33-R51
+2026-04-06,INBOUND,CONFIRMED,33,Spunta,SPUNTA-13,20940.000,,Trevelin,,F52/G52 | Transporte: nazer,Ingreso  Trevelin,52,XLS-INGRESO-TREVELIN-33-R52
+2026-04-06,INBOUND,CONFIRMED,33,Daifla,DAIFLA-15,12721.000,,Trevelin,,F53/G53 | Transporte: nazer,Ingreso  Trevelin,53,XLS-INGRESO-TREVELIN-33-R53
+2026-04-06,INBOUND,CONFIRMED,35,Daifla,DAIFLA-15,4515.000,,Trevelin,,F54/G54 | Transporte: rosemberg pablo,Ingreso  Trevelin,54,XLS-INGRESO-TREVELIN-35-R54
+2026-04-06,INBOUND,CONFIRMED,35,King Russet,KING-RUSSET-10-B,23090.000,,Trevelin,,F55/G55 | Transporte: rosemberg pablo,Ingreso  Trevelin,55,XLS-INGRESO-TREVELIN-35-R55
+2026-04-06,INBOUND,CONFIRMED,35,Atlantic,ATLANTIC-1,6105.000,,Trevelin,,F56/G56 | Transporte: rosemberg pablo,Ingreso  Trevelin,56,XLS-INGRESO-TREVELIN-35-R56
+2026-04-06,INBOUND,CONFIRMED,35,Ludmilla,LUDMILLA-6,667.000,,Trevelin,,F57/G57 | Transporte: rosemberg pablo,Ingreso  Trevelin,57,XLS-INGRESO-TREVELIN-35-R57
+2026-04-06,INBOUND,CONFIRMED,41,Ludmilla,LUDMILLA-16-B,6324.000,,Trevelin,,F58/G58 | Transporte: s.garcia(scho),Ingreso  Trevelin,58,XLS-INGRESO-TREVELIN-41-R58
+2026-04-06,INBOUND,CONFIRMED,41,Agata,AGATA-22,29890.000,,Trevelin,,F59/G59 | Transporte: s.garcia(scho),Ingreso  Trevelin,59,XLS-INGRESO-TREVELIN-41-R59
+2026-04-07,INBOUND,CONFIRMED,40,Edison,EDISON-9-B,17718.000,,Trevelin,,F60/G60 | Transporte: el salvador,Ingreso  Trevelin,60,XLS-INGRESO-TREVELIN-40-R60
+2026-04-07,INBOUND,CONFIRMED,40,Ludmilla,LUDMILLA-16-B,16858.000,,Trevelin,,F61/G61 | Transporte: el salvador,Ingreso  Trevelin,61,XLS-INGRESO-TREVELIN-40-R61
+2026-04-07,INBOUND,CONFIRMED,40,Ludmilla,LUDMILLA-16-A,429.000,,Trevelin,,F62/G62 | Transporte: el salvador,Ingreso  Trevelin,62,XLS-INGRESO-TREVELIN-40-R62
+2026-04-07,INBOUND,CONFIRMED,40,7 Four 7,7-FOUR-7-17,1074.000,,Trevelin,,F63/G63 | Transporte: el salvador,Ingreso  Trevelin,63,XLS-INGRESO-TREVELIN-40-R63
+2026-04-07,INBOUND,CONFIRMED,43,Sagitta,SAGITTA-40-B,26415.000,,Trevelin,,F66/G66 | Transporte: di carpo,Ingreso  Trevelin,66,XLS-INGRESO-TREVELIN-43-R66
+2026-04-07,INBOUND,CONFIRMED,43,Tilbury,TILBURY-47-B,4043.000,,Trevelin,,F67/G67 | Transporte: di carpo,Ingreso  Trevelin,67,XLS-INGRESO-TREVELIN-43-R67
+2026-04-07,INBOUND,CONFIRMED,43,Agata,AGATA-22,5499.000,,Trevelin,,F68/G68 | Transporte: di carpo,Ingreso  Trevelin,68,XLS-INGRESO-TREVELIN-43-R68
+2026-04-07,DISPATCH,CONFIRMED,1110,Asterix,ASTERIX-811,7369.000,Dospanca,,,Retiro de frío. bolsa verde-hilo amarillo | Transporte: fran cambronera,Ret Frio,6,XLS-RET-FRIO-1110-R6
+2026-04-07,DISPATCH,CONFIRMED,1110,Asterix,ASTERIX-810,15040.000,Dospanca,,,Retiro de frío. bolsa verde-hilo verde | Transporte: fran cambronera,Ret Frio,7,XLS-RET-FRIO-1110-R7
+2026-04-08,INBOUND,CONFIRMED,42,Agata,AGATA-22,29185.000,,Trevelin,,F64/G64 | Transporte: winter nelson,Ingreso  Trevelin,64,XLS-INGRESO-TREVELIN-42-R64
+2026-04-08,INBOUND,CONFIRMED,42,Tilbury,TILBURY-47-B,5369.000,,Trevelin,,F65/G65 | Transporte: winter nelson,Ingreso  Trevelin,65,XLS-INGRESO-TREVELIN-42-R65
+2026-04-10,DISPATCH,CONFIRMED,1111,Agata,AGATA-225,28780.000,Dospanca,,,Retiro de frío. bolsa blanca y roja hilo amarillo | Transporte: cerone(sotelol),Ret Frio,8,XLS-RET-FRIO-1111-R8
+2026-04-11,INBOUND,CONFIRMED,1013,Agata,AGATA-230,4347.000,,Galpón,,bolsa blanva dtv 13534780-9 | Transporte: Camillo Gastón,De campo a Frío,17,XLS-DE-CAMPO-A-FRIO-1013-R17
+2026-04-11,INBOUND,CONFIRMED,1013,Spunta,SPUNTA-310,5532.000,,Galpón,,bolsa marron idem dtv | Transporte: serantes-vera,De campo a Frío,18,XLS-DE-CAMPO-A-FRIO-1013-R18
+2026-04-11,INBOUND,CONFIRMED,1013,Spunta,SPUNTA-310,24700.000,,Dospanca,,bolsa marron idem dtv | Transporte: serantes-vera,De campo a Frío,19,XLS-DE-CAMPO-A-FRIO-1013-R19
+2026-04-13,INBOUND,CONFIRMED,1014,Spunta,SPUNTA-310,33620.000,,Dospanca,,bolsa marron  dtv 13534848-1 | Transporte: Camillo Gastón,De campo a Frío,20,XLS-DE-CAMPO-A-FRIO-1014-R20
+2026-04-13,INBOUND,CONFIRMED,1015,Spunta,SPUNTA-310,33420.000,,Dospanca,,bolsa marron dtv 13536115-1 | Transporte: serantes-vera,De campo a Frío,21,XLS-DE-CAMPO-A-FRIO-1015-R21
+2026-04-13,INBOUND,CONFIRMED,840,Atlantic,ATLANTIC-419,24310.000,,Dospanca,,bolsa roja-hilo negro | Transporte: cerone(raphael),Env a Frio,28,XLS-ENV-A-FRIO-840-R28
+2026-04-13,INBOUND,CONFIRMED,840,Spunta,SPUNTA-300,7747.000,,Dospanca,,bolsa blanca-hilo blanco | Transporte: cerone(raphael),Env a Frio,29,XLS-ENV-A-FRIO-840-R29
+2026-04-14,INBOUND,CONFIRMED,841,Spunta,SPUNTA-300,18745.000,,Cecive,,bolsa blanca-hilo blanco | Transporte: fran cambronera,Env a Frio,30,XLS-ENV-A-FRIO-841-R30
+2026-04-14,INBOUND,CONFIRMED,841,Spunta,SPUNTA-302,11277.000,,Cecive,,bolsa roja-hilo verde claro | Transporte: fran cambronera,Env a Frio,31,XLS-ENV-A-FRIO-841-R31
+2026-04-14,INBOUND,CONFIRMED,842,Spunta,SPUNTA-302,14934.000,,Cecive,,bolsa roja-hilo verde claro | Transporte: cerone(sotelo),Env a Frio,32,XLS-ENV-A-FRIO-842-R32
+2026-04-14,INBOUND,CONFIRMED,842,Atlantic,ATLANTIC-419,12676.000,,Cecive,,bolsa roja-hilo negro | Transporte: cerone(sotelo),Env a Frio,33,XLS-ENV-A-FRIO-842-R33
+2026-04-14,INBOUND,CONFIRMED,842,Atlantic,ATLANTIC-416,3541.000,,Cecive,,bolsa roja-hilo celeste | Transporte: cerone(sotelo),Env a Frio,34,XLS-ENV-A-FRIO-842-R34
+2026-04-14,INBOUND,CONFIRMED,44,Agata,AGATA-22,32130.000,,Trevelin,,F69/G69 | Transporte: s.garcia(verdicchio),Ingreso  Trevelin,69,XLS-INGRESO-TREVELIN-44-R69
+2026-04-14,INBOUND,CONFIRMED,44,Orchestra,ORCHESTRA-31-B,3851.000,,Trevelin,,F70/G70 | Transporte: s.garcia(verdicchio),Ingreso  Trevelin,70,XLS-INGRESO-TREVELIN-44-R70
+2026-04-14,INBOUND,CONFIRMED,45,Yona,YONA-55-B,6457.000,,Trevelin,,F71/G71 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,71,XLS-INGRESO-TREVELIN-45-R71
+2026-04-14,INBOUND,CONFIRMED,45,Lady Anna,LADY-ANNA-37-B,1102.000,,Trevelin,,F72/G72 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,72,XLS-INGRESO-TREVELIN-45-R72
+2026-04-14,INBOUND,CONFIRMED,45,Sunred,SUNRED-45-B,2572.000,,Trevelin,,F73/G73 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,73,XLS-INGRESO-TREVELIN-45-R73
+2026-04-14,INBOUND,CONFIRMED,45,Lady Jane,LADY-JANE-39-B,840.000,,Trevelin,,F74/G74 | Transporte: s.garcia (sergio),Ingreso  Trevelin,74,XLS-INGRESO-TREVELIN-45-R74
+2026-04-14,INBOUND,CONFIRMED,45,Memphis,MEMPHIS-46-B,3307.000,,Trevelin,,F75/G75 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,75,XLS-INGRESO-TREVELIN-45-R75
+2026-04-14,INBOUND,CONFIRMED,45,Acoustic,ACOUSTIC-32-B,1680.000,,Trevelin,,F76/G76 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,76,XLS-INGRESO-TREVELIN-45-R76
+2026-04-14,INBOUND,CONFIRMED,45,Sinatra,SINATRA-30-B,866.000,,Trevelin,,F77/G77 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,77,XLS-INGRESO-TREVELIN-45-R77
+2026-04-14,INBOUND,CONFIRMED,45,Sound,SOUND-34-B,1312.000,,Trevelin,,F78/G78 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,78,XLS-INGRESO-TREVELIN-45-R78
+2026-04-14,INBOUND,CONFIRMED,45,Agata,AGATA-22,3097.000,,Trevelin,,F79/G79 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,79,XLS-INGRESO-TREVELIN-45-R79
+2026-04-14,INBOUND,CONFIRMED,45,Rock,ROCK-33-B,892.000,,Trevelin,,F80/G80 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,80,XLS-INGRESO-TREVELIN-45-R80
+2026-04-14,INBOUND,CONFIRMED,45,Red Magic,RED-MAGIC-49,78.000,,Trevelin,,F81/G81 | Transporte: s.garcia(sergio ),Ingreso  Trevelin,81,XLS-INGRESO-TREVELIN-45-R81
+2026-04-14,DISPATCH,CONFIRMED,1112,Asterix,ASTERIX-810,3866.000,Dospanca,,,Retiro de frío. bolsa verde-hilo verde | Transporte: cerone(raphael),Ret Frio,10,XLS-RET-FRIO-1112-R10
+2026-04-14,DISPATCH,CONFIRMED,1112,Asterix,ASTERIX-820,1984.000,Dospanca,,,Retiro de frío. bolsa verde-hilo blanco | Transporte: cerone(raphael),Ret Frio,11,XLS-RET-FRIO-1112-R11
+2026-04-14,DISPATCH,CONFIRMED,1112,Agata,AGATA-224,19130.000,Dospanca,,,Retiro de frío. bolsa blanca y roja hilo negro | Transporte: cerone(raphael),Ret Frio,12,XLS-RET-FRIO-1112-R12
+2026-04-14,DISPATCH,CONFIRMED,1112,Agata,AGATA-225,4757.000,Dospanca,,,Retiro de frío. hilo amarillo | Transporte: cerone(raphael),Ret Frio,9,XLS-RET-FRIO-1112-R9
+2026-04-15,INBOUND,CONFIRMED,39,Ludmilla,LUDMILLA-16-A,30068.000,,Trevelin,,F82/G82 | Transporte: adrian estevanez,Ingreso  Trevelin,82,XLS-INGRESO-TREVELIN-39-R82
+2026-04-15,INBOUND,CONFIRMED,39,Lady Jane,LADY-JANE-39,703.000,,Trevelin,,F83/G83 | Transporte: adrian estevanez,Ingreso  Trevelin,83,XLS-INGRESO-TREVELIN-39-R83
+2026-04-15,INBOUND,CONFIRMED,39,Lady Avlone,LADY-AVLONE-38,703.000,,Trevelin,,F84/G84 | Transporte: adrian estevanez,Ingreso  Trevelin,84,XLS-INGRESO-TREVELIN-39-R84
+2026-04-15,INBOUND,CONFIRMED,39,Lady Anna,LADY-ANNA-37,757.000,,Trevelin,,F85/G85 | Transporte: adrian estevanez,Ingreso  Trevelin,85,XLS-INGRESO-TREVELIN-39-R85
+2026-04-15,INBOUND,CONFIRMED,39,Lady Alicia,LADY-ALICIA-36,649.000,,Trevelin,,F86/G86 | Transporte: adrian estevanez,Ingreso  Trevelin,86,XLS-INGRESO-TREVELIN-39-R86
+2026-04-15,INBOUND,CONFIRMED,39,Lady Ada,LADY-ADA-35,595.000,,Trevelin,,F87/G87 | Transporte: adrian estevanez,Ingreso  Trevelin,87,XLS-INGRESO-TREVELIN-39-R87
+2026-04-15,INBOUND,CONFIRMED,39,Rivola,RIVOLA-55,757.000,,Trevelin,,F88/G88 | Transporte: adrian estevanez,Ingreso  Trevelin,88,XLS-INGRESO-TREVELIN-39-R88
+2026-04-15,INBOUND,CONFIRMED,39,7 Four 7,7-FOUR-7-17,2000.000,,Trevelin,,F89/G89 | Transporte: adrian estevanez,Ingreso  Trevelin,89,XLS-INGRESO-TREVELIN-39-R89
+2026-04-15,DISPATCH,CONFIRMED,1113,Agata,AGATA-225,4725.000,Dospanca,,,Retiro de frío. bolsas varias -hilo amarillo | Transporte: estevanez a.,Ret Frio,13,XLS-RET-FRIO-1113-R13
+2026-04-16,DISPATCH,CONFIRMED,1020,Daifla,DAIFLA-351,27480.000,Santa Ana,,Parmentier,"cargo en santa ana ,en bolsones. | DTV: 13581534-9 | Calibre: recibo",Entregas a clientes 2026,7,XLS-ENTREGAS-A-CLIENTES-2026-1020-R7
+2026-04-16,DISPATCH,CONFIRMED,1021,Daifla,DAIFLA-351,26760.000,Santa Ana,,Parmentier,"cargo en santa ana ,en bolsones. | DTV: 13581466-0 | Calibre: recibo",Entregas a clientes 2026,8,XLS-ENTREGAS-A-CLIENTES-2026-1021-R8
+2026-04-17,INBOUND,CONFIRMED,843,Spunta,SPUNTA-302,32060.000,,Dospanca,,bolsa roja-hilo blanco dtv 13565336-5 | Transporte: cerone(sotelo),Env a Frio,35,XLS-ENV-A-FRIO-843-R35
+2026-04-17,INBOUND,CONFIRMED,844,Spunta,SPUNTA-302,31920.000,,Dospanca,,bolsa roja-hilo blanco dtv 13568357-4 | Transporte: cerone(raphael),Env a Frio,36,XLS-ENV-A-FRIO-844-R36
+2026-04-20,INBOUND,CONFIRMED,698,Spunta,SPUNTA-301,40960.000,,Santa Ana,,Transporte: camillo/mario,Ingreso Tolvas Santa Ana,17,XLS-INGRESO-TOLVAS-SANTA-ANA-698-R17
+2026-04-21,DISPATCH,CONFIRMED,850,Asterix,ASTERIX-810,15600.000,Galpón,,Parmentier,cargo en galpon mar del plata | DTV: 13587702-6 | Calibre: sin chicas,Entregas a clientes 2026,6,XLS-ENTREGAS-A-CLIENTES-2026-850-R6
+2026-04-21,INBOUND,CONFIRMED,699,Spunta,SPUNTA-302,37500.000,,Santa Ana,,Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,18,XLS-INGRESO-TOLVAS-SANTA-ANA-699-R18
+2026-04-21,INBOUND,CONFIRMED,700,Spunta,SPUNTA-302,39420.000,,Santa Ana,,Transporte: alvaro arenas,Ingreso Tolvas Santa Ana,19,XLS-INGRESO-TOLVAS-SANTA-ANA-700-R19
+2026-04-21,INBOUND,CONFIRMED,701,Spunta,SPUNTA-301,41100.000,,Santa Ana,,Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,20,XLS-INGRESO-TOLVAS-SANTA-ANA-701-R20
+2026-04-23,DISPATCH,CONFIRMED,1025,Daifla,DAIFLA-351,17200.000,Santa Ana,,Parmentier,galpon mdp asterix + daifla en sta ana | DTV: 13587702-6 | Calibre: recibo,Entregas a clientes 2026,9,XLS-ENTREGAS-A-CLIENTES-2026-1025-R9
+2026-04-24,DISPATCH,CONFIRMED,1026,Daifla,DAIFLA-351,27780.000,Santa Ana,,Parmentier,"cargo en santa ana ,en bolsones. | DTV: 13599459-6 | Calibre: recibo",Entregas a clientes 2026,10,XLS-ENTREGAS-A-CLIENTES-2026-1026-R10
+2026-04-24,INBOUND,CONFIRMED,702,Sagitta,SAGITTA-500,42920.000,,Santa Ana,,Transporte: camillo/mario,Ingreso Tolvas Santa Ana,21,XLS-INGRESO-TOLVAS-SANTA-ANA-702-R21
+2026-04-25,INBOUND,CONFIRMED,855,Spunta,SPUNTA-500,31460.000,,Dospanca,,bolsa blanca-hilo amarillo dtv 13608380-5 | Transporte: cerone(sotelo),Env a Frio,37,XLS-ENV-A-FRIO-855-R37
+2026-04-25,INBOUND,CONFIRMED,856,Atlantic,ATLANTIC-500,30400.000,,Dospanca,,bolsa blanca-hilo amarillo dtv 13611549-9 | Transporte: cerone(raphael),Env a Frio,38,XLS-ENV-A-FRIO-856-R38
+2026-04-27,INBOUND,CONFIRMED,857,Atlantic,ATLANTIC-500,30720.000,,Dospanca,,bolsa blanca y roja -h.amarillo 13615788-4 | Transporte: fran cambronera,Env a Frio,39,XLS-ENV-A-FRIO-857-R39
+2026-04-27,INBOUND,CONFIRMED,858,Atlantic,ATLANTIC-500,31180.000,,Dospanca,,bolsa roja-h.amarillo dtv 13615936-4 | Transporte: cerone(sotelo),Env a Frio,40,XLS-ENV-A-FRIO-858-R40
+2026-04-27,INBOUND,CONFIRMED,859,Atlantic,ATLANTIC-500,9439.000,,Dospanca,,bolsa roja-hilo amarillo | Transporte: cerone(raphael),Env a Frio,41,XLS-ENV-A-FRIO-859-R41
+2026-04-27,INBOUND,CONFIRMED,859,Asterix,ASTERIX-811,2917.000,,Dospanca,,bolsa verde-hilo amarillo | Transporte: cerone(raphael),Env a Frio,42,XLS-ENV-A-FRIO-859-R42
+2026-04-27,INBOUND,CONFIRMED,859,Spunta,SPUNTA-310,5444.000,,Dospanca,,bolsa marron-hilo blanco | Transporte: cerone(raphael),Env a Frio,43,XLS-ENV-A-FRIO-859-R43
+2026-04-27,INBOUND,CONFIRMED,859,Agata,AGATA-230,4278.000,,Dospanca,,bolsa blanca-hilo verde | Transporte: cerone(raphael),Env a Frio,44,XLS-ENV-A-FRIO-859-R44
+2026-05-01,INBOUND,CONFIRMED,860,Daifla,DAIFLA-352,30920.000,,Dospanca,,bolsa negra-hilo verde dtv 13641313-9 | Transporte: fran cambronera,Env a Frio,45,XLS-ENV-A-FRIO-860-R45
+2026-05-02,INBOUND,CONFIRMED,861,Daifla,DAIFLA-352,32060.000,,Dospanca,,bolsa negra y blanca-h.verde 13643183-8 | Transporte: cerone(sotelo),Env a Frio,46,XLS-ENV-A-FRIO-861-R46
+2026-05-02,INBOUND,CONFIRMED,710,Daifla,DAIFLA-352,39420.000,,Santa Ana,,Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,22,XLS-INGRESO-TOLVAS-SANTA-ANA-710-R22
+2026-05-02,INBOUND,CONFIRMED,711,Daifla,DAIFLA-352,42620.000,,Santa Ana,,Transporte: camillo/mario,Ingreso Tolvas Santa Ana,23,XLS-INGRESO-TOLVAS-SANTA-ANA-711-R23
+2026-05-04,INBOUND,CONFIRMED,712,Daifla,DAIFLA-352,43000.000,,Santa Ana,,TODO BOLSON !!! | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,24,XLS-INGRESO-TOLVAS-SANTA-ANA-712-R24
+2026-05-04,INBOUND,CONFIRMED,713,Daifla,DAIFLA-352,37040.000,,Santa Ana,,39 BOLSON + GRIMME | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,25,XLS-INGRESO-TOLVAS-SANTA-ANA-713-R25
+2026-05-04,INBOUND,CONFIRMED,714,Daifla,DAIFLA-352,43400.000,,Santa Ana,,GRIMME | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,26,XLS-INGRESO-TOLVAS-SANTA-ANA-714-R26
+2026-05-05,INBOUND,CONFIRMED,715,Ludmilla,LUDMILLA-602,36740.000,,Santa Ana,,TODO BOLSON !!! | Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,27,XLS-INGRESO-TOLVAS-SANTA-ANA-715-R27
+2026-05-05,INBOUND,CONFIRMED,716,Ludmilla,LUDMILLA-602,41200.000,,Santa Ana,,TODO BOLSON !!! | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,28,XLS-INGRESO-TOLVAS-SANTA-ANA-716-R28
+2026-05-05,INBOUND,CONFIRMED,717,Ludmilla,LUDMILLA-602,38660.000,,Santa Ana,,2 T.GRIMME+BOLSON | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,29,XLS-INGRESO-TOLVAS-SANTA-ANA-717-R29
+2026-05-06,INBOUND,CONFIRMED,718,Sagitta,SAGITTA-500,43000.000,,Santa Ana,,GRIMME | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,30,XLS-INGRESO-TOLVAS-SANTA-ANA-718-R30
+2026-05-06,INBOUND,CONFIRMED,719,Sababa,SABABA-530,34500.000,,Santa Ana,,GRIMME | Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,31,XLS-INGRESO-TOLVAS-SANTA-ANA-719-R31
+2026-05-07,DISPATCH,CONFIRMED,871,Ludmilla,LUDMILLA-602,32500.000,Planta,,Frigopap,"en planta,b.roja -hilo blanco | DTV: 13677656-8 | Categoría: (lamb weston) | Calibre: recibo",Entregas a clientes 2026,11,XLS-ENTREGAS-A-CLIENTES-2026-871-R11
+2026-05-07,INBOUND,CONFIRMED,720,Sababa,SABABA-530,46820.000,,Santa Ana,,GRIMME | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,32,XLS-INGRESO-TOLVAS-SANTA-ANA-720-R32
+2026-05-08,DISPATCH,CONFIRMED,872,Ludmilla,LUDMILLA-602,31900.000,Planta,,Frigopap,"en planta,b.roja -hilo blanco | DTV: 13681619-5 | Categoría: (lamb weston) | Calibre: recibo",Entregas a clientes 2026,12,XLS-ENTREGAS-A-CLIENTES-2026-872-R12
+2026-05-11,DISPATCH,CONFIRMED,873,Ludmilla,LUDMILLA-602,32300.000,Planta,,Frigopap,"en planta,b.roja -hilo blanco | DTV: 13694801-6 | Categoría: (lamb weston) | Calibre: recibo",Entregas a clientes 2026,13,XLS-ENTREGAS-A-CLIENTES-2026-873-R13
+2026-05-14,DISPATCH,CONFIRMED,721,Spunta,SPUNTA-310,34260.000,Santa Ana,,La Union Del Sur,cargo en sta ana bolson-granel | DTV: 13713031-9 | Categoría: 56 BOLSONES | Calibre: granel,Entregas a clientes 2026,14,XLS-ENTREGAS-A-CLIENTES-2026-721-R14
+2026-05-14,DISPATCH,CONFIRMED,722,Spunta,SPUNTA-310,33780.000,Santa Ana,,La Union Del Sur,cargo en sta ana bolson-granel | DTV: 13713177-3 | Categoría: 60 BOLSONES | Calibre: granel,Entregas a clientes 2026,15,XLS-ENTREGAS-A-CLIENTES-2026-722-R15
+2026-05-15,DISPATCH,CONFIRMED,723,Spunta,SPUNTA-310,31740.000,Santa Ana,,La Union Del Sur,cargo en sta ana bolson-granel | DTV: 13719739-1 | Categoría: 50 BOLSONES | Calibre: granel,Entregas a clientes 2026,16,XLS-ENTREGAS-A-CLIENTES-2026-723-R16
+2026-05-18,INBOUND,CONFIRMED,725,Daifla,DAIFLA-352,27340.000,,Santa Ana,,pila-bolson-tolva | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,33,XLS-INGRESO-TOLVAS-SANTA-ANA-725-R33
+2026-05-18,INBOUND,CONFIRMED,726,Daifla,DAIFLA-352,11400.000,,Santa Ana,,pila-bolson-tolva | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,34,XLS-INGRESO-TOLVAS-SANTA-ANA-726-R34
+2026-05-18,INBOUND,CONFIRMED,726,Spunta,SPUNTA-320,24600.000,,Santa Ana,,pila-bolson-tolva-paraguay | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,35,XLS-INGRESO-TOLVAS-SANTA-ANA-726-R35
+2026-05-18,INBOUND,CONFIRMED,727,Daifla,DAIFLA-352,21620.000,,Santa Ana,,pila-bolson-tolva | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,36,XLS-INGRESO-TOLVAS-SANTA-ANA-727-R36
+2026-05-18,INBOUND,CONFIRMED,727,Spunta,SPUNTA-320,9840.000,,Santa Ana,,pila-bolson-tolva-paraguay | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,37,XLS-INGRESO-TOLVAS-SANTA-ANA-727-R37
+2026-05-20,INBOUND,CONFIRMED,729,Spunta,SPUNTA-301,40840.000,,Santa Ana,,pila-bolson-tolva-paraguay | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,38,XLS-INGRESO-TOLVAS-SANTA-ANA-729-R38
+2026-05-20,INBOUND,CONFIRMED,730,Spunta,SPUNTA-320,33180.000,,Santa Ana,,pila-bolson-tolva | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,39,XLS-INGRESO-TOLVAS-SANTA-ANA-730-R39
+2026-05-21,INBOUND,CONFIRMED,731,Spunta,SPUNTA-301,34980.000,,Santa Ana,,pila-bolson-tolva-paraguay | Transporte: arenas/de grandis,Ingreso Tolvas Santa Ana,40,XLS-INGRESO-TOLVAS-SANTA-ANA-731-R40
+2026-05-21,INBOUND,CONFIRMED,732,Spunta,SPUNTA-301,11400.000,,Santa Ana,,pila-bolson-tolva-paraguay | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,41,XLS-INGRESO-TOLVAS-SANTA-ANA-732-R41
+2026-05-21,INBOUND,CONFIRMED,732,Spunta,SPUNTA-301,36360.000,,Santa Ana,,sac.disco-sin estacionar | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,42,XLS-INGRESO-TOLVAS-SANTA-ANA-732-R42
+2026-05-22,INBOUND,CONFIRMED,733,Spunta,SPUNTA-301,39620.000,,Santa Ana,,sac.disco-sin estacionar | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,43,XLS-INGRESO-TOLVAS-SANTA-ANA-733-R43
+2026-05-23,INBOUND,CONFIRMED,734,Spunta,SPUNTA-301,40860.000,,Belmonte,,Transporte: camillo(mario),Env a Frio,47,XLS-ENV-A-FRIO-734-R47
+2026-05-23,INBOUND,CONFIRMED,735,Spunta,SPUNTA-301,36140.000,,Belmonte,,Transporte: arenas(de grandis),Env a Frio,48,XLS-ENV-A-FRIO-735-R48
+2026-05-25,INBOUND,CONFIRMED,877,Spunta,SPUNTA-320,8065.000,,Dospanca,,B.AMARILLA USADA C/TARJ. 13784910-0 | Transporte: cerone((raphael),Env a Frio,49,XLS-ENV-A-FRIO-877-R49
+2026-05-25,INBOUND,CONFIRMED,877,Spunta,SPUNTA-301,18934.000,,Dospanca,,B.BLANCA USADA C/ALGU.TARJ 13784910-0 | Transporte: cerone(raphael),Env a Frio,50,XLS-ENV-A-FRIO-877-R50
+2026-05-25,INBOUND,CONFIRMED,736,Spunta,SPUNTA-301,38860.000,,Santa Ana,,18 bol.monton +resto pila | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,44,XLS-INGRESO-TOLVAS-SANTA-ANA-736-R44
+2026-05-25,INBOUND,CONFIRMED,737,Spunta,SPUNTA-320,10500.000,,Santa Ana,,16 b pila-resto monton | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,45,XLS-INGRESO-TOLVAS-SANTA-ANA-737-R45
+2026-05-25,INBOUND,CONFIRMED,737,Spunta,SPUNTA-302,25960.000,,Santa Ana,,idem | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,46,XLS-INGRESO-TOLVAS-SANTA-ANA-737-R46
+2026-05-26,INBOUND,CONFIRMED,236,Spunta,SPUNTA-50,41200.000,,Santa Ana,,MONTON -PAMPA CHICA | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,47,XLS-INGRESO-TOLVAS-SANTA-ANA-236-R47
+2026-05-27,INBOUND,CONFIRMED,878,Spunta,SPUNTA-320,30480.000,,Dospanca,,b.b nueva-h.b.-alguna tarj.daifla 352 x error | Transporte: fran cambronera,Env a Frio,51,XLS-ENV-A-FRIO-878-R51
+2026-05-27,INBOUND,CONFIRMED,738,Spunta,SPUNTA-320,44720.000,,Santa Ana,,peludo-bolson-galpon | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,48,XLS-INGRESO-TOLVAS-SANTA-ANA-738-R48
+2026-05-28,INBOUND,CONFIRMED,739,Ludmilla,LUDMILLA-600,37520.000,,Santa Ana,,peludo-bolson-galpon | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,49,XLS-INGRESO-TOLVAS-SANTA-ANA-739-R49
+2026-05-28,INBOUND,CONFIRMED,740,Ludmilla,LUDMILLA-600,41260.000,,Santa Ana,,peludo-bolson-galpon | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,50,XLS-INGRESO-TOLVAS-SANTA-ANA-740-R50
+2026-05-29,INBOUND,CONFIRMED,741,Ludmilla,LUDMILLA-601,45680.000,,Santa Ana,,peludo-bolson-galpon | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,51,XLS-INGRESO-TOLVAS-SANTA-ANA-741-R51
+2026-05-29,DISPATCH,CONFIRMED,1121,Agata,AGATA-221,29700.000,Dospanca,,,Retiro de frío. b.blanca-h.blanco | Transporte: fran cambronera,Ret Frio,14,XLS-RET-FRIO-1121-R14
+2026-05-30,INBOUND,CONFIRMED,742,Ludmilla,LUDMILLA-600,39400.000,,Santa Ana,,peludo-bolson-galpon | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,52,XLS-INGRESO-TOLVAS-SANTA-ANA-742-R52
+2026-06-01,INBOUND,CONFIRMED,246,Spunta,SPUNTA-50,40800.000,,Belmonte,,de pampa chica a belmonte | Transporte: camillo(mario),Env a Frio,52,XLS-ENV-A-FRIO-246-R52
+2026-06-01,INBOUND,CONFIRMED,743,Ludmilla,LUDMILLA-600,43420.000,,Santa Ana,,peludo-bolson-galpon | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,53,XLS-INGRESO-TOLVAS-SANTA-ANA-743-R53
+2026-06-01,DISPATCH,CONFIRMED,1122,Agata,AGATA-224,10158.000,Dospanca,,,"Retiro de frío. b,blanca-hilo negro | Transporte: cerone(sotelo)",Ret Frio,15,XLS-RET-FRIO-1122-R15
+2026-06-01,DISPATCH,CONFIRMED,1122,Agata,AGATA-240,20118.000,Dospanca,,,Retiro de frío. b.blanca-hilo celeste | Transporte: cerone(sotelo),Ret Frio,16,XLS-RET-FRIO-1122-R16
+2026-06-02,INBOUND,CONFIRMED,882,Spunta,SPUNTA-530,24544.000,,Dospanca,,b.naranja-h.verde dtv 13840687-3 | Transporte: fran cambronera,Env a Frio,53,XLS-ENV-A-FRIO-882-R53
+2026-06-02,INBOUND,CONFIRMED,883,Atlantic,ATLANTIC-600,31620.000,,Cecive,,b.naranja-h.blanco dtv 13839055-1 | Transporte: cerone(sotelo),Env a Frio,54,XLS-ENV-A-FRIO-883-R54
+2026-06-02,DISPATCH,CONFIRMED,1123,Agata,AGATA-240,30800.000,Dospanca,,,Retiro de frío. b.blanca-hilo celeste | Transporte: cerone(raphael),Ret Frio,17,XLS-RET-FRIO-1123-R17
+2026-06-03,INBOUND,CONFIRMED,884,Spunta,SPUNTA-320,29600.000,,Cecive,,b.blanca-hilo amarillo-dtv 13844762-6 | Transporte: cerone(sotelo),Env a Frio,55,XLS-ENV-A-FRIO-884-R55
+2026-06-03,INBOUND,CONFIRMED,885,Spunta,SPUNTA-600,30720.000,,Cecive,,b.naranja-hilo blanco dtv 13848365-7 | Transporte: cerone(raphael),Env a Frio,56,XLS-ENV-A-FRIO-885-R56
+2026-06-03,INBOUND,CONFIRMED,886,Spunta,SPUNTA-600,13656.000,,Cecive,,b.naranja-hilo blanco dtv 13848832-2 | Transporte: cerone(sotelo),Env a Frio,57,XLS-ENV-A-FRIO-886-R57
+2026-06-03,INBOUND,CONFIRMED,886,Spunta,SPUNTA-601,17380.000,,Cecive,,b.naranja-hilo negro dtv 13848832-2 | Transporte: cerone(sotelo),Env a Frio,58,XLS-ENV-A-FRIO-886-R58
+2026-06-03,INBOUND,CONFIRMED,746,Spunta,SPUNTA-320,48780.000,,Santa Ana,,GRIMME | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,54,XLS-INGRESO-TOLVAS-SANTA-ANA-746-R54
+2026-06-03,DISPATCH,CONFIRMED,1124,Agata,AGATA-240,5544.000,Dospanca,,,Retiro de frío. b.blanca-hilo celeste- SOLO CHASIS !!!! | Transporte: fran cambronera,Ret Frio,18,XLS-RET-FRIO-1124-R18
+2026-06-04,INBOUND,CONFIRMED,747,Sagitta,SAGITTA-500,9500.000,,Santa Ana,,16 bolson-peludo-tolva | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,55,XLS-INGRESO-TOLVAS-SANTA-ANA-747-R55
+2026-06-04,INBOUND,CONFIRMED,747,Agata,AGATA-243,28840.000,,Santa Ana,,51 bolson-peludo-tolva | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,56,XLS-INGRESO-TOLVAS-SANTA-ANA-747-R56
+2026-06-04,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-50,38200.000,Belmonte,,,Retiro de frío. granel-paraguay | Transporte: camillo(mario),Ret Frio,19,XLS-RET-FRIO-S-REMITO-R19
+2026-06-05,INBOUND,CONFIRMED,748,Agata,AGATA-243,44860.000,,Santa Ana,,56 bolson+ 2 tol.grimme | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,57,XLS-INGRESO-TOLVAS-SANTA-ANA-748-R57
+2026-06-05,DISPATCH,CONFIRMED,1125,Asterix,ASTERIX-820,28740.000,Dospanca,,,Retiro de frío. b.verde-h.blanco | Transporte: cerone(sotelo),Ret Frio,20,XLS-RET-FRIO-1125-R20
+2026-06-06,INBOUND,CONFIRMED,889,Agata,AGATA-243,29720.000,,Dospanca,,b.blanca-h.negro dtv 13870340-1 | Transporte: cerone(sotelo),Env a Frio,59,XLS-ENV-A-FRIO-889-R59
+2026-06-06,DISPATCH,CONFIRMED,1412,Spunta,SPUNTA-50,34800.000,Sasula Balcarce,,,Retiro de frío. paraguay | Transporte: tapia,Ret Frio,22,XLS-RET-FRIO-1412-R22
+2026-06-06,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-50,39840.000,Belmonte,,,Retiro de frío. granel-paraguay | Transporte: camillo(mario),Ret Frio,21,XLS-RET-FRIO-S-REMITO-R21
+2026-06-08,DISPATCH,CONFIRMED,1126,Agata,AGATA-240,26720.000,Dospanca,,,Retiro de frío. b.blanca-h.celeste | Transporte: cerone(raphael),Ret Frio,24,XLS-RET-FRIO-1126-R24
+2026-06-08,DISPATCH,CONFIRMED,1413,Spunta,SPUNTA-50,34860.000,Sasula Balcarce,,,Retiro de frío. paraguay | Transporte: jodar,Ret Frio,23,XLS-RET-FRIO-1413-R23
+2026-06-10,DISPATCH,CONFIRMED,1414,Spunta,SPUNTA-50,34860.000,Sasula Balcarce,,,Retiro de frío. paraguay | Transporte: gabino santiago,Ret Frio,25,XLS-RET-FRIO-1414-R25
+2026-06-11,INBOUND,CONFIRMED,749,Atlantic,ATLANTIC-418,39860.000,,Santa Ana,,44 b.peludo+grimme | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,58,XLS-INGRESO-TOLVAS-SANTA-ANA-749-R58
+2026-06-11,DISPATCH,CONFIRMED,1127,Agata,AGATA-242,28140.000,Dospanca,,,Retiro de frío. b.blanca-h.blanco | Transporte: fran cambronera,Ret Frio,26,XLS-RET-FRIO-1127-R26
+2026-06-12,INBOUND,CONFIRMED,751,Spunta,SPUNTA-320,25600.000,,Santa Ana,,Transporte: camillo/mario,Ingreso Tolvas Santa Ana,59,XLS-INGRESO-TOLVAS-SANTA-ANA-751-R59
+2026-06-12,INBOUND,CONFIRMED,752,Sababa,SABABA-530,26180.000,,Santa Ana,,Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,60,XLS-INGRESO-TOLVAS-SANTA-ANA-752-R60
+2026-06-12,DISPATCH,CONFIRMED,1128,Agata,AGATA-242,28000.000,Dospanca,,,Retiro de frío. b.blanca-h.blanco | Transporte: cerone(raphael),Ret Frio,27,XLS-RET-FRIO-1128-R27
+2026-06-12,DISPATCH,CONFIRMED,1415,Spunta,SPUNTA-50,33920.000,Sasula Balcarce,,,Retiro de frío. paraguay | Transporte: alvaro arenas,Ret Frio,28,XLS-RET-FRIO-1415-R28
+2026-06-15,INBOUND,CONFIRMED,753,Sababa,SABABA-530,25200.000,,Santa Ana,,42 bolsones | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,61,XLS-INGRESO-TOLVAS-SANTA-ANA-753-R61
+2026-06-15,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-50,10780.000,Cecive,,,Retiro de frío. paraguay en tarimas | Transporte: camillo(mario),Ret Frio,29,XLS-RET-FRIO-S-REMITO-R29
+2026-06-16,INBOUND,CONFIRMED,754,Atlantic,ATLANTIC-410,26700.000,,Santa Ana,,GRIMME | Transporte: camillo/gaston,Ingreso Tolvas Santa Ana,62,XLS-INGRESO-TOLVAS-SANTA-ANA-754-R62
+2026-06-16,DISPATCH,CONFIRMED,1129,Agata,AGATA-242,6244.000,Dospanca,,,Retiro de frío. b.blanca-h.blanco | Transporte: cerone(sotelo),Ret Frio,30,XLS-RET-FRIO-1129-R30
+2026-06-16,DISPATCH,CONFIRMED,1129,Agata,AGATA-225,3216.000,Dospanca,,,Retiro de frío. b.blanca-h.amarillo | Transporte: cerone(sotelo),Ret Frio,31,XLS-RET-FRIO-1129-R31
+2026-06-16,DISPATCH,CONFIRMED,1416,Spunta,SPUNTA-50,33040.000,Sasula Balcarce,,,Retiro de frío. paraguay | Transporte: alvaro arenas,Ret Frio,32,XLS-RET-FRIO-1416-R32
+2026-06-17,DISPATCH,CONFIRMED,897,Atlantic,ATLANTIC-410,35580.000,Planta,,Radino (cristofaro),en planta | Calibre: recibo,Entregas a clientes 2026,17,XLS-ENTREGAS-A-CLIENTES-2026-897-R17
+2026-06-17,INBOUND,CONFIRMED,755,Atlantic,ATLANTIC-410,40860.000,,Santa Ana,,GRIMME | Transporte: camillo/mario,Ingreso Tolvas Santa Ana,63,XLS-INGRESO-TOLVAS-SANTA-ANA-755-R63
+2026-06-17,INBOUND,CONFIRMED,756,Atlantic,ATLANTIC-410,36640.000,,Santa Ana,,GRIMME | Transporte: arenas/jaimez,Ingreso Tolvas Santa Ana,64,XLS-INGRESO-TOLVAS-SANTA-ANA-756-R64
+2026-06-20,INBOUND,CONFIRMED,900,Atlantic,ATLANTIC-411,25092.000,,Cecive,,b.roja-hilo negro | Transporte: fran cambronera,Env a Frio,60,XLS-ENV-A-FRIO-900-R60
+2026-06-20,INBOUND,CONFIRMED,901,Atlantic,ATLANTIC-411,9820.000,,Dospanca,,b.roja-h.negro | Transporte: cerone(raphael),Env a Frio,61,XLS-ENV-A-FRIO-901-R61
+2026-06-20,INBOUND,CONFIRMED,901,Atlantic,ATLANTIC-414,21350.000,,Dospanca,,b.roja-h.amarillo | Transporte: cerone(raphael),Env a Frio,62,XLS-ENV-A-FRIO-901-R62
+2026-06-22,INBOUND,CONFIRMED,902,Atlantic,ATLANTIC-414,614.000,,Dospanca,,b.roja-h.amarillo | Transporte: cerone(sotelo),Env a Frio,63,XLS-ENV-A-FRIO-902-R63
+2026-06-22,INBOUND,CONFIRMED,902,Atlantic,ATLANTIC-411,32640.000,,Dospanca,,b.roja-h.negro | Transporte: cerone(sotelo),Env a Frio,64,XLS-ENV-A-FRIO-902-R64
+2026-06-22,INBOUND,CONFIRMED,903,Atlantic,ATLANTIC-411,7068.000,,Cecive,,b.roja-h.negro | Transporte: fran cambronera,Env a Frio,65,XLS-ENV-A-FRIO-903-R65
+2026-06-22,INBOUND,CONFIRMED,903,Atlantic,ATLANTIC-414,24340.000,,Cecive,,b.roja-h.amarillo | Transporte: fran cambronera,Env a Frio,66,XLS-ENV-A-FRIO-903-R66
+2026-06-23,INBOUND,CONFIRMED,904,Atlantic,ATLANTIC-414,21670.000,,Cecive,,b.roja-h.amarillo | Transporte: cerone(raphael),Env a Frio,67,XLS-ENV-A-FRIO-904-R67
+2026-06-23,INBOUND,CONFIRMED,904,Spunta,SPUNTA-601,9966.000,,Cecive,,b.naranja-h.negro | Transporte: cerone(raphael),Env a Frio,68,XLS-ENV-A-FRIO-904-R68
+2026-06-23,INBOUND,CONFIRMED,905,Atlantic,ATLANTIC-412,30640.000,,Cecive,,b.verde-h.blanco | Transporte: fran cambronera,Env a Frio,69,XLS-ENV-A-FRIO-905-R69
+2026-06-24,DISPATCH,CONFIRMED,908,7 Four 7,7-FOUR-7-700,16800.000,Planta,,Parmentier,en planta mercaderia repasada | DTV: 13974897-2 | Calibre: exportacion,Entregas a clientes 2026,18,XLS-ENTREGAS-A-CLIENTES-2026-908-R18
+2026-06-24,DISPATCH,CONFIRMED,908,Agata,AGATA-222,4438.000,Planta,,Parmentier,EN PLANTA PAPASUD-PARMENTIER | DTV: idem | Calibre: sin chicas,Entregas a clientes 2026,19,XLS-ENTREGAS-A-CLIENTES-2026-908-R19
+2026-06-24,DISPATCH,CONFIRMED,908,Agata,AGATA-222,5100.000,Planta,,Parmentier,EN PLANTA PAPASUD-PARMENTIER | DTV: idem | Calibre: exportacion,Entregas a clientes 2026,20,XLS-ENTREGAS-A-CLIENTES-2026-908-R20
+2026-06-24,INBOUND,CONFIRMED,906,Atlantic,ATLANTIC-412,7735.000,,Dospanca,,b.verde-h.blanco | Transporte: cerone(raphael),Env a Frio,70,XLS-ENV-A-FRIO-906-R70
+2026-06-27,DISPATCH,CONFIRMED,909,Spunta,SPUNTA-50,10000.000,Planta,,Agro Selmi,en planta. | Calibre: recibo,Entregas a clientes 2026,21,XLS-ENTREGAS-A-CLIENTES-2026-909-R21
+2026-06-30,DISPATCH,CONFIRMED,910,Spunta,SPUNTA-301,32760.000,Planta,,Delcasagro,en planta. | Calibre: recibo,Entregas a clientes 2026,22,XLS-ENTREGAS-A-CLIENTES-2026-910-R22
+2026-07-01,DISPATCH,CONFIRMED,911,Sinatra,SINATRA-902,7580.000,Pancani,,Romero Gaston,en pancani | DTV: 14022910-5 | Calibre: recibo,Entregas a clientes 2026,23,XLS-ENTREGAS-A-CLIENTES-2026-911-R23
+2026-07-03,DISPATCH,CONFIRMED,913,Spunta,SPUNTA-320,29800.000,Cecive,,Mazzeo Cristian,en cecive | DTV: 14039047-5 | Calibre: recibo,Entregas a clientes 2026,24,XLS-ENTREGAS-A-CLIENTES-2026-913-R24
+2026-07-03,DISPATCH,CONFIRMED,1139,Spunta,SPUNTA-302,15200.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(jaimez),Ret Frio,33,XLS-RET-FRIO-1139-R33
+2026-07-03,DISPATCH,CONFIRMED,1139,Spunta,SPUNTA-301,19400.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(jaimez),Ret Frio,34,XLS-RET-FRIO-1139-R34
+2026-07-03,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-50,30780.000,Cecive,,,Retiro de frío. A SASULA PARA REPASAR | Transporte: cerone(raphael),Ret Frio,35,XLS-RET-FRIO-S-REMITO-R35
+2026-07-03,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-320,29800.000,Cecive,,,Retiro de frío. cargo directo de camara a Mazzeo | Transporte: fenix v.m,Ret Frio,36,XLS-RET-FRIO-S-REMITO-R36
+2026-07-04,DISPATCH,CONFIRMED,1140,Spunta,SPUNTA-301,30700.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: cerone(sotelo),Ret Frio,37,XLS-RET-FRIO-1140-R37
+2026-07-04,DISPATCH,CONFIRMED,1141,Spunta,SPUNTA-301,16200.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,38,XLS-RET-FRIO-1141-R38
+2026-07-04,DISPATCH,CONFIRMED,1141,Spunta,SPUNTA-302,19500.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,39,XLS-RET-FRIO-1141-R39
+2026-07-06,DISPATCH,CONFIRMED,1142,Spunta,SPUNTA-302,36080.000,Dospanca,,,Retiro de frío. A SASULA PARA REPASAR | Transporte: camillo(mario),Ret Frio,40,XLS-RET-FRIO-1142-R40
+2026-07-07,DISPATCH,CONFIRMED,914,Spunta,SPUNTA-50,14620.000,Planta,,Francisco Andreu,en planta | DTV: 14057064-8 | Calibre: desc.paraguay,Entregas a clientes 2026,25,XLS-ENTREGAS-A-CLIENTES-2026-914-R25
+2026-07-07,DISPATCH,CONFIRMED,915,Daifla,DAIFLA-352,14640.000,Cecive,,Andreu Jose,en cecive | DTV: idem | Calibre: recibo,Entregas a clientes 2026,26,XLS-ENTREGAS-A-CLIENTES-2026-915-R26
+2026-07-07,DISPATCH,CONFIRMED,916,Spunta,SPUNTA-50,29400.000,Cecive,,Delcaso(romero M),en sasula-completa en cecive | Categoría: 540 sasu+50 ceci | Calibre: recibo,Entregas a clientes 2026,27,XLS-ENTREGAS-A-CLIENTES-2026-916-R27
+2026-07-07,DISPATCH,CONFIRMED,1143,Spunta,SPUNTA-301,16800.000,Dospanca,,,Retiro de frío. a cecive para trabaja | Transporte: camillo(mario),Ret Frio,44,XLS-RET-FRIO-1143-R44
+2026-07-07,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-320,28469.000,Cecive,,,Retiro de frío. saco p/trabajar en cecive | Transporte: cecive,Ret Frio,41,XLS-RET-FRIO-S-REMITO-R41
+2026-07-07,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-50,2940.000,Cecive,,,Retiro de frío. saco p/trabajar en cecive completamos a romero | Transporte: cecive,Ret Frio,42,XLS-RET-FRIO-S-REMITO-R42
+2026-07-07,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-302,8526.000,Cecive,,,Retiro de frío. saco p/trabajar | Transporte: cecive,Ret Frio,43,XLS-RET-FRIO-S-REMITO-R43
+2026-07-07,DISPATCH,CONFIRMED,s/remito,Daifla,DAIFLA-352,14640.000,Cecive,,,Retiro de frío. cargo directo de camara | Transporte: andreu,Ret Frio,45,XLS-RET-FRIO-S-REMITO-R45
+2026-07-08,DISPATCH,CONFIRMED,917,Spunta,SPUNTA-301,29440.000,Planta,,Papalini(m.seco),en planta | DTV: 14063633-9 | Calibre: recibo,Entregas a clientes 2026,28,XLS-ENTREGAS-A-CLIENTES-2026-917-R28
+2026-07-08,DISPATCH,CONFIRMED,918,Spunta,SPUNTA-301,32080.000,Planta,,Delcasagro-delcaso,en planta | DTV: 14062871-9 | Calibre: recibo,Entregas a clientes 2026,29,XLS-ENTREGAS-A-CLIENTES-2026-918-R29
+2026-07-08,DISPATCH,CONFIRMED,919,Spunta,SPUNTA-50,28600.000,Planta,,Francisco Andreu,en planta | Calibre: desc.paraguay,Entregas a clientes 2026,30,XLS-ENTREGAS-A-CLIENTES-2026-919-R30
+2026-07-08,DISPATCH,CONFIRMED,920,Spunta,SPUNTA-50,30200.000,Planta,,Francisco Andreu,en planta | Calibre: desc.paraguay,Entregas a clientes 2026,31,XLS-ENTREGAS-A-CLIENTES-2026-920-R31
+2026-07-08,DISPATCH,CONFIRMED,1144,Spunta,SPUNTA-302,16930.000,Dospanca,,,Retiro de frío. A SASULA PARA REPASAR B.ROJA | Transporte: camillo(mario),Ret Frio,46,XLS-RET-FRIO-1144-R46
+2026-07-08,DISPATCH,CONFIRMED,1144,Spunta,SPUNTA-301,17560.000,Dospanca,,,Retiro de frío. A SASULA PARA REPASAR B.BLANCA | Transporte: camillo(mario),Ret Frio,47,XLS-RET-FRIO-1144-R47
+2026-07-08,DISPATCH,CONFIRMED,1145,Spunta,SPUNTA-301,16926.000,Dospanca,,,Retiro de frío. A SASULA PARA REPASAR BOLSA BLANCA | Transporte: fran cambronera,Ret Frio,50,XLS-RET-FRIO-1145-R50
+2026-07-08,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-302,22540.000,Cecive,,,Retiro de frío. saco p/trabajar | Transporte: cecive,Ret Frio,48,XLS-RET-FRIO-S-REMITO-R48
+2026-07-08,DISPATCH,CONFIRMED,s/remito,Atlantic,ATLANTIC-412,22540.000,Cecive,,,Retiro de frío. saco p/trabajar b.verde | Transporte: cecive,Ret Frio,49,XLS-RET-FRIO-S-REMITO-R49
+2026-07-09,DISPATCH,CONFIRMED,921,Spunta,SPUNTA-301,29400.000,Planta,,Papalini(malesan),en planta | DTV: 14070747-3 | Calibre: recibo,Entregas a clientes 2026,32,XLS-ENTREGAS-A-CLIENTES-2026-921-R32
+2026-07-10,DISPATCH,CONFIRMED,922,Spunta,SPUNTA-301,29400.000,Planta,,Papalini(conci),en planta | DTV: 14074881-1 | Calibre: recibo,Entregas a clientes 2026,33,XLS-ENTREGAS-A-CLIENTES-2026-922-R33
+2026-07-11,DISPATCH,CONFIRMED,924,7 Four 7,7-FOUR-7-700,9972.000,Planta,,Agro Selmi,en planta | Calibre: exportacion,Entregas a clientes 2026,34,XLS-ENTREGAS-A-CLIENTES-2026-924-R34
+2026-07-11,DISPATCH,CONFIRMED,924,Atlantic,ATLANTIC-414,22438.000,Planta,,Agro Selmi,en planta | Calibre: recibo,Entregas a clientes 2026,35,XLS-ENTREGAS-A-CLIENTES-2026-924-R35
+2026-07-11,DISPATCH,CONFIRMED,924,Spunta,SPUNTA-50,5086.000,Planta,,Agro Selmi,en planta | Calibre: recibo,Entregas a clientes 2026,36,XLS-ENTREGAS-A-CLIENTES-2026-924-R36
+2026-07-11,DISPATCH,CONFIRMED,925,Daifla,DAIFLA-352,15150.000,Cecive,,Juan Viale,"en cecive,directo de camara | DTV: 14087809-5 | Calibre: recibo",Entregas a clientes 2026,37,XLS-ENTREGAS-A-CLIENTES-2026-925-R37
+2026-07-11,DISPATCH,CONFIRMED,925,Sagitta,SAGITTA-500,15150.000,Planta,,Juan Viale,en planta | DTV: idem | Calibre: recibo,Entregas a clientes 2026,38,XLS-ENTREGAS-A-CLIENTES-2026-925-R38
+2026-07-13,DISPATCH,CONFIRMED,926,Spunta,SPUNTA-301,29400.000,Planta,,Papalini(m.seco),en planta | DTV: 14092487-3 | Calibre: recibo,Entregas a clientes 2026,39,XLS-ENTREGAS-A-CLIENTES-2026-926-R39
+2026-07-13,DISPATCH,CONFIRMED,927,Spunta,SPUNTA-320,24036.000,Cecive,,Mazzeo Cristian,en cecive | DTV: 14096084-5 | Calibre: recibo,Entregas a clientes 2026,40,XLS-ENTREGAS-A-CLIENTES-2026-927-R40
+2026-07-13,DISPATCH,CONFIRMED,927,Yona,YONA-55-B,2404.000,Cecive,,Mazzeo Cristian,en cecive | DTV: idem | Calibre: recibo,Entregas a clientes 2026,41,XLS-ENTREGAS-A-CLIENTES-2026-927-R41
+2026-07-13,DISPATCH,CONFIRMED,927,7 Four 7,7-FOUR-7-700,2500.000,Planta,,Mazzeo Cristian,en planta | DTV: idem | Calibre: recibo,Entregas a clientes 2026,42,XLS-ENTREGAS-A-CLIENTES-2026-927-R42
+2026-07-13,DISPATCH,CONFIRMED,928,Spunta,SPUNTA-301,29820.000,Cecive,,Delcaso(egea),en cecive | DTV: 14096934-6 | Calibre: recibo,Entregas a clientes 2026,43,XLS-ENTREGAS-A-CLIENTES-2026-928-R43
+2026-07-14,DISPATCH,CONFIRMED,929,Spunta,SPUNTA-310,29400.000,Planta,,Del Caso(egea),en planta | DTV: 14099828-1 | Calibre: recibo,Entregas a clientes 2026,44,XLS-ENTREGAS-A-CLIENTES-2026-929-R44
+2026-07-14,DISPATCH,CONFIRMED,930,Sababa,SABABA-530,5040.000,Planta,,Gomez S.hecho,en planta | Categoría: papasud-hzpc | Calibre: sin chicas,Entregas a clientes 2026,45,XLS-ENTREGAS-A-CLIENTES-2026-930-R45
+2026-07-14,DISPATCH,CONFIRMED,931,Spunta,SPUNTA-301,19600.000,Planta,,Papalini(conci),en planta | DTV: 14104582-2 | Calibre: recibo,Entregas a clientes 2026,46,XLS-ENTREGAS-A-CLIENTES-2026-931-R46
+2026-07-14,DISPATCH,CONFIRMED,932,Spunta,SPUNTA-301,11080.000,Cecive,,Papalini(s.v.r),"200 b.roja en cecive,24 b.blanca en planta | DTV: sin dtv | Calibre: recibo",Entregas a clientes 2026,47,XLS-ENTREGAS-A-CLIENTES-2026-932-R47
+2026-07-15,DISPATCH,CONFIRMED,933,Spunta,SPUNTA-302,27220.000,Sasula Balcarce,,Delcasagro-delcaso,cargo en sasula bolsa roja. | DTV: 14107968-9 | Calibre: recibo,Entregas a clientes 2026,48,XLS-ENTREGAS-A-CLIENTES-2026-933-R48
+2026-07-16,DISPATCH,CONFIRMED,934,Spunta,SPUNTA-50,29400.000,Cecive,,Delcaso(palacio),cargo en cecive | DTV: varios(consumo) | Calibre: recibo,Entregas a clientes 2026,49,XLS-ENTREGAS-A-CLIENTES-2026-934-R49
+2026-07-16,DISPATCH,CONFIRMED,935,Spunta,SPUNTA-302,7350.000,Sasula Balcarce,,Papalini(daghero L),cargo en sasula | DTV: 14116681-6 | Calibre: recibo,Entregas a clientes 2026,50,XLS-ENTREGAS-A-CLIENTES-2026-935-R50
+2026-07-16,DISPATCH,CONFIRMED,936,Spunta,SPUNTA-302,12250.000,Sasula Balcarce,,Papalini(level Dnd),cargo en sasula | DTV: 14116774-5 | Categoría: daghero damian | Calibre: recibo,Entregas a clientes 2026,51,XLS-ENTREGAS-A-CLIENTES-2026-936-R51
+2026-07-16,DISPATCH,CONFIRMED,937,Spunta,SPUNTA-302,9800.000,Sasula Balcarce,,Papalini(martin D.),cargo en sasula | DTV: 14116890-8 | Calibre: recibo,Entregas a clientes 2026,52,XLS-ENTREGAS-A-CLIENTES-2026-937-R52
+2026-07-16,DISPATCH,CONFIRMED,938,Spunta,SPUNTA-302,2450.000,Sasula Balcarce,,Papalini(daghero E.),cargo en sasula | DTV: sin dtv | Categoría: daghero edgardo | Calibre: recibo,Entregas a clientes 2026,53,XLS-ENTREGAS-A-CLIENTES-2026-938-R53
+2026-07-16,DISPATCH,CONFIRMED,939,Spunta,SPUNTA-302,1078.000,Cecive,,Ostafchuk,cargo en cecive | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,54,XLS-ENTREGAS-A-CLIENTES-2026-939-R54
+2026-07-18,DISPATCH,CONFIRMED,940,Spunta,SPUNTA-302,29400.000,Sasula Balcarce,,Papalini(londero B),cargo en sasula | DTV: 14129494-6 | Calibre: recibo,Entregas a clientes 2026,55,XLS-ENTREGAS-A-CLIENTES-2026-940-R55
+2026-07-18,DISPATCH,CONFIRMED,941,Spunta,SPUNTA-52,30120.000,Cecive,,Francisco Andreu,cargo en cecive | DTV: anular cuando llegue | Calibre: recibo,Entregas a clientes 2026,56,XLS-ENTREGAS-A-CLIENTES-2026-941-R56
+2026-07-18,DISPATCH,CONFIRMED,942,Sababa,SABABA-530,5140.000,Planta,,Hzpc,cargo en planta | Categoría: papasud-hzpc | Calibre: recibo,Entregas a clientes 2026,57,XLS-ENTREGAS-A-CLIENTES-2026-942-R57
+2026-07-21,DISPATCH,CONFIRMED,946,Atlantic,ATLANTIC-417,31220.000,Cecive,,Vagnoni Andres,cargo en cecive | DTV: 14144476-5 | Calibre: exportacion,Entregas a clientes 2026,58,XLS-ENTREGAS-A-CLIENTES-2026-946-R58
+2026-07-22,DISPATCH,CONFIRMED,947,Spunta,SPUNTA-302,12250.000,Cecive,,Delcaso(vera),cargo en cecive repasada | DTV: 14146451-5 | Calibre: recibo,Entregas a clientes 2026,59,XLS-ENTREGAS-A-CLIENTES-2026-947-R59
+2026-07-22,DISPATCH,CONFIRMED,948,Spunta,SPUNTA-302,12250.000,Cecive,,Delcaso(romero M),cargo en cecive repasada | DTV: 14149806-1 | Calibre: recibo,Entregas a clientes 2026,60,XLS-ENTREGAS-A-CLIENTES-2026-948-R60
+2026-07-22,DISPATCH,CONFIRMED,949,Spunta,SPUNTA-302,3430.000,Cecive,,Delcaso(garcia),cargo en cecive repasada | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,61,XLS-ENTREGAS-A-CLIENTES-2026-949-R61
+2026-07-22,DISPATCH,CONFIRMED,950,Spunta,SPUNTA-302,1470.000,Cecive,,Delcaso(deheza),cargo en cecive repasada | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,62,XLS-ENTREGAS-A-CLIENTES-2026-950-R62
+2026-07-22,DISPATCH,CONFIRMED,951,Daifla,DAIFLA-352,4900.000,Cecive,,Delcaso(cima),directo de camara cecive | DTV: 14148327-7 | Calibre: recibo,Entregas a clientes 2026,63,XLS-ENTREGAS-A-CLIENTES-2026-951-R63
+2026-07-22,DISPATCH,CONFIRMED,955,Daifla,DAIFLA-352,6370.000,Cecive,,Delcaso(vera),directo de camara cecive | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,64,XLS-ENTREGAS-A-CLIENTES-2026-955-R64
+2026-07-22,DISPATCH,CONFIRMED,956,Spunta,SPUNTA-310,12250.000,Sasula Balcarce,,Papalini(gabrielli),cargo en sasula | DTV: 14151509-8 | Calibre: recibo,Entregas a clientes 2026,65,XLS-ENTREGAS-A-CLIENTES-2026-956-R65
+2026-07-22,DISPATCH,CONFIRMED,957,Spunta,SPUNTA-310,4900.000,Sasula Balcarce,,Papalini(carnelluti),cargo en sasula | DTV: 14151780-5 | Calibre: recibo,Entregas a clientes 2026,66,XLS-ENTREGAS-A-CLIENTES-2026-957-R66
+2026-07-22,DISPATCH,CONFIRMED,958,Spunta,SPUNTA-310,12250.000,Sasula Balcarce,,Papalini(garcia),cargo en sasula | DTV: 14151681-7 | Calibre: recibo,Entregas a clientes 2026,67,XLS-ENTREGAS-A-CLIENTES-2026-958-R67
+2026-07-22,DISPATCH,CONFIRMED,959,Spunta,SPUNTA-310,12540.000,Planta,,Delcaso(tourn),cargo en planta | DTV: 1415224-8 | Calibre: recibo,Entregas a clientes 2026,68,XLS-ENTREGAS-A-CLIENTES-2026-959-R68
+2026-07-23,DISPATCH,CONFIRMED,961,Spunta,SPUNTA-51,30860.000,Cecive,,Francisco Andreu,cargo en cecive | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,69,XLS-ENTREGAS-A-CLIENTES-2026-961-R69
+2026-07-23,DISPATCH,CONFIRMED,962,Sagitta,SAGITTA-500,30120.000,Pancani,,Agricolo S.r.l,cargo en pancani | DTV: 14156365-3 | Calibre: recibo,Entregas a clientes 2026,70,XLS-ENTREGAS-A-CLIENTES-2026-962-R70
+2026-07-23,DISPATCH,CONFIRMED,963,Spunta,SPUNTA-310,14700.000,Sasula Balcarce,,Papalini(londero),cargo en sasula | DTV: 14157443-4 | Calibre: recibo,Entregas a clientes 2026,71,XLS-ENTREGAS-A-CLIENTES-2026-963-R71
+2026-07-23,DISPATCH,CONFIRMED,964,Spunta,SPUNTA-310,4900.000,Sasula Balcarce,,Papalini(rossi M.),cargo en sasula | DTV: 14157514-7 | Calibre: recibo,Entregas a clientes 2026,72,XLS-ENTREGAS-A-CLIENTES-2026-964-R72
+2026-07-23,DISPATCH,CONFIRMED,965,Spunta,SPUNTA-310,9800.000,Sasula Balcarce,,Papalini(agri 2021),cargo en sasula | DTV: 14158412-8 | Calibre: recibo,Entregas a clientes 2026,73,XLS-ENTREGAS-A-CLIENTES-2026-965-R73
+2026-07-23,DISPATCH,CONFIRMED,966,Spunta,SPUNTA-310,1220.000,Sasula Balcarce,,Papalini(s.v.r),cargo en sasula -sobrante de kilos a s.v.r | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,74,XLS-ENTREGAS-A-CLIENTES-2026-966-R74
+2026-07-23,INBOUND,CONFIRMED,764,Atlantic,ATLANTIC-414,28974.000,,Santa Ana,,GRIMME | Transporte: camillo(gaston),Ingreso Tolvas Santa Ana,65,XLS-INGRESO-TOLVAS-SANTA-ANA-764-R65
+2026-07-24,DISPATCH,CONFIRMED,967,Spunta,SPUNTA-311,29320.000,Sasula Balcarce,,Papalini(s.v.r),cargo en sasula | DTV: dtv p/anular. | Calibre: recibo,Entregas a clientes 2026,75,XLS-ENTREGAS-A-CLIENTES-2026-967-R75
+2026-07-24,DISPATCH,CONFIRMED,968,Spunta,SPUNTA-301,29900.000,Planta,,Delcaso(romero),cargo en planta | DTV: 14164495-5 | Calibre: recibo,Entregas a clientes 2026,76,XLS-ENTREGAS-A-CLIENTES-2026-968-R76
+2026-07-24,DISPATCH,CONFIRMED,970,Atlantic,ATLANTIC-417,31580.000,Cecive,,Vagnoni Andres,cargo en cecive | DTV: 14164730-5 | Calibre: exportacion,Entregas a clientes 2026,77,XLS-ENTREGAS-A-CLIENTES-2026-970-R77
+2026-07-24,INBOUND,CONFIRMED,969,Spunta,SPUNTA-530,12186.000,,Dospanca,,b.naranja-hilo negro vuelve al frio(honduras | Transporte: camillo(mario),Env a Frio,71,XLS-ENV-A-FRIO-969-R71
+2026-07-24,DISPATCH,CONFIRMED,1214,Sagitta,SAGITTA-500,30120.000,Dospanca,,,Retiro de frío. cargo agricolo directo de camara | Transporte: agricolo,Ret Frio,52,XLS-RET-FRIO-1214-R52
+2026-07-24,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-51,31680.000,Cecive,,,Retiro de frío. saco para trabajar | Transporte: cecive,Ret Frio,51,XLS-RET-FRIO-S-REMITO-R51
+2026-07-25,DISPATCH,CONFIRMED,971,Spunta,SPUNTA-311,28900.000,Sasula Balcarce,,Delcaso(romero),cargo en sasula | DTV: 14169719-6 | Calibre: recibo,Entregas a clientes 2026,78,XLS-ENTREGAS-A-CLIENTES-2026-971-R78
+2026-07-25,DISPATCH,CONFIRMED,972,Spunta,SPUNTA-51,28420.000,Cecive,,Francisco Andreu,cargo en cecive | DTV: dtv p/anular. | Calibre: recibo,Entregas a clientes 2026,79,XLS-ENTREGAS-A-CLIENTES-2026-972-R79
+2026-07-25,DISPATCH,CONFIRMED,1215,Spunta,SPUNTA-311,6664.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,53,XLS-RET-FRIO-1215-R53
+2026-07-25,DISPATCH,CONFIRMED,1215,Spunta,SPUNTA-320,24206.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,54,XLS-RET-FRIO-1215-R54
+2026-07-27,DISPATCH,CONFIRMED,973,Spunta,SPUNTA-310,24500.000,Sasula Balcarce,,Delcaso(ciccioli ),cargo en sasula | DTV: 14177224-4 | Calibre: recibo,Entregas a clientes 2026,80,XLS-ENTREGAS-A-CLIENTES-2026-973-R80
+2026-07-27,DISPATCH,CONFIRMED,974,Spunta,SPUNTA-301,7124.000,Planta,,Delcaso(delcaso),cargo en planta | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,81,XLS-ENTREGAS-A-CLIENTES-2026-974-R81
+2026-07-27,INBOUND,CONFIRMED,765,Atlantic,ATLANTIC-414,28280.000,,Santa Ana,,GRIMME | Transporte: alvaro arenas,Ingreso Tolvas Santa Ana,66,XLS-INGRESO-TOLVAS-SANTA-ANA-765-R66
+2026-07-27,DISPATCH,CONFIRMED,1216,Spunta,SPUNTA-320,34790.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(jaimez),Ret Frio,55,XLS-RET-FRIO-1216-R55
+2026-07-28,DISPATCH,CONFIRMED,975,Spunta,SPUNTA-301,12250.000,Cecive,,Delcaso(guzman),cargo en cecive | DTV: 14182377-9 | Calibre: recibo,Entregas a clientes 2026,82,XLS-ENTREGAS-A-CLIENTES-2026-975-R82
+2026-07-28,DISPATCH,CONFIRMED,976,Spunta,SPUNTA-301,5880.000,Cecive,,Delcaso(quinzaños),cargo en cecive | DTV: 14182439-2 | Calibre: recibo,Entregas a clientes 2026,83,XLS-ENTREGAS-A-CLIENTES-2026-976-R83
+2026-07-28,DISPATCH,CONFIRMED,977,Spunta,SPUNTA-301,7350.000,Cecive,,Delcaso(moran),cargo en cecive | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,84,XLS-ENTREGAS-A-CLIENTES-2026-977-R84
+2026-07-28,DISPATCH,CONFIRMED,978,Spunta,SPUNTA-301,3920.000,Cecive,,Delcaso(delcaso),cargo en cecive | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,85,XLS-ENTREGAS-A-CLIENTES-2026-978-R85
+2026-07-28,DISPATCH,CONFIRMED,979,Spunta,SPUNTA-320,36760.000,Planta,,Delcaso (carlos),cargo en planta | DTV: 14186441-6 | Calibre: recibo,Entregas a clientes 2026,86,XLS-ENTREGAS-A-CLIENTES-2026-979-R86
+2026-07-28,DISPATCH,CONFIRMED,1217,Sagitta,SAGITTA-500,37480.000,Dospanca,,,Retiro de frío. a cecive para trabajar | Transporte: camillo(jaimez),Ret Frio,56,XLS-RET-FRIO-1217-R56
+2026-07-29,DISPATCH,CONFIRMED,981,Sagitta,SAGITTA-500,19584.000,Cecive,,Delcaso(produser),cargo en cecive | DTV: 14194729-5 | Categoría: repasada | Calibre: recibo,Entregas a clientes 2026,87,XLS-ENTREGAS-A-CLIENTES-2026-981-R87
+2026-07-29,DISPATCH,CONFIRMED,983,Sagitta,SAGITTA-500,15096.000,Cecive,,Delcaso (carlos),cargo en cecive | DTV: 14195019-5 | Categoría: repasada | Calibre: recibo,Entregas a clientes 2026,89,XLS-ENTREGAS-A-CLIENTES-2026-983-R89
+2026-07-29,DISPATCH,CONFIRMED,984,Spunta,SPUNTA-320,29400.000,Planta,,Delcaso(produser),cargo en planta | DTV: 14195515-2 | Categoría: repasada | Calibre: recibo,Entregas a clientes 2026,90,XLS-ENTREGAS-A-CLIENTES-2026-984-R90
+2026-07-29,DISPATCH,CONFIRMED,1218,Sagitta,SAGITTA-500,19670.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,57,XLS-RET-FRIO-1218-R57
+2026-07-29,DISPATCH,CONFIRMED,s/remito,Spunta,SPUNTA-300,69970.000,Cecive,,,Retiro de frío. saco para trabajar | Transporte: cecive,Ret Frio,58,XLS-RET-FRIO-S-REMITO-R58
+2026-07-30,DISPATCH,CONFIRMED,1219,Sagitta,SAGITTA-500,8460.000,Dospanca,,,Retiro de frío. a planta para trabajar SOLO CHASIS!!! | Transporte: camillo(mario),Ret Frio,59,XLS-RET-FRIO-1219-R59
+2026-07-31,DISPATCH,CONFIRMED,982,Edison,EDISON-900,9100.000,Planta,,Parmentier,cargo en planta | DTV: 14252825-8 | Categoría: repasada | Calibre: recibo,Entregas a clientes 2026,88,XLS-ENTREGAS-A-CLIENTES-2026-982-R88
+2026-07-31,DISPATCH,CONFIRMED,985,Spunta,SPUNTA-300,15200.000,Cecive,,Delcaso(vega),cargo en cecive | DTV: 14202102-1 | Calibre: recibo,Entregas a clientes 2026,91,XLS-ENTREGAS-A-CLIENTES-2026-985-R91
+2026-07-31,DISPATCH,CONFIRMED,986,Daifla,DAIFLA-352,4900.000,Cecive,,Delcaso(cima),cargo en cecive | DTV: 14202415-2 | Calibre: recibo,Entregas a clientes 2026,92,XLS-ENTREGAS-A-CLIENTES-2026-986-R92
+2026-07-31,DISPATCH,CONFIRMED,1220,Sagitta,SAGITTA-500,34848.000,Dospanca,,,Retiro de frío. a cecive para repasar | Transporte: camillo(mario),Ret Frio,61,XLS-RET-FRIO-1220-R61
+2026-07-31,DISPATCH,CONFIRMED,s/remito,Daifla,DAIFLA-352,4900.000,Cecive,,,Retiro de frío. cargo delcaso directo. | Transporte: cecive,Ret Frio,60,XLS-RET-FRIO-S-REMITO-R60
+2026-08-01,DISPATCH,CONFIRMED,987,Sagitta,SAGITTA-500,19600.000,Planta,,Delcaso(granero),cargo en planta | DTV: 14208496-1 | Calibre: recibo,Entregas a clientes 2026,93,XLS-ENTREGAS-A-CLIENTES-2026-987-R93
+2026-08-01,DISPATCH,CONFIRMED,988,Sagitta,SAGITTA-500,4900.000,Planta,,Delcaso(romero M),cargo en planta | DTV: 14208673-5 | Calibre: recibo,Entregas a clientes 2026,94,XLS-ENTREGAS-A-CLIENTES-2026-988-R94
+2026-08-01,DISPATCH,CONFIRMED,989,Sagitta,SAGITTA-500,2240.000,Planta,,Delcaso(ciccioli ),cargo en planta | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,95,XLS-ENTREGAS-A-CLIENTES-2026-989-R95
+2026-08-01,DISPATCH,CONFIRMED,990,Spunta,SPUNTA-310,7854.000,Planta,,Delcaso(produser),cargo en planta | DTV: 14208757-5 anular | Calibre: recibo,Entregas a clientes 2026,96,XLS-ENTREGAS-A-CLIENTES-2026-990-R96
+2026-08-01,DISPATCH,CONFIRMED,991,Daifla,DAIFLA-352,29700.000,Cecive,,Delcaso(agro Bess),cargo en cecive | DTV: 14208970-5 | Calibre: recibo,Entregas a clientes 2026,97,XLS-ENTREGAS-A-CLIENTES-2026-991-R97
+2026-08-01,DISPATCH,CONFIRMED,992,Agata,AGATA-241,200.000,Planta,,Chakra Balcarce,cargo en planta | DTV: idem | Categoría: elias agüero | Calibre: exportacion,Entregas a clientes 2026,100,XLS-ENTREGAS-A-CLIENTES-2026-992-R100
+2026-08-01,DISPATCH,CONFIRMED,992,Sagitta,SAGITTA-500,30720.000,Cecive,,Chakra Balcarce,cargo en cecive | DTV: 14209234-4 | Categoría: elias agüero | Calibre: recibo,Entregas a clientes 2026,98,XLS-ENTREGAS-A-CLIENTES-2026-992-R98
+2026-08-01,DISPATCH,CONFIRMED,992,Daifla,DAIFLA-352,200.000,Cecive,,Chakra Balcarce,cargo en cecive | DTV: idem | Categoría: elias agüero | Calibre: recibo,Entregas a clientes 2026,99,XLS-ENTREGAS-A-CLIENTES-2026-992-R99
+2026-08-01,DISPATCH,CONFIRMED,1221,Sagitta,SAGITTA-500,5978.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,63,XLS-RET-FRIO-1221-R63
+2026-08-01,DISPATCH,CONFIRMED,1221,Atlantic,ATLANTIC-417,19790.000,Dospanca,,,Retiro de frío. a planta para trabajar EXPORTACION | Transporte: camillo(mario),Ret Frio,64,XLS-RET-FRIO-1221-R64
+2026-08-01,DISPATCH,CONFIRMED,1221,Atlantic,ATLANTIC-417,6810.000,Dospanca,,,Retiro de frío. a planta para trabajar SIN CHICAS | Transporte: camillo(mario),Ret Frio,65,XLS-RET-FRIO-1221-R65
+2026-08-01,DISPATCH,CONFIRMED,s/remito,Daifla,DAIFLA-352,29400.000,Cecive,,,Retiro de frío. cargo directo de camara | Transporte: cecive,Ret Frio,62,XLS-RET-FRIO-S-REMITO-R62
+2026-08-05,DISPATCH,CONFIRMED,1222,Spunta,SPUNTA-320,28752.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,66,XLS-RET-FRIO-1222-R66
+2026-08-05,DISPATCH,CONFIRMED,1222,Spunta,SPUNTA-310,1296.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,67,XLS-RET-FRIO-1222-R67
+2026-08-05,DISPATCH,CONFIRMED,1222,Asterix,ASTERIX-820,3920.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,68,XLS-RET-FRIO-1222-R68
+2026-08-05,DISPATCH,CONFIRMED,1222,Atlantic,ATLANTIC-417,1568.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,69,XLS-RET-FRIO-1222-R69
+2026-08-06,DISPATCH,CONFIRMED,1223,Sagitta,SAGITTA-500,15090.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,70,XLS-RET-FRIO-1223-R70
+2026-08-07,DISPATCH,CONFIRMED,1444,Spunta,SPUNTA-50,23500.000,Sasula Balcarce,,,Retiro de frío. a planta para trabajar | Transporte: camillo(mario),Ret Frio,71,XLS-RET-FRIO-1444-R71
+2026-08-08,DISPATCH,CONFIRMED,993,Taurus,TAURUS-G1,12880.000,Planta,,Vagnoni Andres,cargo en planta | DTV: 14151509-8 | Calibre: recibo,Entregas a clientes 2026,101,XLS-ENTREGAS-A-CLIENTES-2026-993-R101
+2026-08-08,DISPATCH,CONFIRMED,993,Atlantic,ATLANTIC-417,21127.000,Planta,,Vagnoni Andres,cargo en planta | DTV: 14256206-5 | Calibre: exportacion,Entregas a clientes 2026,102,XLS-ENTREGAS-A-CLIENTES-2026-993-R102
+2026-08-08,DISPATCH,CONFIRMED,993,Atlantic,ATLANTIC-417,6072.000,Planta,,Vagnoni Andres,cargo en planta | DTV: idem | Calibre: sin chicas,Entregas a clientes 2026,103,XLS-ENTREGAS-A-CLIENTES-2026-993-R103
+2026-08-10,DISPATCH,CONFIRMED,1000,Daifla,DAIFLA-352,9800.000,Cecive,,Delcaso(gramatica),cargo en cecive | DTV: 14266375-9 | Calibre: recibo,Entregas a clientes 2026,113,XLS-ENTREGAS-A-CLIENTES-2026-1000-R113
+2026-08-10,DISPATCH,CONFIRMED,994,Asterix,ASTERIX-820,3800.000,Planta,,U.t.t,cargo en planta | Calibre: exportacion,Entregas a clientes 2026,104,XLS-ENTREGAS-A-CLIENTES-2026-994-R104
+2026-08-10,DISPATCH,CONFIRMED,994,Ribola,RIBOLA-NO,1300.000,Planta,,U.t.t,cargo en planta | Calibre: recibo,Entregas a clientes 2026,105,XLS-ENTREGAS-A-CLIENTES-2026-994-R105
+2026-08-10,DISPATCH,CONFIRMED,994,Daifla,DAIFLA-352,300.000,Planta,,U.t.t,cargo en planta | Calibre: recibo,Entregas a clientes 2026,106,XLS-ENTREGAS-A-CLIENTES-2026-994-R106
+2026-08-10,DISPATCH,CONFIRMED,994,Atlantic,ATLANTIC-417,1250.000,Planta,,U.t.t,cargo en planta | Calibre: sin chicas,Entregas a clientes 2026,107,XLS-ENTREGAS-A-CLIENTES-2026-994-R107
+2026-08-10,DISPATCH,CONFIRMED,995,Spunta,SPUNTA-320,9800.000,Planta,,Delcaso(produser),cargo en planta | DTV: 14265464-4 | Calibre: recibo,Entregas a clientes 2026,108,XLS-ENTREGAS-A-CLIENTES-2026-995-R108
+2026-08-10,DISPATCH,CONFIRMED,996,Spunta,SPUNTA-320,7350.000,Planta,,Delcaso (carlos),cargo en planta | DTV: 14265521-7 | Calibre: recibo,Entregas a clientes 2026,109,XLS-ENTREGAS-A-CLIENTES-2026-996-R109
+2026-08-10,DISPATCH,CONFIRMED,997,Spunta,SPUNTA-320,7350.000,Planta,,Delcaso(ciccioli ),cargo en planta | DTV: 14265673-6 | Calibre: recibo,Entregas a clientes 2026,110,XLS-ENTREGAS-A-CLIENTES-2026-997-R110
+2026-08-10,DISPATCH,CONFIRMED,998,Spunta,SPUNTA-320,7350.000,Planta,,Delcaso(palacio),cargo en planta | DTV: sin dtv | Calibre: recibo,Entregas a clientes 2026,111,XLS-ENTREGAS-A-CLIENTES-2026-998-R111
+2026-08-10,DISPATCH,CONFIRMED,999,Daifla,DAIFLA-352,19600.000,Cecive,,Delcaso(delcasagro),cargo en cecive | DTV: 14266228-0 | Calibre: recibo,Entregas a clientes 2026,112,XLS-ENTREGAS-A-CLIENTES-2026-999-R112
+2026-08-10,DISPATCH,CONFIRMED,1224,Sagitta,SAGITTA-500,29596.000,Dospanca,,,Retiro de frío. a planta para trabajar | Transporte: camillo(jaimez),Ret Frio,72,XLS-RET-FRIO-1224-R72
+2026-08-10,DISPATCH,CONFIRMED,1224,Memphis,MEMPHIS-511,49.000,Dospanca,,,Retiro de frío. a planta | Transporte: camillo(jaimez),Ret Frio,73,XLS-RET-FRIO-1224-R73
+2026-08-10,DISPATCH,CONFIRMED,1224,Sunred,SUNRED-520,49.000,Dospanca,,,Retiro de frío. a planta | Transporte: camillo(jaimez),Ret Frio,74,XLS-RET-FRIO-1224-R74
+2026-08-10,DISPATCH,CONFIRMED,s/remito,Daifla,DAIFLA-352,29400.000,Cecive,,,Retiro de frío. cargo del caso directo . | Transporte: cecive,Ret Frio,75,XLS-RET-FRIO-S-REMITO-R75
+2026-08-11,DISPATCH,CONFIRMED,1001,Daifla,DAIFLA-352,24500.000,Cecive,,Delcaso(gramatica),cargo en cecive | DTV: 14269633-9 | Calibre: recibo,Entregas a clientes 2026,114,XLS-ENTREGAS-A-CLIENTES-2026-1001-R114
+2026-08-11,DISPATCH,CONFIRMED,s/remito,Daifla,DAIFLA-352,25000.000,Cecive,,,"Retiro de frío. cargo del caso directo ,bajamos 10 en planta. | Transporte: cecive",Ret Frio,76,XLS-RET-FRIO-S-REMITO-R76
+2026-08-12,DISPATCH,CONFIRMED,1002,Spunta,SPUNTA-300,12250.000,Cecive,,Papalini(asef S.),cargo en cecive | DTV: 14284030-8( anular) | Calibre: recibo,Entregas a clientes 2026,115,XLS-ENTREGAS-A-CLIENTES-2026-1002-R115
+2026-08-12,DISPATCH,CONFIRMED,1003,Spunta,SPUNTA-300,9800.000,Cecive,,Papalini(versellone),cargo en cecive | DTV: ANULADO | Calibre: recibo,Entregas a clientes 2026,116,XLS-ENTREGAS-A-CLIENTES-2026-1003-R116
+2026-08-12,DISPATCH,CONFIRMED,1004,Spunta,SPUNTA-300,1715.000,Cecive,,Papalini(garcia J),cargo en cecive | DTV: ANULADO | Calibre: recibo,Entregas a clientes 2026,117,XLS-ENTREGAS-A-CLIENTES-2026-1004-R117
+2026-08-12,DISPATCH,CONFIRMED,1005,Spunta,SPUNTA-300,3900.000,Cecive,,Papalini(crucianelli),cargo en cecive | DTV: ANULADO | Calibre: recibo,Entregas a clientes 2026,118,XLS-ENTREGAS-A-CLIENTES-2026-1005-R118
+2026-09-28,INBOUND,CONFIRMED,980,Spunta,SPUNTA-530,12240.000,,Dospanca,,b.naranja-hilo negro (honduras) | Transporte: camillo(mario),Env a Frio,72,XLS-ENV-A-FRIO-980-R72

@@ -1,0 +1,6 @@
+hoja,fila,motivo,datos
+Env a Frio,349,"Fila sin variedad, lote ni kilos pero con contenido (posible total o comentario).",374
+P.Chica,-,"Layout irregular (encabezado en fila 6, columnas por destino). Requiere mapeo manual.",Filas en la hoja: 122
+Stocks,-,"Resumen de producción por variedad, no son movimientos.",Filas en la hoja: 37
+DJ Panc,-,Declaración jurada sin filas cargadas.,Filas en la hoja: 26
+SP,-,"Planilla de stock de semilla con fórmulas, no son movimientos.",Filas en la hoja: 62
