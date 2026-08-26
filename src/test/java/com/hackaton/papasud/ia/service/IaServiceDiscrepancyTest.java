@@ -1,8 +1,10 @@
 package com.hackaton.papasud.ia.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import com.hackaton.papasud.api.dto.DiscrepancyRequestDto;
-import com.hackaton.papasud.api.dto.DiscrepancyResponseDto;
+import com.hackaton.papasud.api.dto.DiscrepancyAnalysisDto;
+import com.hackaton.papasud.repository.LocationRepository;
+import com.hackaton.papasud.repository.LotRepository;
 import com.hackaton.papasud.ia.client.GroqStructuredClient;
 import com.hackaton.papasud.ia.dto.DiscrepancyContextDto;
 import com.hackaton.papasud.ia.dto.ResolvedDiscrepancyContext;
@@ -37,12 +39,16 @@ class IaServiceDiscrepancyTest {
     @Mock private DiscrepancyContextService contextService;
     @Mock private StockDiscrepancyRepository discrepancyRepository;
     @Mock private GroqStructuredClient groqClient;
+    @Mock private HeuristicMovementParser heuristicParser;
+    @Mock private LotRepository lotRepository;
+    @Mock private LocationRepository locationRepository;
 
     private IaService service;
 
     @BeforeEach
     void setUp() {
-        service = new IaService(groqClient, new ObjectMapper(), contextService, discrepancyRepository);
+        service = new IaService(groqClient, new ObjectMapper(), contextService, discrepancyRepository,
+                heuristicParser, lotRepository, locationRepository);
         ReflectionTestUtils.setField(service, "apiModel", "test-model");
     }
 
@@ -53,14 +59,14 @@ class IaServiceDiscrepancyTest {
                 movement("MV-TEST-001", "PENDING", "2000.000", "Dospanca", null))));
         when(discrepancyRepository.findOpenCaseId(LOT_ID, LOCATION_ID)).thenReturn(Optional.empty());
 
-        DiscrepancyResponseDto.DiscrepancyAnalysisDto analysis = service.analyzeDiscrepancy(new DiscrepancyRequestDto());
+        DiscrepancyAnalysisDto analysis = service.analyzeDiscrepancy(new DiscrepancyRequestDto(null, null, null, null));
 
-        assertThat(analysis.getEngine()).isEqualTo("heuristic");
-        assertThat(analysis.getExplainedQuantity()).isEqualTo(2000.0);
-        assertThat(analysis.getUnexplainedQuantity()).isEqualTo(0.0);
-        assertThat(analysis.getMovementReferences()).containsExactly("MV-TEST-001");
-        assertThat(analysis.getEvidence()).hasSize(1);
-        assertThat(analysis.getExplanation()).contains("Dospanca");
+        assertThat(analysis.engine()).isEqualTo("heuristic");
+        assertThat(analysis.explainedQuantity()).isEqualTo(2000.0);
+        assertThat(analysis.unexplainedQuantity()).isEqualTo(0.0);
+        assertThat(analysis.hypotheses().get(0).movementReferences()).containsExactly("MV-TEST-001");
+        assertThat(analysis.evidence()).hasSize(1);
+        assertThat(analysis.evidence().get(0).description()).contains("Dospanca");
     }
 
     @Test
@@ -70,29 +76,27 @@ class IaServiceDiscrepancyTest {
                 movement("MV-TEST-002", "CONFIRMED", "2000.000", "Dospanca", null))));
         when(discrepancyRepository.findOpenCaseId(LOT_ID, LOCATION_ID)).thenReturn(Optional.empty());
 
-        DiscrepancyResponseDto.DiscrepancyAnalysisDto analysis = service.analyzeDiscrepancy(new DiscrepancyRequestDto());
+        DiscrepancyAnalysisDto analysis = service.analyzeDiscrepancy(new DiscrepancyRequestDto(null, null, null, null));
 
-        assertThat(analysis.getExplainedQuantity()).isEqualTo(0.0);
-        assertThat(analysis.getUnexplainedQuantity()).isEqualTo(2000.0);
-        assertThat(analysis.getMovementReferences()).isEmpty();
+        assertThat(analysis.explainedQuantity()).isEqualTo(0.0);
+        assertThat(analysis.unexplainedQuantity()).isEqualTo(2000.0);
+        assertThat(analysis.hypotheses()).isEmpty();
     }
 
     @Test
     void keepsTheLegacyFallbackWhenTheLotCannotBeResolved() {
         when(contextService.resolve(any())).thenReturn(Optional.empty());
 
-        DiscrepancyRequestDto.StockDto stock = new DiscrepancyRequestDto.StockDto();
-        stock.setDeclaredQuantity(10000.0);
-        stock.setVerifiedQuantity(8000.0);
-        DiscrepancyRequestDto req = new DiscrepancyRequestDto();
-        req.setStock(stock);
+        DiscrepancyRequestDto.StockDto stock = new DiscrepancyRequestDto.StockDto(
+                null, null, null, 10000.0, 8000.0, null, null);
+        DiscrepancyRequestDto req = new DiscrepancyRequestDto(null, stock, null, null);
 
-        DiscrepancyResponseDto.DiscrepancyAnalysisDto analysis = service.analyzeDiscrepancy(req);
+        DiscrepancyAnalysisDto analysis = service.analyzeDiscrepancy(req);
 
-        assertThat(analysis.getEngine()).isEqualTo("heuristic");
-        assertThat(analysis.getExplanation()).isEqualTo("Fallback local: no se pudo analizar.");
-        assertThat(analysis.getUnexplainedQuantity()).isEqualTo(2000.0);
-        assertThat(analysis.getRecommendedAction()).isEqualTo("Revisar manualmente");
+        assertThat(analysis.engine()).isEqualTo("heuristic");
+        assertThat(analysis.summary()).contains("No se pudo reconstruir el contexto");
+        assertThat(analysis.unexplainedQuantity()).isEqualTo(2000.0);
+        assertThat(analysis.recommendedAction()).contains("Revisar manualmente");
     }
 
     private ResolvedDiscrepancyContext context(BigDecimal difference, DiscrepancyContextDto.Movement movement) {

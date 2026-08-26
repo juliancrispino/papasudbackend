@@ -64,7 +64,7 @@ class DiscrepancyContextServiceTest {
     void quantitiesComeFromTheDatabaseAndNotFromTheRequestBody() {
         StockOverviewProjection overview = overview();
         when(lotRepository.findById(LOT_ID)).thenReturn(Optional.of(lot));
-        when(stockOverviewRepository.findByLotAndLocation(LOT_ID, LOCATION_ID))
+        when(stockOverviewRepository.findAnyByLotAndLocation(LOT_ID, LOCATION_ID))
                 .thenReturn(Optional.of(overview));
         when(stockMovementRepository.findByLotIdOrderByMovementDateDesc(LOT_ID))
                 .thenReturn(List.of(pendingDispatch()));
@@ -73,7 +73,7 @@ class DiscrepancyContextServiceTest {
 
         // The body carries deliberately wrong numbers: difference would be -998 kg.
         DiscrepancyRequestDto req = request(999.0, 1.0);
-        assertThat(req.getDifference()).isEqualTo(-998.0);
+        assertThat(req.difference()).isEqualTo(-998.0);
 
         ResolvedDiscrepancyContext context = service.resolve(req).orElseThrow();
 
@@ -87,7 +87,7 @@ class DiscrepancyContextServiceTest {
     void movementsAreExposedWithReadableNamesInsteadOfUuids() {
         StockOverviewProjection overview = overview();
         when(lotRepository.findById(LOT_ID)).thenReturn(Optional.of(lot));
-        when(stockOverviewRepository.findByLotAndLocation(LOT_ID, LOCATION_ID))
+        when(stockOverviewRepository.findAnyByLotAndLocation(LOT_ID, LOCATION_ID))
                 .thenReturn(Optional.of(overview));
         when(stockMovementRepository.findByLotIdOrderByMovementDateDesc(LOT_ID))
                 .thenReturn(List.of(pendingDispatch()));
@@ -142,14 +142,8 @@ class DiscrepancyContextServiceTest {
     }
 
     private DiscrepancyRequestDto request(Double declared, Double verified) {
-        DiscrepancyRequestDto.StockDto stock = new DiscrepancyRequestDto.StockDto();
-        stock.setLotId(LOT_ID.toString());
-        stock.setLocationId(LOCATION_ID.toString());
-        stock.setDeclaredQuantity(declared);
-        stock.setVerifiedQuantity(verified);
-
-        DiscrepancyRequestDto req = new DiscrepancyRequestDto();
-        req.setStock(stock);
-        return req;
+        DiscrepancyRequestDto.StockDto stock = new DiscrepancyRequestDto.StockDto(
+                null, LOT_ID.toString(), LOCATION_ID.toString(), declared, verified, null, null);
+        return new DiscrepancyRequestDto(null, stock, null, null);
     }
 }
