@@ -12,7 +12,7 @@ public class GroqClientConfig {
 
     @Bean(name = "groqRestTemplate")
     public RestTemplate groqRestTemplate(
-            @Value("${openai.api.timeout-ms:30000}") int timeoutMs) {
+            @Value("${groq.api.timeout-ms:30000}") int timeoutMs) {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(Duration.ofSeconds(5));
         factory.setReadTimeout(Duration.ofMillis(Math.max(1_000, timeoutMs)));
