@@ -4,11 +4,11 @@ import java.util.Map;
 import lombok.Builder;
 
 @Builder
-public record TraceabilityEventDto(
-        String id,
-        String lotId,
+public record TraceabilityIntentDto(
+        String engine,
+        String lotCode,
         String type,
         String date,
-        String locationId,
+        String location,
         Map<String, Object> data) {
 }

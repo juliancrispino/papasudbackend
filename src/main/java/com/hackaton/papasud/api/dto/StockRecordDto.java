@@ -1,17 +1,26 @@
 package com.hackaton.papasud.api.dto;
 
-import lombok.Builder;
-import lombok.Data;
 import java.math.BigDecimal;
+import lombok.Builder;
 
-@Data
+/**
+ * Posicion de stock tal como la ve el frontend.
+ *
+ * <p>{@code id} es el UUID persistido de stock_positions, no un id fabricado: se puede
+ * mandar de vuelta en /api/stock/verify y /api/stock/assign-shelf.
+ *
+ * <p>{@code version} es el token de concurrencia optimista.
+ */
 @Builder
-public class StockRecordDto {
-    private String id;
-    private String lotId;
-    private String locationId;
-    private BigDecimal declaredQuantity;
-    private BigDecimal verifiedQuantity;
-    private String updatedAt;
-    private Boolean verificationPending;
+public record StockRecordDto(
+        String id,
+        String lotId,
+        String locationId,
+        String shelfId,
+        BigDecimal declaredQuantity,
+        BigDecimal verifiedQuantity,
+        String unit,
+        long version,
+        String updatedAt,
+        boolean verificationPending) {
 }
