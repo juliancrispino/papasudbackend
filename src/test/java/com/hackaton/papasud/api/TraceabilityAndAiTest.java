@@ -24,6 +24,18 @@ class TraceabilityAndAiTest extends ApiIntegrationTest {
     private StockDiscrepancyRepository stockDiscrepancyRepository;
 
     @Test
+    @DisplayName("7f. el estado de Groq expone solo configuracion y mantiene permisos")
+    void operationsAssistantStatusReportsGroqConfiguration() throws Exception {
+        MvcResult result = mockMvc.perform(authed(org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get("/api/ai/status")))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        JsonNode status = data(result);
+        assertThat(status.has("groqConfigured")).isTrue();
+        assertThat(status.size()).isEqualTo(1);
+    }
+
+    @Test
     @DisplayName("21. una fecha YYYY-MM-DD se acepta (antes daba 500 en produccion)")
     void businessDateIsAccepted() throws Exception {
         TestDataSeeder.Fixture fixture = seeder.seedBaseScenario();

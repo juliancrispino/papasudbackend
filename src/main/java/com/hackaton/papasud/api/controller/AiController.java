@@ -14,11 +14,13 @@ import com.hackaton.papasud.api.service.OperationsContextService;
 import com.hackaton.papasud.api.support.ApiResponse;
 import com.hackaton.papasud.auth.Permission;
 import com.hackaton.papasud.ia.service.IaService;
+import com.hackaton.papasud.ia.client.GroqStructuredClient;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,6 +38,16 @@ public class AiController {
 
     private final IaService iaService;
     private final OperationsContextService operationsContextService;
+    private final GroqStructuredClient groqClient;
+
+    public record AiStatus(boolean groqConfigured) {
+    }
+
+    @GetMapping("/status")
+    @PreAuthorize("hasAuthority('" + Permission.AI_USE + "')")
+    public ResponseEntity<ApiResponse<AiStatus>> status() {
+        return ResponseEntity.ok(ApiResponse.of(new AiStatus(groqClient.isConfigured())));
+    }
 
     @PostMapping("/movement-intent")
     @PreAuthorize("hasAuthority('" + Permission.AI_USE + "')")
