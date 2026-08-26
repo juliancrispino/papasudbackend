@@ -12,6 +12,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface StockDiscrepancyRepository extends JpaRepository<StockDiscrepancy, UUID> {
 
+    @Query("select d from StockDiscrepancy d "
+            + "where d.status in ('OPEN', 'INVESTIGATING') "
+            + "order by d.openedAt desc")
+    List<StockDiscrepancy> findOpenCases();
+
     @Query("select d.id from StockDiscrepancy d "
             + "where d.lotId = :lotId and d.locationId = :locationId "
             + "and d.status in ('OPEN', 'INVESTIGATING') "
@@ -25,7 +30,7 @@ public interface StockDiscrepancyRepository extends JpaRepository<StockDiscrepan
 
     @Modifying
     @Query(value = "UPDATE stock_discrepancies SET probable_cause = :probableCause, "
-            + "cause = COALESCE(:probableCause, cause), "
+            + "cause = COALESCE(cause, :probableCause), "
             + "related_movement_id = COALESCE(:relatedMovementId, related_movement_id), "
             + "ai_analysis = CAST(:aiAnalysisJson AS jsonb) "
             + "WHERE id = :caseId", nativeQuery = true)

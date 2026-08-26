@@ -1,7 +1,9 @@
 package com.hackaton.papasud.api.service;
 
 import com.hackaton.papasud.api.support.TextKeys;
+import com.hackaton.papasud.domain.entity.StockDiscrepancy;
 import com.hackaton.papasud.domain.entity.StockMovement;
+import com.hackaton.papasud.repository.StockDiscrepancyRepository;
 import com.hackaton.papasud.repository.StockMovementRepository;
 import com.hackaton.papasud.repository.StockOverviewProjection;
 import com.hackaton.papasud.repository.StockOverviewRepository;
@@ -24,15 +26,18 @@ public class OperationsContextService {
 
     private static final int MAX_STOCK_ROWS = 40;
     private static final int MAX_MOVEMENTS = 25;
+    private static final int MAX_DISCREPANCIES = 40;
 
     private final StockOverviewRepository stockOverview;
     private final StockMovementRepository movements;
+    private final StockDiscrepancyRepository discrepancies;
 
     @Transactional(readOnly = true)
     public String buildContext(String question) {
         String normalizedQuestion = TextKeys.normalize(question);
 
         List<StockOverviewProjection> stock = stockOverview.findAll();
+        List<StockMovement> recent = movements.findAllForSnapshot();
         List<StockOverviewProjection> relevant = stock.stream()
                 .filter(row -> mentions(normalizedQuestion, row.getLotCode())
                         || mentions(normalizedQuestion, row.getLocationName())
@@ -62,8 +67,37 @@ public class OperationsContextService {
             context.append("\n");
         }
 
+        context.append("\nDISCREPANCIAS ABIERTAS:\n");
+        List<StockDiscrepancy> openCases = discrepancies.findOpenCases();
+        if (openCases.isEmpty()) {
+            context.append("- Ninguna.\n");
+        } else {
+            for (StockDiscrepancy discrepancy : openCases.stream().limit(MAX_DISCREPANCIES).toList()) {
+                StockOverviewProjection row = stock.stream()
+                        .filter(candidate -> discrepancy.getLotId().equals(candidate.getLotId())
+                                && discrepancy.getLocationId().equals(candidate.getLocationId()))
+                        .findFirst()
+                        .orElse(null);
+                context.append("- Caso ").append(discrepancy.getId())
+                        .append(" | lote ").append(row != null ? row.getLotCode() : discrepancy.getLotId())
+                        .append(" | ubicacion ").append(row != null ? row.getLocationName() : discrepancy.getLocationId())
+                        .append(" | tipo ").append(discrepancy.getType())
+                        .append(" | esperado ").append(plain(discrepancy.getExpectedQuantity()))
+                        .append(" ").append(discrepancy.getUnit())
+                        .append(" | observado ").append(plain(discrepancy.getObservedQuantity()))
+                        .append(" ").append(discrepancy.getUnit())
+                        .append(" | diferencia ").append(plain(discrepancy.getDifferenceKg()))
+                        .append(" ").append(discrepancy.getUnit())
+                        .append(" | estado ").append(discrepancy.getStatus());
+                String movementReference = movementReference(recent, discrepancy.getRelatedMovementId());
+                if (movementReference != null) {
+                    context.append(" | movimiento ").append(movementReference);
+                }
+                context.append("\n");
+            }
+        }
+
         context.append("\nMOVIMIENTOS RECIENTES:\n");
-        List<StockMovement> recent = movements.findAllForSnapshot();
         List<String> rendered = new ArrayList<>();
         for (StockMovement movement : recent) {
             if (rendered.size() >= MAX_MOVEMENTS) {
@@ -93,6 +127,17 @@ public class OperationsContextService {
         rendered.forEach(line -> context.append(line).append("\n"));
 
         return context.toString();
+    }
+
+    private static String movementReference(List<StockMovement> movements, java.util.UUID movementId) {
+        if (movementId == null) {
+            return null;
+        }
+        return movements.stream()
+                .filter(movement -> movementId.equals(movement.getId()))
+                .map(StockMovement::getMovementNumber)
+                .findFirst()
+                .orElse(null);
     }
 
     private static boolean mentions(String normalizedQuestion, String value) {

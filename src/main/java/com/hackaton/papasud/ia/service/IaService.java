@@ -9,6 +9,7 @@ import com.hackaton.papasud.api.dto.MovementIntentDto;
 import com.hackaton.papasud.api.dto.MovementInterpretationDto;
 import com.hackaton.papasud.api.dto.OperationsAnswerDto;
 import com.hackaton.papasud.api.dto.TraceabilityIntentDto;
+import com.hackaton.papasud.api.support.TextKeys;
 import com.hackaton.papasud.ia.client.GroqStructuredClient;
 import com.hackaton.papasud.ia.dto.DiscrepancyContextDto;
 import com.hackaton.papasud.ia.dto.ResolvedDiscrepancyContext;
@@ -343,6 +344,13 @@ public class IaService {
                     .build();
         }
 
+        DiscrepancyContextDto.OpenDiscrepancy openDiscrepancy = context.payload() != null
+                ? context.payload().openDiscrepancy() : null;
+        if (openDiscrepancy != null
+                && "reception_shortfall".equalsIgnoreCase(openDiscrepancy.type())) {
+            return receptionShortfallAnalysis(context, openDiscrepancy, missing);
+        }
+
         List<DiscrepancyContextDto.Movement> candidates = pendingCandidates(context, difference);
 
         double pendingTotal = 0.0;
@@ -398,6 +406,46 @@ public class IaService {
                 .relatedMovementId(relatedMovementId == null ? null : relatedMovementId.toString())
                 .relatedMovementReference(references.isEmpty() ? null : references.get(0))
                 .build();
+    }
+
+    private DiscrepancyAnalysisDto receptionShortfallAnalysis(
+            ResolvedDiscrepancyContext context,
+            DiscrepancyContextDto.OpenDiscrepancy discrepancy,
+            double missing) {
+        String reference = discrepancy.relatedMovementReference();
+        String movementLabel = reference != null ? " del movimiento " + reference : "";
+        String summary = "La recepcion" + movementLabel + " registro "
+                + format(decimal(discrepancy.observedQuantity())) + " de "
+                + format(decimal(discrepancy.expectedQuantity())) + " "
+                + (discrepancy.unit() != null ? discrepancy.unit() : "kg")
+                + ": hay un faltante de " + format(missing) + " kg.";
+        List<String> references = reference == null ? List.of() : List.of(reference);
+        UUID relatedMovementId = resolveRelatedMovement(context, references);
+
+        return DiscrepancyAnalysisDto.builder()
+                .engine("heuristic")
+                .summary(summary)
+                .confidence(1.0)
+                .explainedQuantity(missing)
+                .unexplainedQuantity(0.0)
+                .hypotheses(List.of(DiscrepancyAnalysisDto.Hypothesis.builder()
+                        .title("Faltante confirmado en recepcion")
+                        .explanation(summary)
+                        .movementReferences(references)
+                        .build()))
+                .evidence(List.of(DiscrepancyAnalysisDto.Evidence.builder()
+                        .type("stock_discrepancy")
+                        .reference(discrepancy.id())
+                        .description(summary)
+                        .build()))
+                .recommendedAction("Revisar el remito y conciliar el faltante con el transportista antes de cerrar la discrepancia.")
+                .relatedMovementId(relatedMovementId == null ? null : relatedMovementId.toString())
+                .relatedMovementReference(reference)
+                .build();
+    }
+
+    private static double decimal(BigDecimal value) {
+        return value != null ? value.doubleValue() : 0.0;
     }
 
     private List<DiscrepancyContextDto.Movement> pendingCandidates(ResolvedDiscrepancyContext context,
@@ -652,12 +700,63 @@ public class IaService {
                 log.error("Error respondiendo la consulta operativa con Groq", e);
             }
         }
+        if (TextKeys.normalize(question).contains("discrepancia")) {
+            return answerOpenDiscrepancies(context);
+        }
         return OperationsAnswerDto.builder()
                 .engine("heuristic")
                 .answer("El asistente con IA no esta disponible en este momento. "
                         + "El stock y los movimientos siguen consultables en las pantallas de Stock y Movimientos.")
                 .references(List.of())
                 .build();
+    }
+
+    private OperationsAnswerDto answerOpenDiscrepancies(String context) {
+        List<String> cases = contextSection(context, "DISCREPANCIAS ABIERTAS:").stream()
+                .filter(line -> line.startsWith("- Caso "))
+                .toList();
+        if (cases.isEmpty()) {
+            return OperationsAnswerDto.builder()
+                    .engine("heuristic")
+                    .answer("No hay discrepancias abiertas en PostgreSQL.")
+                    .references(List.of())
+                    .build();
+        }
+
+        List<OperationsAnswerDto.Reference> references = cases.stream()
+                .map(line -> {
+                    String payload = line.substring("- Caso ".length());
+                    int separator = payload.indexOf(" | ");
+                    String id = separator >= 0 ? payload.substring(0, separator) : payload;
+                    return OperationsAnswerDto.Reference.builder()
+                            .type("stock_discrepancy")
+                            .reference(id)
+                            .description(line.substring(2))
+                            .build();
+                })
+                .toList();
+        String rendered = cases.stream()
+                .map(line -> "- " + line.substring("- Caso ".length()))
+                .collect(java.util.stream.Collectors.joining("\n"));
+        return OperationsAnswerDto.builder()
+                .engine("heuristic")
+                .answer("Hay " + cases.size() + " discrepancia(s) abierta(s) en PostgreSQL:\n" + rendered)
+                .references(references)
+                .build();
+    }
+
+    private static List<String> contextSection(String context, String heading) {
+        if (context == null) {
+            return List.of();
+        }
+        int start = context.indexOf(heading);
+        if (start < 0) {
+            return List.of();
+        }
+        start += heading.length();
+        int end = context.indexOf("\n\n", start);
+        String section = end >= 0 ? context.substring(start, end) : context.substring(start);
+        return section.lines().map(String::trim).filter(line -> !line.isEmpty()).toList();
     }
 
     private static String format(double value) {

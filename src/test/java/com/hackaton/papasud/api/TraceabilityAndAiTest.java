@@ -6,8 +6,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.hackaton.papasud.support.ApiIntegrationTest;
 import com.hackaton.papasud.support.TestDataSeeder;
+import com.hackaton.papasud.repository.StockDiscrepancyRepository;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -17,6 +19,9 @@ import tools.jackson.databind.JsonNode;
 
 /** Tests 21-22 del plan: fechas y enums de trazabilidad, y la IA sin Groq. */
 class TraceabilityAndAiTest extends ApiIntegrationTest {
+
+    @Autowired
+    private StockDiscrepancyRepository stockDiscrepancyRepository;
 
     @Test
     @DisplayName("21. una fecha YYYY-MM-DD se acepta (antes daba 500 en produccion)")
@@ -196,6 +201,57 @@ class TraceabilityAndAiTest extends ApiIntegrationTest {
     }
 
     @Test
+    @DisplayName("7f. IA analiza el faltante de recepcion aunque el ledger ya refleje lo recibido")
+    void receptionShortfallRemainsGroundedAfterLedgerAdjustment() throws Exception {
+        TestDataSeeder.Fixture fixture = seeder.seedBaseScenario();
+
+        MvcResult created = mockMvc.perform(jsonPost("/api/movements", Map.of(
+                        "action", "transfer",
+                        "remitoNumber", "AI-RCP-30",
+                        "origin", "Galpon Test",
+                        "destination", "Frigorifico Test",
+                        "items", List.of(Map.of(
+                                "lotCode", "A-1000", "quantity", 500, "unit", "kg")))))
+                .andExpect(status().isCreated())
+                .andReturn();
+        String movementId = data(created).get("id").asString();
+
+        mockMvc.perform(jsonPost("/api/movements/" + movementId + "/reception",
+                        Map.of("date", "2026-08-26", "receivedTotal", 470))
+                        .header("Idempotency-Key", "ai-reception-shortfall"))
+                .andExpect(status().isCreated());
+
+        MvcResult result = mockMvc.perform(jsonPost("/api/ai/discrepancy", Map.of(
+                        "lot", Map.of("id", fixture.lotA().getId().toString(), "code", "A-1000"),
+                        "stock", Map.of(
+                                "lotId", fixture.lotA().getId().toString(),
+                                "locationId", fixture.destination().getId().toString(),
+                                // El ledger ya quedo conciliado a 470; el caso abierto sigue en stock_discrepancies.
+                                "declaredQuantity", 470,
+                                "verifiedQuantity", 470),
+                        "movements", List.of(),
+                        "traceability", List.of())))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        JsonNode analysis = data(result);
+        assertThat(analysis.get("engine").asString()).isEqualTo("heuristic");
+        assertThat(analysis.get("summary").asString()).contains("30").doesNotContain("No hay diferencia");
+        assertThat(analysis.get("hypotheses")).isNotEmpty();
+        assertThat(analysis.get("hypotheses").get(0).get("explanation").asString()).contains("30");
+        assertThat(analysis.get("evidence")).isNotEmpty();
+        assertThat(analysis.get("recommendedAction").asString()).isNotBlank();
+        assertThat(analysis.get("relatedMovementId").asString()).isEqualTo(movementId);
+
+        var discrepancy = stockDiscrepancyRepository.findOpenCaseId(
+                        fixture.lotA().getId(), fixture.destination().getId())
+                .flatMap(stockDiscrepancyRepository::findById)
+                .orElseThrow();
+        assertThat(discrepancy.getCause()).contains("Diferencia detectada en la recepcion");
+        assertThat(discrepancy.getProbableCause()).contains("30");
+    }
+
+    @Test
     @DisplayName("7e. el asistente de operaciones responde sin Groq en vez de fallar")
     void operationsAssistantDegradesGracefully() throws Exception {
         seeder.seedBaseScenario();
@@ -204,5 +260,40 @@ class TraceabilityAndAiTest extends ApiIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.data.engine").value("heuristic"))
                 .andExpect(jsonPath("$.data.answer").isNotEmpty());
+    }
+
+    @Test
+    @DisplayName("7g. asistente de operaciones lista discrepancias abiertas desde PostgreSQL sin Groq")
+    void operationsAssistantGroundsOpenDiscrepanciesWithoutGroq() throws Exception {
+        TestDataSeeder.Fixture fixture = seeder.seedBaseScenario();
+        MvcResult created = mockMvc.perform(jsonPost("/api/movements", Map.of(
+                        "action", "transfer",
+                        "remitoNumber", "OPS-RCP-30",
+                        "origin", "Galpon Test",
+                        "destination", "Frigorifico Test",
+                        "items", List.of(Map.of(
+                                "lotCode", "A-1000", "quantity", 500, "unit", "kg")))))
+                .andExpect(status().isCreated())
+                .andReturn();
+        String movementId = data(created).get("id").asString();
+        mockMvc.perform(jsonPost("/api/movements/" + movementId + "/reception",
+                        Map.of("date", "2026-08-26", "receivedTotal", 470))
+                        .header("Idempotency-Key", "operations-reception-shortfall"))
+                .andExpect(status().isCreated());
+
+        MvcResult result = mockMvc.perform(jsonPost("/api/ai/operations", Map.of(
+                        "question", "¿Qué discrepancias abiertas hay?")))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        JsonNode answer = data(result);
+        assertThat(answer.get("engine").asString()).isEqualTo("heuristic");
+        assertThat(answer.get("answer").asString())
+                .contains("A-1000", "reception_shortfall", "-30", "MV-");
+        assertThat(answer.get("references")).hasSize(1);
+        String discrepancyId = stockDiscrepancyRepository.findOpenCaseId(
+                fixture.lotA().getId(), fixture.destination().getId()).orElseThrow().toString();
+        assertThat(answer.get("references").get(0).get("reference").asString())
+                .isEqualTo(discrepancyId);
     }
 }

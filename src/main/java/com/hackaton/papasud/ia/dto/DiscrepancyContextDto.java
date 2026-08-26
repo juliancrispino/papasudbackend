@@ -10,6 +10,7 @@ import java.util.List;
 public record DiscrepancyContextDto(
         Lot lot,
         Stock stock,
+        OpenDiscrepancy openDiscrepancy,
         List<Movement> movements,
         List<Event> traceability
 ) {
@@ -29,6 +30,23 @@ public record DiscrepancyContextDto(
             BigDecimal differenceKg,
             Boolean verificationPending,
             String lastVerifiedAt
+    ) {}
+
+    /**
+     * Caso operativo abierto que origina el analisis. Una recepcion con faltante ya
+     * ajusto el ledger a lo realmente recibido, por lo que no necesariamente aparece
+     * como diferencia en {@code v_stock_overview}; el hecho auditable vive aca.
+     */
+    public record OpenDiscrepancy(
+            String id,
+            String type,
+            BigDecimal expectedQuantity,
+            BigDecimal observedQuantity,
+            BigDecimal difference,
+            String unit,
+            String status,
+            String cause,
+            String relatedMovementReference
     ) {}
 
     public record Movement(

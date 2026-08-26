@@ -3,11 +3,13 @@ package com.hackaton.papasud.ia.service;
 import com.hackaton.papasud.api.dto.DiscrepancyRequestDto;
 import com.hackaton.papasud.domain.entity.Location;
 import com.hackaton.papasud.domain.entity.Lot;
+import com.hackaton.papasud.domain.entity.StockDiscrepancy;
 import com.hackaton.papasud.domain.entity.StockMovement;
 import com.hackaton.papasud.domain.entity.Variety;
 import com.hackaton.papasud.ia.dto.DiscrepancyContextDto;
 import com.hackaton.papasud.ia.dto.ResolvedDiscrepancyContext;
 import com.hackaton.papasud.repository.LotRepository;
+import com.hackaton.papasud.repository.StockDiscrepancyRepository;
 import com.hackaton.papasud.repository.StockMovementRepository;
 import com.hackaton.papasud.repository.StockOverviewProjection;
 import com.hackaton.papasud.repository.StockOverviewRepository;
@@ -40,6 +42,7 @@ class DiscrepancyContextServiceTest {
 
     @Mock private LotRepository lotRepository;
     @Mock private StockOverviewRepository stockOverviewRepository;
+    @Mock private StockDiscrepancyRepository stockDiscrepancyRepository;
     @Mock private StockMovementRepository stockMovementRepository;
     @Mock private TraceabilityEventRepository traceabilityEventRepository;
 
@@ -108,6 +111,44 @@ class DiscrepancyContextServiceTest {
     }
 
     @Test
+    void openReceptionShortfallOverridesAReconciledLedgerDifference() {
+        StockOverviewProjection overview = overviewWithoutDifference();
+        UUID discrepancyId = UUID.fromString("44444444-4444-4444-8444-444444444001");
+        StockDiscrepancy discrepancy = StockDiscrepancy.builder()
+                .id(discrepancyId)
+                .lotId(LOT_ID)
+                .locationId(LOCATION_ID)
+                .relatedMovementId(MOVEMENT_ID)
+                .type("reception_shortfall")
+                .expectedQuantity(new BigDecimal("500.000"))
+                .observedQuantity(new BigDecimal("470.000"))
+                .differenceKg(new BigDecimal("-30.000"))
+                .unit("kg")
+                .status("OPEN")
+                .cause("Faltante detectado al recibir")
+                .openedAt(NOW)
+                .build();
+
+        when(lotRepository.findById(LOT_ID)).thenReturn(Optional.of(lot));
+        when(stockOverviewRepository.findAnyByLotAndLocation(LOT_ID, LOCATION_ID))
+                .thenReturn(Optional.of(overview));
+        when(stockDiscrepancyRepository.findOpenCaseId(LOT_ID, LOCATION_ID))
+                .thenReturn(Optional.of(discrepancyId));
+        when(stockDiscrepancyRepository.findById(discrepancyId)).thenReturn(Optional.of(discrepancy));
+        when(stockMovementRepository.findByLotIdOrderByMovementDateDesc(LOT_ID))
+                .thenReturn(List.of(pendingDispatch()));
+        when(traceabilityEventRepository.findByLotIdOrderByEventDateDesc(LOT_ID))
+                .thenReturn(List.of());
+
+        ResolvedDiscrepancyContext context = service.resolve(request(470.0, 470.0)).orElseThrow();
+
+        assertThat(context.differenceOrZero()).isEqualTo(-30.0);
+        assertThat(context.payload().openDiscrepancy().type()).isEqualTo("reception_shortfall");
+        assertThat(context.payload().openDiscrepancy().relatedMovementReference())
+                .isEqualTo("MV-TEST-001");
+    }
+
+    @Test
     void returnsEmptyWhenTheLotCannotBeIdentified() {
         when(lotRepository.findById(LOT_ID)).thenReturn(Optional.empty());
 
@@ -123,6 +164,18 @@ class DiscrepancyContextServiceTest {
         when(projection.getDifferenceKg()).thenReturn(new BigDecimal("-2000.000"));
         when(projection.getVerificationPending()).thenReturn(false);
         when(projection.getLastVerifiedAt()).thenReturn(NOW);
+        return projection;
+    }
+
+    private StockOverviewProjection overviewWithoutDifference() {
+        StockOverviewProjection projection = mock(StockOverviewProjection.class);
+        when(projection.getLocationId()).thenReturn(LOCATION_ID);
+        when(projection.getLocationName()).thenReturn("Dospanca");
+        when(projection.getRegisteredQuantityKg()).thenReturn(new BigDecimal("470.000"));
+        when(projection.getVerifiedQuantityKg()).thenReturn(null);
+        when(projection.getDifferenceKg()).thenReturn(null);
+        when(projection.getVerificationPending()).thenReturn(true);
+        when(projection.getLastVerifiedAt()).thenReturn(null);
         return projection;
     }
 

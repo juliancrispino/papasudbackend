@@ -104,6 +104,7 @@ class IaServiceDiscrepancyTest {
                 new DiscrepancyContextDto.Lot("AGATA-224", "Agata", "2026", null, null, null),
                 new DiscrepancyContextDto.Stock("Dospanca", new BigDecimal("10000.000"),
                         new BigDecimal("8000.000"), difference, false, null),
+                null,
                 List.of(movement),
                 List.of());
 

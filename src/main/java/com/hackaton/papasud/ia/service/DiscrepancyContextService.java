@@ -2,11 +2,13 @@ package com.hackaton.papasud.ia.service;
 
 import com.hackaton.papasud.api.dto.DiscrepancyRequestDto;
 import com.hackaton.papasud.domain.entity.Lot;
+import com.hackaton.papasud.domain.entity.StockDiscrepancy;
 import com.hackaton.papasud.domain.entity.StockMovement;
 import com.hackaton.papasud.domain.entity.TraceabilityEvent;
 import com.hackaton.papasud.ia.dto.DiscrepancyContextDto;
 import com.hackaton.papasud.ia.dto.ResolvedDiscrepancyContext;
 import com.hackaton.papasud.repository.LotRepository;
+import com.hackaton.papasud.repository.StockDiscrepancyRepository;
 import com.hackaton.papasud.repository.StockMovementRepository;
 import com.hackaton.papasud.repository.StockOverviewProjection;
 import com.hackaton.papasud.repository.StockOverviewRepository;
@@ -16,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -41,6 +44,7 @@ public class DiscrepancyContextService {
 
     private final LotRepository lotRepository;
     private final StockOverviewRepository stockOverviewRepository;
+    private final StockDiscrepancyRepository stockDiscrepancyRepository;
     private final StockMovementRepository stockMovementRepository;
     private final TraceabilityEventRepository traceabilityEventRepository;
 
@@ -55,6 +59,8 @@ public class DiscrepancyContextService {
         }
 
         StockOverviewProjection overview = resolveOverview(lot.getId(), req).orElse(null);
+        UUID locationId = overview != null ? overview.getLocationId() : requestedLocationId(req);
+        StockDiscrepancy openDiscrepancy = resolveOpenDiscrepancy(lot.getId(), locationId).orElse(null);
 
         List<StockMovement> movements = stockMovementRepository
                 .findByLotIdOrderByMovementDateDesc(lot.getId());
@@ -84,16 +90,37 @@ public class DiscrepancyContextService {
         DiscrepancyContextDto payload = new DiscrepancyContextDto(
                 toLot(lot),
                 toStock(overview),
+                toOpenDiscrepancy(openDiscrepancy, movementIds),
                 movementPayload,
                 events);
 
         return Optional.of(new ResolvedDiscrepancyContext(
                 lot.getId(),
-                overview != null ? overview.getLocationId() : null,
+                locationId,
                 overview != null ? overview.getLocationName() : null,
-                overview != null ? overview.getDifferenceKg() : null,
+                authoritativeDifference(openDiscrepancy, overview),
                 payload,
                 movementIds));
+    }
+
+    private Optional<StockDiscrepancy> resolveOpenDiscrepancy(UUID lotId, UUID locationId) {
+        if (locationId == null) {
+            return Optional.empty();
+        }
+        return stockDiscrepancyRepository.findOpenCaseId(lotId, locationId)
+                .flatMap(stockDiscrepancyRepository::findById);
+    }
+
+    private UUID requestedLocationId(DiscrepancyRequestDto req) {
+        return req.stock() != null ? parseUuid(req.stock().locationId()) : null;
+    }
+
+    private BigDecimal authoritativeDifference(StockDiscrepancy openDiscrepancy,
+                                               StockOverviewProjection overview) {
+        if (openDiscrepancy != null && openDiscrepancy.getDifferenceKg() != null) {
+            return openDiscrepancy.getDifferenceKg();
+        }
+        return overview != null ? overview.getDifferenceKg() : null;
     }
 
     private Optional<Lot> resolveLot(DiscrepancyRequestDto req) {
@@ -165,6 +192,28 @@ public class DiscrepancyContextService {
                 overview.getDifferenceKg(),
                 overview.getVerificationPending(),
                 format(overview.getLastVerifiedAt()));
+    }
+
+    private DiscrepancyContextDto.OpenDiscrepancy toOpenDiscrepancy(
+            StockDiscrepancy discrepancy, Map<String, UUID> movementIds) {
+        if (discrepancy == null) {
+            return null;
+        }
+        String movementReference = movementIds.entrySet().stream()
+                .filter(entry -> entry.getValue().equals(discrepancy.getRelatedMovementId()))
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .orElse(null);
+        return new DiscrepancyContextDto.OpenDiscrepancy(
+                discrepancy.getId().toString(),
+                discrepancy.getType(),
+                discrepancy.getExpectedQuantity(),
+                discrepancy.getObservedQuantity(),
+                discrepancy.getDifferenceKg(),
+                discrepancy.getUnit(),
+                discrepancy.getStatus(),
+                discrepancy.getCause(),
+                movementReference);
     }
 
     private DiscrepancyContextDto.Event toEvent(TraceabilityEvent event) {
