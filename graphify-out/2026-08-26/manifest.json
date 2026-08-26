@@ -1,0 +1,968 @@
+{
+  "mvnw": {
+    "mtime": 1787710272.1609225,
+    "seen": 1787753052.0005383,
+    "ast_hash": "ab50dd89da7da2346b28003352eeeeeb",
+    "semantic_hash": ""
+  },
+  "pom.xml": {
+    "mtime": 1787751164.745481,
+    "seen": 1787753052.0005457,
+    "ast_hash": "565c5a29b03e00f0af41fb6ac6c9c200",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/PapasudApplication.java": {
+    "mtime": 1787710272.1726604,
+    "seen": 1787753052.0005486,
+    "ast_hash": "c7aedfc21c84d6993f62465f2090224e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/AiController.java": {
+    "mtime": 1787751164.7485924,
+    "seen": 1787753052.0005515,
+    "ast_hash": "9a0ce2ae7b4f855c368c811884713a0c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/AuthController.java": {
+    "mtime": 1787751164.7497697,
+    "seen": 1787753052.0005531,
+    "ast_hash": "819dea7177072a1ce4ec733df41daf04",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/CatalogController.java": {
+    "mtime": 1787751164.7520423,
+    "seen": 1787753052.0005548,
+    "ast_hash": "42df52333a5e2e6baa1c99dba4452c5f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/ImportController.java": {
+    "mtime": 1787751164.7541497,
+    "seen": 1787753052.0005562,
+    "ast_hash": "5033d794c300af60b6956d07c1e0cb41",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/MovementController.java": {
+    "mtime": 1787751164.755151,
+    "seen": 1787753052.000558,
+    "ast_hash": "221ba971dc7f0e2959b0d9ca8601eedd",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/SnapshotController.java": {
+    "mtime": 1787751164.7573354,
+    "seen": 1787753052.0005593,
+    "ast_hash": "beef3fb2918f9a647a8ac2e0bca081a5",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/controller/StockController.java": {
+    "mtime": 1787751164.7593296,
+    "seen": 1787753052.000561,
+    "ast_hash": "f119de0affcae5990000bacef9de5c69",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/AssignShelfRequestDto.java": {
+    "mtime": 1787751164.7613282,
+    "seen": 1787753052.0005627,
+    "ast_hash": "69695a5f421b148f491858bc78e9af43",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/CorrectionRequestDto.java": {
+    "mtime": 1787751164.7633445,
+    "seen": 1787753052.0005646,
+    "ast_hash": "c716d99b2646265b11fe4791745215d2",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/CorrectionResultDto.java": {
+    "mtime": 1787751164.7643495,
+    "seen": 1787753052.0005658,
+    "ast_hash": "022d51216f251523824aa89d0733f5e6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/DiscrepancyAnalysisDto.java": {
+    "mtime": 1787751164.7665553,
+    "seen": 1787753052.000567,
+    "ast_hash": "1aca77cccd3410b26399ce1773be13b8",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/DiscrepancyDto.java": {
+    "mtime": 1787751164.7678626,
+    "seen": 1787753052.0005689,
+    "ast_hash": "de40eceb4a66ef00da491582dc363c83",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/DiscrepancyRequestDto.java": {
+    "mtime": 1787751164.7700777,
+    "seen": 1787753052.0005703,
+    "ast_hash": "93deaae02cd736449351dce395127676",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ExportRequirementsDto.java": {
+    "mtime": 1787751164.7721558,
+    "seen": 1787753052.000572,
+    "ast_hash": "18ed8c1e7edfe96903c75dfb8cdc43d4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ExportRequirementsRequestDto.java": {
+    "mtime": 1787751164.773332,
+    "seen": 1787753052.0005732,
+    "ast_hash": "1d21fefb6b3def41c30608fda6d27d30",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/LocationDto.java": {
+    "mtime": 1787751164.775376,
+    "seen": 1787753052.0005744,
+    "ast_hash": "88b28e9237787f72bf251f67a09bed56",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/LotDto.java": {
+    "mtime": 1787751164.7765808,
+    "seen": 1787753052.0005758,
+    "ast_hash": "e8a13fe01cf2ca086e836634c4cfe00f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementConfirmationDto.java": {
+    "mtime": 1787751164.779766,
+    "seen": 1787753052.000577,
+    "ast_hash": "4980eee484dffa1591679d4aa0d39f94",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementDto.java": {
+    "mtime": 1787751164.7818623,
+    "seen": 1787753052.0005784,
+    "ast_hash": "d209b22365dfa0ae548db9dea7e0b2cf",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementIntentDto.java": {
+    "mtime": 1787751164.784382,
+    "seen": 1787753052.00058,
+    "ast_hash": "4e80db358e2988e627561e798634c03c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementIntentItemDto.java": {
+    "mtime": 1787751164.7859902,
+    "seen": 1787753052.000582,
+    "ast_hash": "ba2036e65ea72cce7b846be55d331706",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementIntentRequestDto.java": {
+    "mtime": 1787751164.7892387,
+    "seen": 1787753052.0005832,
+    "ast_hash": "cc20fa439bf5710194eb20925f5c5886",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementInterpretationDto.java": {
+    "mtime": 1787751164.791587,
+    "seen": 1787753052.0005844,
+    "ast_hash": "427e58b61d3d4c4830743eac887d3ca1",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/MovementItemDto.java": {
+    "mtime": 1787751164.7929926,
+    "seen": 1787753052.0005858,
+    "ast_hash": "0e899cb418662dfd0a23567952bc24dc",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/OperationsAnswerDto.java": {
+    "mtime": 1787751164.7952738,
+    "seen": 1787753052.000587,
+    "ast_hash": "e63811d478246bbfacb2e64561a416c7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/OperationsQuestionRequestDto.java": {
+    "mtime": 1787751164.7964487,
+    "seen": 1787753052.0005882,
+    "ast_hash": "4f7e251053778764af09115b26eb079e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/PlanillaImportConfirmationDto.java": {
+    "mtime": 1787751164.7977355,
+    "seen": 1787753052.0005896,
+    "ast_hash": "28947bf6e0c2789cfbc2c762f1aca077",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/PlanillaImportIssueDto.java": {
+    "mtime": 1787751164.7998855,
+    "seen": 1787753052.000591,
+    "ast_hash": "7d7ea726e4fd4fe7489336211e17b5ad",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/PlanillaImportPreviewDto.java": {
+    "mtime": 1787751164.801966,
+    "seen": 1787753052.0005922,
+    "ast_hash": "665dab3bbcdbd36b9271d42f0ff39c68",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/PlanillaImportRowDto.java": {
+    "mtime": 1787751164.8040578,
+    "seen": 1787753052.0005937,
+    "ast_hash": "76c3dc309787bef87f4a3b5c9c12e2de",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/PlanillaSheetSummaryDto.java": {
+    "mtime": 1787751164.805069,
+    "seen": 1787753052.000595,
+    "ast_hash": "65e79010aacda84d8dc6fa32a4890300",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ReceptionRequestDto.java": {
+    "mtime": 1787751164.8061693,
+    "seen": 1787753052.0005965,
+    "ast_hash": "c484905af9416ca0cfc33706e918c640",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ReceptionResultDto.java": {
+    "mtime": 1787751164.8090942,
+    "seen": 1787753052.0005975,
+    "ast_hash": "22001be8b0bf486b08d4d85fd8aea82f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ShelfDto.java": {
+    "mtime": 1787751164.8101852,
+    "seen": 1787753052.0005987,
+    "ast_hash": "9a062da7a52698f8e46b3f02fbde6705",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ShelfUnitDto.java": {
+    "mtime": 1787751164.81136,
+    "seen": 1787753052.0006003,
+    "ast_hash": "f0ec0d2ddc127d47ad641041bd2ce76a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ShelfUnitInputDto.java": {
+    "mtime": 1787751164.813483,
+    "seen": 1787753052.0006015,
+    "ast_hash": "af3727129e9a0667149cc6f91641f1ac",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/SnapshotResponseDto.java": {
+    "mtime": 1787751164.8146076,
+    "seen": 1787753052.000603,
+    "ast_hash": "7c290d987475ef46a036e0da2ec8a580",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockCountDto.java": {
+    "mtime": 1787751164.8169122,
+    "seen": 1787753052.0006042,
+    "ast_hash": "d26325dd91da3aa7eb28e328922b2b7c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockCountRequestDto.java": {
+    "mtime": 1787751164.817909,
+    "seen": 1787753052.0006053,
+    "ast_hash": "af3e460d2c34010e3545f2573f5840fc",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockCountResultDto.java": {
+    "mtime": 1787751164.8196979,
+    "seen": 1787753052.0006068,
+    "ast_hash": "e6f5d21f0501378c4b4c96a6f78f33cf",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockIntakeInputDto.java": {
+    "mtime": 1787751164.8223279,
+    "seen": 1787753052.0006084,
+    "ast_hash": "ff9a151eb96a0b612a5f8937fab01634",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockRecordDto.java": {
+    "mtime": 1787751164.8250387,
+    "seen": 1787753052.00061,
+    "ast_hash": "dab248980a4d32a1922771b7b013f054",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockSnapshotDto.java": {
+    "mtime": 1787751164.827037,
+    "seen": 1787753052.0006113,
+    "ast_hash": "4eee1db918f4ca2cb1092a6aacbc246d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockTransferLinePreviewDto.java": {
+    "mtime": 1787751164.8290448,
+    "seen": 1787753052.0006125,
+    "ast_hash": "00d3f9faf9abd0abcb5b90069d0a0d0a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockTransferPreviewDto.java": {
+    "mtime": 1787751164.831041,
+    "seen": 1787753052.000614,
+    "ast_hash": "2b0290bb05873b935eec5a4a5f007a46",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockVerificationConfirmationDto.java": {
+    "mtime": 1787751164.8332543,
+    "seen": 1787753052.0006151,
+    "ast_hash": "c3b34b2017070a0f924266072f4f53ec",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/StockVerificationRequestDto.java": {
+    "mtime": 1787751164.8344486,
+    "seen": 1787753052.0006166,
+    "ast_hash": "4ab13ef1377886df00c336debf103668",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/TraceabilityEventDto.java": {
+    "mtime": 1787751164.8374581,
+    "seen": 1787753052.0006177,
+    "ast_hash": "7f54aeae9dae92e11274674b25062c52",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/TraceabilityEventInputDto.java": {
+    "mtime": 1787751164.838475,
+    "seen": 1787753052.000619,
+    "ast_hash": "ada2cae230d53cd52bbb1d559b573650",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/TraceabilityIntentDto.java": {
+    "mtime": 1787751164.8404777,
+    "seen": 1787753052.0006204,
+    "ast_hash": "231e32d9ebc90b6508904da2f6b38411",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/TraceabilityIntentRequestDto.java": {
+    "mtime": 1787751164.8415587,
+    "seen": 1787753052.0006216,
+    "ast_hash": "bc0d106ec52eba5ea368f2b4f70356c6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/TransporterDto.java": {
+    "mtime": 1787751164.8438363,
+    "seen": 1787753052.0006227,
+    "ast_hash": "14b111dbe985a3a702c258dc01efefcc",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/TransporterInputDto.java": {
+    "mtime": 1787751164.8450143,
+    "seen": 1787753052.0006244,
+    "ast_hash": "4179fb01d22c1b72f6d58303952e64f8",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/dto/ValidationErrorDto.java": {
+    "mtime": 1787751164.847091,
+    "seen": 1787753052.0006256,
+    "ast_hash": "7014d3ed34bc25f7a84b90cfbf880fc6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/CatalogResolver.java": {
+    "mtime": 1787751164.8490992,
+    "seen": 1787753052.000627,
+    "ast_hash": "ed44f69a9e3a68edf93144a9391ca3c1",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/CatalogService.java": {
+    "mtime": 1787751164.8510923,
+    "seen": 1787753052.0006282,
+    "ast_hash": "104cb93597084555cc4c6ae16aa669d8",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/DtoMapper.java": {
+    "mtime": 1787751164.8520975,
+    "seen": 1787753052.0006292,
+    "ast_hash": "4ee4f2a16a2409fe74d392685f7d0986",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/IdempotencyService.java": {
+    "mtime": 1787751164.854089,
+    "seen": 1787753052.0006306,
+    "ast_hash": "877bf934f8b92581bbb21b3972c346ca",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/LotCorrectionService.java": {
+    "mtime": 1787751164.8560996,
+    "seen": 1787753052.0006318,
+    "ast_hash": "4299ed29003c8fb7bcd8958e6287186f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/MovementNumbers.java": {
+    "mtime": 1787751164.858094,
+    "seen": 1787753052.000633,
+    "ast_hash": "398a170c6e3c88206c95bdfb8c20ad3f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/MovementReceptionService.java": {
+    "mtime": 1787751164.8601658,
+    "seen": 1787753052.0006344,
+    "ast_hash": "b8f1d037250b4dc88d20dce8113eb07c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/OperationsContextService.java": {
+    "mtime": 1787751164.8617315,
+    "seen": 1787753052.0006356,
+    "ast_hash": "2dc7c7a72136cee4134ca48ff03217fc",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/PlanillaImportService.java": {
+    "mtime": 1787751164.863756,
+    "seen": 1787753052.0006368,
+    "ast_hash": "f941361e1581c9ab5b744a0ab6a43458",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/SnapshotService.java": {
+    "mtime": 1787751164.8647506,
+    "seen": 1787753052.000638,
+    "ast_hash": "9533af6f86d5f02141863e1e8c516d23",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/StockCountService.java": {
+    "mtime": 1787751164.866907,
+    "seen": 1787753052.0006392,
+    "ast_hash": "51090b383f3f56c22d0021fc498a1d39",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/StockIntakeService.java": {
+    "mtime": 1787751164.8689027,
+    "seen": 1787753052.0006406,
+    "ast_hash": "f8b8db47723c396d670b65ee22090e49",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/StockTransferService.java": {
+    "mtime": 1787751164.8709073,
+    "seen": 1787753052.0006416,
+    "ast_hash": "e759c4df247ef1afec30f3dccc3de64a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/TraceabilityService.java": {
+    "mtime": 1787751164.8720932,
+    "seen": 1787753052.0006428,
+    "ast_hash": "8a8d84c7510b6b7caffb00f3badd3d7d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/TraceabilityWriter.java": {
+    "mtime": 1787751164.8742757,
+    "seen": 1787753052.0006442,
+    "ast_hash": "ab96a4ed8b53d84503321425949162c9",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/service/TransferPlanner.java": {
+    "mtime": 1787751164.8752732,
+    "seen": 1787753052.0006456,
+    "ast_hash": "3026ff9d93ecc924fec62757cd01149b",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/ApiDates.java": {
+    "mtime": 1787751164.87745,
+    "seen": 1787753052.0006468,
+    "ast_hash": "92e31977828aa442b1b2e10da84fd87f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/ApiError.java": {
+    "mtime": 1787751164.8785136,
+    "seen": 1787753052.0006483,
+    "ast_hash": "5816f4c9b6f378146748c06213923ce7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/ApiErrorDetail.java": {
+    "mtime": 1787751164.8798683,
+    "seen": 1787753052.0006495,
+    "ast_hash": "a9bcb9ce9ae98b31a970db377d89cfc4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/ApiException.java": {
+    "mtime": 1787751164.881111,
+    "seen": 1787753052.0006511,
+    "ast_hash": "434b0b80e2b471c18b5ce62b6c51211a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/ApiResponse.java": {
+    "mtime": 1787751164.8831232,
+    "seen": 1787753052.0006523,
+    "ast_hash": "e12db31830dc373e558e96c4b314d4c2",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/ErrorCode.java": {
+    "mtime": 1787751164.885326,
+    "seen": 1787753052.0006537,
+    "ast_hash": "b386949069d8070bc900aeff040edab3",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/api/support/TextKeys.java": {
+    "mtime": 1787751164.8873246,
+    "seen": 1787753052.000655,
+    "ast_hash": "40f496995ccff599fc0ebbe6e18bab73",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/AuthIdentity.java": {
+    "mtime": 1787751164.8903265,
+    "seen": 1787753052.000656,
+    "ast_hash": "da7960bde6889dc3ec151e7ca6d29ff4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/AuthProperties.java": {
+    "mtime": 1787751164.891737,
+    "seen": 1787753052.000657,
+    "ast_hash": "90eb47f51cf5037c172e127808afa0f0",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/AuthService.java": {
+    "mtime": 1787751164.893913,
+    "seen": 1787753052.0006585,
+    "ast_hash": "ef7ea070d44bf1778c92298010deea6f",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/HashPasswordTool.java": {
+    "mtime": 1787751164.8960314,
+    "seen": 1787753052.0006597,
+    "ast_hash": "80aa7ebb7276fe3b22829214ce8eff2c",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/Permission.java": {
+    "mtime": 1787751164.897069,
+    "seen": 1787753052.0006607,
+    "ast_hash": "10c807d4fec1b2e3f98c58a4a230a469",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/ScryptPasswordHasher.java": {
+    "mtime": 1787751164.899676,
+    "seen": 1787753052.000662,
+    "ast_hash": "bd4ed60bee55bee95d886bb905738835",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/SessionAuthenticationFilter.java": {
+    "mtime": 1787751164.901674,
+    "seen": 1787753052.0006645,
+    "ast_hash": "b96b11352f096f7389ed622022c269a6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/auth/SessionService.java": {
+    "mtime": 1787751164.90386,
+    "seen": 1787753052.000666,
+    "ast_hash": "d1991f4bc7dfcf1de9a0454658fe360e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/config/CorsConfig.java": {
+    "mtime": 1787751164.9060304,
+    "seen": 1787753052.000667,
+    "ast_hash": "d9104c43cf6c0e97202366731f0b4363",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/config/GroqClientConfig.java": {
+    "mtime": 1787751164.9080436,
+    "seen": 1787753052.0006685,
+    "ast_hash": "ff644c56f27f0fc768cb3b56c3f4efd8",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/config/SameOriginGuardFilter.java": {
+    "mtime": 1787751164.909544,
+    "seen": 1787753052.0006697,
+    "ast_hash": "d55882674660d90cd129d03d9ba9cd6e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/config/SecurityConfig.java": {
+    "mtime": 1787751164.9116733,
+    "seen": 1787753052.0006707,
+    "ast_hash": "fd5a72e65bea053e05d9341c8dc42e33",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/config/SecurityProperties.java": {
+    "mtime": 1787751164.9139774,
+    "seen": 1787753052.000672,
+    "ast_hash": "1d83a3fbd6ea6c6c31e02cd20bf79a24",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/AuthSession.java": {
+    "mtime": 1787751164.9164715,
+    "seen": 1787753052.0006733,
+    "ast_hash": "60ca9a7111f1305f45f7b684c79498aa",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/IdempotencyRecord.java": {
+    "mtime": 1787751164.918468,
+    "seen": 1787753052.0006742,
+    "ast_hash": "da36076485a7ca7b8042a60099f6e299",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/Location.java": {
+    "mtime": 1787710272.2162716,
+    "seen": 1787753052.0006757,
+    "ast_hash": "112b56d6f6e6e5f3b857530029a18827",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/Lot.java": {
+    "mtime": 1787751164.9204729,
+    "seen": 1787753052.0006769,
+    "ast_hash": "6e2e160357d33cfc004d11a1cc50fa43",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/MovementItem.java": {
+    "mtime": 1787751164.9224844,
+    "seen": 1787753052.0006778,
+    "ast_hash": "6b2f34d8d384101d18c5e299fc0cc295",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/Shelf.java": {
+    "mtime": 1787751164.9247048,
+    "seen": 1787753052.0006793,
+    "ast_hash": "6fb91bd715ab526dd7231f53d1dff5e4",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/ShelfUnit.java": {
+    "mtime": 1787751164.9267032,
+    "seen": 1787753052.0006802,
+    "ast_hash": "e88cd61fdda7e8ee085eca6fdbd44909",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/StockCount.java": {
+    "mtime": 1787751164.9281278,
+    "seen": 1787753052.0006816,
+    "ast_hash": "4dd15482663e2f6dcea4f80dd9f5131a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/StockDiscrepancy.java": {
+    "mtime": 1787751164.9304101,
+    "seen": 1787753052.000683,
+    "ast_hash": "58369ebd2bf656bb314a3943e5b38ecc",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/StockMovement.java": {
+    "mtime": 1787751164.9329448,
+    "seen": 1787753052.0006843,
+    "ast_hash": "71d2a43def40e1d8314e2266ade50576",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/StockPosition.java": {
+    "mtime": 1787751164.934942,
+    "seen": 1787753052.0006855,
+    "ast_hash": "38a5764d0e95d6353045d9b7de69a770",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/TraceabilityEvent.java": {
+    "mtime": 1787710272.2204742,
+    "seen": 1787753052.0006866,
+    "ast_hash": "51d7ba11b1a39d1bcfb2c74d95279b4a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/Transporter.java": {
+    "mtime": 1787751164.9364612,
+    "seen": 1787753052.0006878,
+    "ast_hash": "ee32f9145bfb7f4584fb91ce6808152e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/entity/Variety.java": {
+    "mtime": 1787710272.223036,
+    "seen": 1787753052.0006893,
+    "ast_hash": "752e947bc387628a0c96589e0cfe8260",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/enums/TipoMovimiento.java": {
+    "mtime": 1787710272.2269766,
+    "seen": 1787753052.0006902,
+    "ast_hash": "ea3b3e85ac32916f570a0644d7f368ad",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/domain/enums/TipoUbicacion.java": {
+    "mtime": 1787710272.2286446,
+    "seen": 1787753052.0006914,
+    "ast_hash": "589c1711e3765ad96dbf6afe5f24786e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/exception/GlobalExceptionHandler.java": {
+    "mtime": 1787751164.9400754,
+    "seen": 1787753052.0006924,
+    "ast_hash": "19840fb4a6242a7fc06cdb5679a21470",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/exception/InsufficientStockException.java": {
+    "mtime": 1787710272.2342043,
+    "seen": 1787753052.0006938,
+    "ast_hash": "46c081c993986c1ac496b196f92de715",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/exception/StockMismatchException.java": {
+    "mtime": 1787710272.236234,
+    "seen": 1787753052.000695,
+    "ast_hash": "b13295a1cc53ed62fe17794d3144c6ba",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/health/controller/HealthController.java": {
+    "mtime": 1787751164.942075,
+    "seen": 1787753052.0006964,
+    "ast_hash": "9dde273f862870d6e265163a29d7b743",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/client/GroqStructuredClient.java": {
+    "mtime": 1787751164.9450762,
+    "seen": 1787753052.0006976,
+    "ast_hash": "0a5522b9ae47e2ecdc9b7d0e77e9e6d3",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/dto/DiscrepancyContextDto.java": {
+    "mtime": 1787741474.8820238,
+    "seen": 1787753052.0006988,
+    "ast_hash": "52e74277a4323183c314c95f6aaf4bce",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/dto/OpenAiRequestDto.java": {
+    "mtime": 1787741474.8975246,
+    "seen": 1787753052.0007,
+    "ast_hash": "2c5a3fc28506a1d7c796e58e890fd224",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/dto/OpenAiResponseDto.java": {
+    "mtime": 1787741474.9148438,
+    "seen": 1787753052.0007012,
+    "ast_hash": "e3de543aa887ad8580b01e7d482eba5e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/dto/ResolvedDiscrepancyContext.java": {
+    "mtime": 1787741474.93331,
+    "seen": 1787753052.0007024,
+    "ast_hash": "2c12f3e3d03a0d433decfcc991496013",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/service/DiscrepancyContextService.java": {
+    "mtime": 1787751164.9481792,
+    "seen": 1787753052.0007036,
+    "ast_hash": "4cd90de3caceb1e1728aaf3f3de8f7f6",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/service/HeuristicMovementParser.java": {
+    "mtime": 1787751164.949177,
+    "seen": 1787753052.0007048,
+    "ast_hash": "38ec3733f3d02d0c6e7089e8b8f9e47a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/ia/service/IaService.java": {
+    "mtime": 1787751164.9512622,
+    "seen": 1787753052.0007062,
+    "ast_hash": "5698a0de0e511f0d65376d7f46bdf812",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/AuthSessionRepository.java": {
+    "mtime": 1787751164.9534678,
+    "seen": 1787753052.0007074,
+    "ast_hash": "e150117538bf3466c6aeee295332ce35",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/IdempotencyRecordRepository.java": {
+    "mtime": 1787751164.9557936,
+    "seen": 1787753052.0007086,
+    "ast_hash": "4d1a4b067b0e4ba3a6e1b7e557286850",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/LocationRepository.java": {
+    "mtime": 1787710272.2493455,
+    "seen": 1787753052.0007098,
+    "ast_hash": "c5fa5310401ebbc7660b2358ac7d0a17",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/LotRepository.java": {
+    "mtime": 1787751164.9587996,
+    "seen": 1787753052.000711,
+    "ast_hash": "639824f28f74a9ff6e335b36fa684f58",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/MovementItemRepository.java": {
+    "mtime": 1787751164.9610927,
+    "seen": 1787753052.0007122,
+    "ast_hash": "647a906959a154748aaa325dc1343a7a",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/ShelfRepository.java": {
+    "mtime": 1787751164.963092,
+    "seen": 1787753052.0007136,
+    "ast_hash": "b86c365a6d16e4864d7f7950979a96a5",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/ShelfUnitRepository.java": {
+    "mtime": 1787751164.9640985,
+    "seen": 1787753052.0007145,
+    "ast_hash": "c89291fcfc128a6f94d875fcb05066d7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/StockCountRepository.java": {
+    "mtime": 1787751164.9651933,
+    "seen": 1787753052.0007157,
+    "ast_hash": "65eb4eb36a3687bf8e56b3bb28da68ba",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/StockDiscrepancyRepository.java": {
+    "mtime": 1787751164.967369,
+    "seen": 1787753052.0007174,
+    "ast_hash": "99edde135912cde2f86e7fd6ec180886",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/StockMovementRepository.java": {
+    "mtime": 1787751164.968685,
+    "seen": 1787753052.0007184,
+    "ast_hash": "289a553137632658f7122b856bc79a4d",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/StockOverviewProjection.java": {
+    "mtime": 1787751164.971954,
+    "seen": 1787753052.0007195,
+    "ast_hash": "cd70094b503a068db46dd2bff7fe2bbd",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/StockOverviewRepository.java": {
+    "mtime": 1787751164.9729414,
+    "seen": 1787753052.000721,
+    "ast_hash": "cad0c94863becc587cb4005fc007e0a7",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/StockPositionRepository.java": {
+    "mtime": 1787751164.9741287,
+    "seen": 1787753052.0007222,
+    "ast_hash": "d0530bd87aa139bc52a74a9281732f6e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/TraceabilityEventRepository.java": {
+    "mtime": 1787751164.975917,
+    "seen": 1787753052.0007236,
+    "ast_hash": "5c5e5da966f69470551adbefa4dd368e",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/TransporterRepository.java": {
+    "mtime": 1787751164.977933,
+    "seen": 1787753052.0007248,
+    "ast_hash": "0129684bfa83b3d8f642b3933342cd8b",
+    "semantic_hash": ""
+  },
+  "src/main/java/com/hackaton/papasud/repository/VarietyRepository.java": {
+    "mtime": 1787751164.9789321,
+    "seen": 1787753052.000726,
+    "ast_hash": "b616264e20b772d24dfc8666b6c455d0",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V1__baseline_legacy_schema.sql": {
+    "mtime": 1787710272.2622943,
+    "seen": 1787753052.0007274,
+    "ast_hash": "0b8b9feca20ba87e012fa2b757a3c578",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V2__papastock_stock_model.sql": {
+    "mtime": 1787710272.2632968,
+    "seen": 1787753052.0007286,
+    "ast_hash": "7a19716a93a54ef7e4d8ab893af93b65",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V3__stock_views.sql": {
+    "mtime": 1787710272.264813,
+    "seen": 1787753052.00073,
+    "ast_hash": "2d752a2b833e91b988570dd8d557b77d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V4__migrate_legacy_stock.sql": {
+    "mtime": 1787710272.2679236,
+    "seen": 1787753052.0007315,
+    "ast_hash": "ea8c63c2cef2b2138ee0b89f9ffa974a",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V5__seed_generic_locations.sql": {
+    "mtime": 1787710272.2690256,
+    "seen": 1787753052.0007327,
+    "ast_hash": "f59e96467e0f2a99ca5603e62f7033ac",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V6__papastock_frontend_parity.sql": {
+    "mtime": 1787751164.9821944,
+    "seen": 1787753052.000734,
+    "ast_hash": "2684ecc4a0c03404b84d21fb1ee3cb3d",
+    "semantic_hash": ""
+  },
+  "src/main/resources/db/migration/V7__stock_views_v2.sql": {
+    "mtime": 1787751164.9831903,
+    "seen": 1787753052.0007355,
+    "ast_hash": "dab3ed7f30d57d21ec2a547f7ae4390d",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/PapasudApplicationTests.java": {
+    "mtime": 1787751164.9851897,
+    "seen": 1787753052.0007367,
+    "ast_hash": "881fe1de35dd69002e714e65b6178c0d",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/ConcurrentStockTest.java": {
+    "mtime": 1787751164.9861944,
+    "seen": 1787753052.0007381,
+    "ast_hash": "aa9cdd3eb0dbcf8ccde1197610e86468",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/ContractBasicsTest.java": {
+    "mtime": 1787751164.9871867,
+    "seen": 1787753052.0007393,
+    "ast_hash": "77ca19c2d498622be8b113880d7b2e74",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/IntakeAndImportTest.java": {
+    "mtime": 1787751164.9881976,
+    "seen": 1787753052.0007405,
+    "ast_hash": "0187abedc70e7d79969df2c0baf5cfb5",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/MovementFlowTest.java": {
+    "mtime": 1787751164.989391,
+    "seen": 1787753052.000742,
+    "ast_hash": "382a739e7ef5dea1ed2a55f92ca5ec56",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/ReceptionIdempotencyTest.java": {
+    "mtime": 1787751164.993221,
+    "seen": 1787753052.0007434,
+    "ast_hash": "f8348eb02f958caecb4f02f1532eacdb",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/ReconciliationTest.java": {
+    "mtime": 1787751164.995634,
+    "seen": 1787753052.0007453,
+    "ast_hash": "691ec097f328ed810968e5c7717e8330",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/SnapshotContractTest.java": {
+    "mtime": 1787751164.9977,
+    "seen": 1787753052.0007465,
+    "ast_hash": "72c8350a1e0c4328d397a19f01a13684",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/api/TraceabilityAndAiTest.java": {
+    "mtime": 1787751164.998705,
+    "seen": 1787753052.0007474,
+    "ast_hash": "0e43a8d2d45df5d84c19fa2c883927f0",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/ia/client/GroqStructuredClientTest.java": {
+    "mtime": 1787751165.0010178,
+    "seen": 1787753052.0007489,
+    "ast_hash": "657e81e79e3658846cf885b6dd5e26cf",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/ia/service/DiscrepancyContextServiceTest.java": {
+    "mtime": 1787751165.002195,
+    "seen": 1787753052.0007503,
+    "ast_hash": "797d5d00027c343798e0706d1db5eb0c",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/ia/service/IaServiceDiscrepancyTest.java": {
+    "mtime": 1787751165.004292,
+    "seen": 1787753052.000752,
+    "ast_hash": "eaa20f62ba934bf8413002b3b74c1175",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/support/ApiIntegrationTest.java": {
+    "mtime": 1787751165.0052843,
+    "seen": 1787753052.0007532,
+    "ast_hash": "6c6a44ccf88386e36b92087bb9a11c0e",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/support/TestDataSeeder.java": {
+    "mtime": 1787751165.007283,
+    "seen": 1787753052.0007546,
+    "ast_hash": "b5ca8128d5c84bb0bbf1de79f01d4924",
+    "semantic_hash": ""
+  },
+  "src/test/java/com/hackaton/papasud/support/TestDatabase.java": {
+    "mtime": 1787751165.0094416,
+    "seen": 1787753052.0007558,
+    "ast_hash": "decd50d977d15c09c5bcbfcc61a08b42",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1787710272.1420283,
+    "seen": 1787753052.000757,
+    "ast_hash": "688556c48314f44a3433cf15028f9c93",
+    "semantic_hash": ""
+  },
+  "csv-import/README.md": {
+    "mtime": 1787710272.1552677,
+    "seen": 1787753052.000759,
+    "ast_hash": "46fa163406e6d3b9ca9bd9bd3880d3c5",
+    "semantic_hash": ""
+  }
+}
