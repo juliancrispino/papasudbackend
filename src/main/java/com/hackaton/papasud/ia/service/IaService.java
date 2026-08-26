@@ -3,19 +3,14 @@ package com.hackaton.papasud.ia.service;
 import com.hackaton.papasud.api.dto.DiscrepancyRequestDto;
 import com.hackaton.papasud.api.dto.DiscrepancyResponseDto;
 import com.hackaton.papasud.api.dto.MovementInterpretationDto;
+import com.hackaton.papasud.ia.client.GroqStructuredClient;
 import com.hackaton.papasud.ia.dto.DiscrepancyContextDto;
-import com.hackaton.papasud.ia.dto.OpenAiRequestDto;
-import com.hackaton.papasud.ia.dto.OpenAiResponseDto;
 import com.hackaton.papasud.ia.dto.ResolvedDiscrepancyContext;
 import com.hackaton.papasud.repository.StockDiscrepancyRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.math.BigDecimal;
@@ -32,104 +27,83 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class IaService {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private static final Map<String, Object> MOVEMENT_SCHEMA = Map.of(
+            "type", "object",
+            "additionalProperties", false,
+            "required", List.of("action", "lotCode", "quantityKg", "origin", "destination"),
+            "properties", Map.of(
+                    "action", Map.of("type", "string", "enum", List.of("transfer")),
+                    "lotCode", Map.of("type", "string"),
+                    "quantityKg", Map.of("type", "number"),
+                    "origin", Map.of("type", "string"),
+                    "destination", Map.of("type", "string")));
+
+    private static final Map<String, Object> DISCREPANCY_SCHEMA = Map.of(
+            "type", "object",
+            "additionalProperties", false,
+            "required", List.of(
+                    "explanation", "explainedQuantity", "unexplainedQuantity",
+                    "movementReferences", "evidence", "recommendedAction"),
+            "properties", Map.of(
+                    "explanation", Map.of("type", "string"),
+                    "explainedQuantity", Map.of("type", "number"),
+                    "unexplainedQuantity", Map.of("type", "number"),
+                    "movementReferences", Map.of("type", "array", "items", Map.of("type", "string")),
+                    "evidence", Map.of(
+                            "type", "array",
+                            "items", Map.of(
+                                    "type", "object",
+                                    "additionalProperties", false,
+                                    "required", List.of("type", "reference", "description"),
+                                    "properties", Map.of(
+                                            "type", Map.of("type", "string"),
+                                            "reference", Map.of("type", "string"),
+                                            "description", Map.of("type", "string")))),
+                    "recommendedAction", Map.of("type", "string")));
+
+    private final GroqStructuredClient groqClient;
     private final ObjectMapper objectMapper;
     private final DiscrepancyContextService discrepancyContextService;
     private final StockDiscrepancyRepository stockDiscrepancyRepository;
-
-    @Value("${openai.api.key}")
-    private String apiKey;
-
-    @Value("${openai.api.url}")
-    private String apiUrl;
 
     @Value("${openai.api.model}")
     private String apiModel;
 
     public MovementInterpretationDto parseMovementIntent(String text) {
-        String systemPrompt = "Extract the stock movement intent from the text. Respond ONLY in valid JSON matching the schema. " +
-                "Do not invent lots or locations not mentioned. The action is always 'transfer'.";
-
-        Map<String, Object> schema = Map.of(
-            "type", "json_object"
-        );
-
-        OpenAiRequestDto request = new OpenAiRequestDto(
-                apiModel,
-                List.of(
-                        new OpenAiRequestDto.Message("system", systemPrompt + " Schema: { \"action\": \"transfer\", \"lotCode\": \"string\", \"quantityKg\": 0.0, \"origin\": \"string\", \"destination\": \"string\" }"),
-                        new OpenAiRequestDto.Message("user", text)
-                ),
-                0.0,
-                schema
-        );
-
+        if (!groqClient.isConfigured()) {
+            return null;
+        }
+        String systemPrompt = "Extract the stock movement intent from the text. Respond ONLY in valid JSON matching the schema. "
+                + "Do not invent lots or locations not mentioned. The action is always 'transfer'.";
         try {
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_JSON);
-            headers.setBearerAuth(apiKey);
-            HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
-
-            OpenAiResponseDto response = restTemplate.postForObject(
-                    apiUrl,
-                    entity,
-                    OpenAiResponseDto.class
-            );
-
-            if (response != null && response.choices() != null && !response.choices().isEmpty()) {
-                String json = response.choices().get(0).message().content();
-                MovementInterpretationDto intent = objectMapper.readValue(json, MovementInterpretationDto.class);
-                intent.setEngine("llm");
-                return intent;
-            }
+            MovementInterpretationDto intent = groqClient.complete(
+                    "papasud_movement_intent", MOVEMENT_SCHEMA, systemPrompt, text, MovementInterpretationDto.class);
+            intent.setEngine("llm");
+            return intent;
         } catch (Exception e) {
             log.error("OpenAI intent error", e);
+            return null;
         }
-        
-        // Basic heuristic fallback
-        return null;
     }
 
     public DiscrepancyResponseDto.DiscrepancyAnalysisDto analyzeDiscrepancy(DiscrepancyRequestDto req) {
         ResolvedDiscrepancyContext context = resolveContext(req);
         double difference = context != null ? context.differenceOrZero() : req.getDifference();
 
-        String systemPrompt = "Analyze the discrepancy. Difference (verified minus registered) is " + difference + " kg. " +
-                "Identify pending movements that explain this. " +
-                "Use ONLY the context provided by the user message; never invent lots, locations or movements. " +
-                "Reference movements by their 'reference' field. " +
-                "Respond ONLY in valid JSON. All string values like explanation and recommended action MUST be written in Spanish." +
-                "Schema required: { \"explanation\": \"string\", \"explainedQuantity\": 0.0, \"unexplainedQuantity\": 0.0, \"movementReferences\": [\"string\"], \"evidence\": [{\"type\": \"string\", \"reference\": \"string\", \"description\": \"string\"}], \"recommendedAction\": \"string\" }";
+        String systemPrompt = "Analyze the discrepancy. Difference (verified minus registered) is " + difference + " kg. "
+                + "Identify pending movements that explain this. "
+                + "Use ONLY the context provided by the user message; never invent lots, locations or movements. "
+                + "Reference movements by their 'reference' field. "
+                + "Respond ONLY in valid JSON. All string values like explanation and recommended action MUST be written in Spanish.";
 
-        Map<String, Object> schema = Map.of(
-            "type", "json_object"
-        );
-
-        OpenAiRequestDto request = new OpenAiRequestDto(
-                apiModel,
-                List.of(
-                        new OpenAiRequestDto.Message("system", systemPrompt),
-                        new OpenAiRequestDto.Message("user", buildUserMessage(context, req))
-                ),
-                0.0,
-                schema
-        );
-
-        try {
-            HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.APPLICATION_JSON);
-            headers.setBearerAuth(apiKey);
-            HttpEntity<OpenAiRequestDto> entity = new HttpEntity<>(request, headers);
-
-            OpenAiResponseDto response = restTemplate.postForObject(
-                    apiUrl,
-                    entity,
-                    OpenAiResponseDto.class
-            );
-
-            if (response != null && response.choices() != null && !response.choices().isEmpty()) {
-                String json = response.choices().get(0).message().content();
-                DiscrepancyResponseDto.DiscrepancyAnalysisDto analysis = objectMapper.readValue(json, DiscrepancyResponseDto.DiscrepancyAnalysisDto.class);
+        if (groqClient.isConfigured()) {
+            try {
+                DiscrepancyResponseDto.DiscrepancyAnalysisDto analysis = groqClient.complete(
+                        "papasud_discrepancy",
+                        DISCREPANCY_SCHEMA,
+                        systemPrompt,
+                        buildUserMessage(context, req),
+                        DiscrepancyResponseDto.DiscrepancyAnalysisDto.class);
                 analysis.setEngine("llm");
                 normalize(analysis);
                 if (analysis.getExplanation() != null && !analysis.getExplanation().isBlank()) {
@@ -137,9 +111,9 @@ public class IaService {
                     return analysis;
                 }
                 log.warn("Respuesta del LLM sin explicación utilizable; se usa el fallback heurístico");
+            } catch (Exception e) {
+                log.error("OpenAI discrepancy error", e);
             }
-        } catch (Exception e) {
-            log.error("OpenAI discrepancy error", e);
         }
 
         DiscrepancyResponseDto.DiscrepancyAnalysisDto fallback = heuristicAnalysis(context, difference);

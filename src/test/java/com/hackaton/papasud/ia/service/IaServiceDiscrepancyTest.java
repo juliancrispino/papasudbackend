@@ -3,6 +3,7 @@ package com.hackaton.papasud.ia.service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hackaton.papasud.api.dto.DiscrepancyRequestDto;
 import com.hackaton.papasud.api.dto.DiscrepancyResponseDto;
+import com.hackaton.papasud.ia.client.GroqStructuredClient;
 import com.hackaton.papasud.ia.dto.DiscrepancyContextDto;
 import com.hackaton.papasud.ia.dto.ResolvedDiscrepancyContext;
 import com.hackaton.papasud.repository.StockDiscrepancyRepository;
@@ -24,8 +25,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 /**
- * The API URL points to a closed port so the LLM call always fails and the heuristic
- * fallback is exercised without touching the network.
+ * Groq stays unconfigured so the heuristic fallback is exercised without touching the network.
  */
 @ExtendWith(MockitoExtension.class)
 class IaServiceDiscrepancyTest {
@@ -36,14 +36,13 @@ class IaServiceDiscrepancyTest {
 
     @Mock private DiscrepancyContextService contextService;
     @Mock private StockDiscrepancyRepository discrepancyRepository;
+    @Mock private GroqStructuredClient groqClient;
 
     private IaService service;
 
     @BeforeEach
     void setUp() {
-        service = new IaService(new ObjectMapper(), contextService, discrepancyRepository);
-        ReflectionTestUtils.setField(service, "apiKey", "");
-        ReflectionTestUtils.setField(service, "apiUrl", "http://127.0.0.1:1/unreachable");
+        service = new IaService(groqClient, new ObjectMapper(), contextService, discrepancyRepository);
         ReflectionTestUtils.setField(service, "apiModel", "test-model");
     }
 

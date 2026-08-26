@@ -9,6 +9,7 @@ public record OpenAiResponseDto(
 ) {
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Choice(Message message) {}
+
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public record Message(String content) {}
+    public record Message(Object content, String reasoning) {}
 }
