@@ -46,13 +46,16 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class IaService {
 
-    private static final Map<String, Object> MOVEMENT_SCHEMA = Map.of(
+    // Structured Outputs en modo strict exige que TODA clave de properties este en required.
+    // Un campo opcional se modela como nullable, nunca omitiendolo de required: si falta,
+    // Groq responde 400 invalid_request_error y el flujo cae a heuristica sin motivo real.
+    static final Map<String, Object> MOVEMENT_SCHEMA = Map.of(
             "type", "object",
             "additionalProperties", false,
-            "required", List.of("action", "origin", "destination", "items"),
+            "required", List.of("action", "remitoNumber", "origin", "destination", "items"),
             "properties", Map.of(
                     "action", Map.of("type", "string", "enum", List.of("transfer")),
-                    "remitoNumber", Map.of("type", "string"),
+                    "remitoNumber", Map.of("type", List.of("string", "null")),
                     "origin", Map.of("type", "string"),
                     "destination", Map.of("type", "string"),
                     "items", Map.of(
@@ -67,7 +70,7 @@ public class IaService {
                                             "unit", Map.of("type", "string",
                                                     "enum", List.of("kg", "bags")))))));
 
-    private static final Map<String, Object> DISCREPANCY_SCHEMA = Map.of(
+    static final Map<String, Object> DISCREPANCY_SCHEMA = Map.of(
             "type", "object",
             "additionalProperties", false,
             "required", List.of(
@@ -91,10 +94,10 @@ public class IaService {
                                             "description", Map.of("type", "string")))),
                     "recommendedAction", Map.of("type", "string")));
 
-    private static final Map<String, Object> TRACEABILITY_SCHEMA = Map.of(
+    static final Map<String, Object> TRACEABILITY_SCHEMA = Map.of(
             "type", "object",
             "additionalProperties", false,
-            "required", List.of("lotCode", "type", "date"),
+            "required", List.of("lotCode", "type", "date", "location", "notes"),
             "properties", Map.of(
                     "lotCode", Map.of("type", "string"),
                     "type", Map.of("type", "string", "enum", List.of(
@@ -102,10 +105,28 @@ public class IaService {
                             "stock_verification", "reception", "correction",
                             "physical_count", "discrepancy")),
                     "date", Map.of("type", "string"),
-                    "location", Map.of("type", "string"),
-                    "notes", Map.of("type", "string")));
+                    "location", Map.of("type", List.of("string", "null")),
+                    "notes", Map.of("type", List.of("string", "null"))));
 
-    private static final Map<String, Object> OPERATIONS_SCHEMA = Map.of(
+    static final Map<String, Object> EXPORT_REQUIREMENTS_SCHEMA = Map.of(
+            "type", "object",
+            "additionalProperties", false,
+            "required", List.of("title", "fields"),
+            "properties", Map.of(
+                    "title", Map.of("type", "string"),
+                    "fields", Map.of(
+                            "type", "array",
+                            "items", Map.of(
+                                    "type", "object",
+                                    "additionalProperties", false,
+                                    "required", List.of("dataKey", "label", "required", "description"),
+                                    "properties", Map.of(
+                                            "dataKey", Map.of("type", "string"),
+                                            "label", Map.of("type", "string"),
+                                            "required", Map.of("type", "boolean"),
+                                            "description", Map.of("type", List.of("string", "null")))))));
+
+    static final Map<String, Object> OPERATIONS_SCHEMA = Map.of(
             "type", "object",
             "additionalProperties", false,
             "required", List.of("answer", "references"),
@@ -604,24 +625,7 @@ public class IaService {
             try {
                 LlmRequirements raw = groqClient.complete(
                         "papasud_export_requirements",
-                        Map.of(
-                                "type", "object",
-                                "additionalProperties", false,
-                                "required", List.of("title", "fields"),
-                                "properties", Map.of(
-                                        "title", Map.of("type", "string"),
-                                        "fields", Map.of(
-                                                "type", "array",
-                                                "items", Map.of(
-                                                        "type", "object",
-                                                        "additionalProperties", false,
-                                                        "required", List.of("dataKey", "label", "required"),
-                                                        "properties", Map.of(
-                                                                "dataKey", Map.of("type", "string"),
-                                                                "label", Map.of("type", "string"),
-                                                                "required", Map.of("type", "boolean"),
-                                                                "description", Map.of("type", "string"))))))
-                        ,
+                        EXPORT_REQUIREMENTS_SCHEMA,
                         "Extrae los campos documentales exigidos para exportar. Responde SOLO JSON valido. "
                                 + "No inventes requisitos que no esten en el texto.",
                         request.sourceText(),
