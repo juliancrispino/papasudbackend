@@ -108,7 +108,7 @@ public class IaService {
     private static final Map<String, Object> OPERATIONS_SCHEMA = Map.of(
             "type", "object",
             "additionalProperties", false,
-            "required", List.of("answer"),
+            "required", List.of("answer", "references"),
             "properties", Map.of(
                     "answer", Map.of("type", "string"),
                     "references", Map.of(
