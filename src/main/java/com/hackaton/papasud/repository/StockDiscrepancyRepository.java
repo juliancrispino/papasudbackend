@@ -1,38 +1,36 @@
 package com.hackaton.papasud.repository;
 
-import org.springframework.jdbc.core.JdbcTemplate;
+import com.hackaton.papasud.domain.entity.StockDiscrepancy;
+import java.util.List;
+import java.util.UUID;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
-
 @Repository
-public class StockDiscrepancyRepository {
+public interface StockDiscrepancyRepository extends JpaRepository<StockDiscrepancy, UUID> {
 
-    private final JdbcTemplate jdbcTemplate;
+    @Query("select d.id from StockDiscrepancy d "
+            + "where d.lotId = :lotId and d.locationId = :locationId "
+            + "and d.status in ('OPEN', 'INVESTIGATING') "
+            + "order by d.openedAt desc")
+    List<UUID> findOpenCaseIds(@Param("lotId") UUID lotId, @Param("locationId") UUID locationId);
 
-    public StockDiscrepancyRepository(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
+    default java.util.Optional<UUID> findOpenCaseId(UUID lotId, UUID locationId) {
+        List<UUID> ids = findOpenCaseIds(lotId, locationId);
+        return ids.isEmpty() ? java.util.Optional.empty() : java.util.Optional.of(ids.get(0));
     }
 
-    public Optional<UUID> findOpenCaseId(UUID lotId, UUID locationId) {
-        List<UUID> ids = jdbcTemplate.query(
-                "SELECT id FROM stock_discrepancies "
-                        + "WHERE lot_id = ? AND location_id = ? AND status IN ('OPEN', 'INVESTIGATING') "
-                        + "ORDER BY opened_at DESC LIMIT 1",
-                (rs, rowNum) -> rs.getObject("id", UUID.class),
-                lotId, locationId);
-        return ids.isEmpty() ? Optional.empty() : Optional.of(ids.get(0));
-    }
-
-    public void saveAiAnalysis(UUID caseId, String probableCause, UUID relatedMovementId, String aiAnalysisJson) {
-        jdbcTemplate.update(
-                "UPDATE stock_discrepancies "
-                        + "SET probable_cause = ?, "
-                        + "    related_movement_id = COALESCE(?, related_movement_id), "
-                        + "    ai_analysis = ?::jsonb "
-                        + "WHERE id = ?",
-                probableCause, relatedMovementId, aiAnalysisJson, caseId);
-    }
+    @Modifying
+    @Query(value = "UPDATE stock_discrepancies SET probable_cause = :probableCause, "
+            + "cause = COALESCE(:probableCause, cause), "
+            + "related_movement_id = COALESCE(:relatedMovementId, related_movement_id), "
+            + "ai_analysis = CAST(:aiAnalysisJson AS jsonb) "
+            + "WHERE id = :caseId", nativeQuery = true)
+    int updateAiAnalysis(@Param("caseId") UUID caseId,
+                         @Param("probableCause") String probableCause,
+                         @Param("relatedMovementId") UUID relatedMovementId,
+                         @Param("aiAnalysisJson") String aiAnalysisJson);
 }

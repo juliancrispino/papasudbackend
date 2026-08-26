@@ -1,20 +1,14 @@
 package com.hackaton.papasud.api.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import java.util.Map;
+import lombok.Builder;
 
-@Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class TraceabilityEventDto {
-    private String id;
-    private String lotId;
-    private String type;
-    private String date;
-    private String locationId;
-    private Map<String, Object> data;
+public record TraceabilityEventDto(
+        String id,
+        String lotId,
+        String type,
+        String date,
+        String locationId,
+        Map<String, Object> data) {
 }

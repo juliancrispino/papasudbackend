@@ -1,12 +1,13 @@
 package com.hackaton.papasud.api.dto;
 
 import lombok.Builder;
-import lombok.Data;
 
-@Data
+/** type usa los valores del frontend: cold_storage | warehouse. */
 @Builder
-public class LocationDto {
-    private String id;
-    private String name;
-    private String type;
+public record LocationDto(
+        String id,
+        String name,
+        String type,
+        java.math.BigDecimal capacityKg,
+        java.math.BigDecimal temperatureC) {
 }

@@ -1,7 +1,7 @@
 package com.hackaton.papasud.ia.client;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
 import com.hackaton.papasud.ia.dto.OpenAiRequestDto;
 import com.hackaton.papasud.ia.dto.OpenAiResponseDto;
 import java.util.LinkedHashMap;
@@ -35,10 +35,10 @@ public class GroqStructuredClient {
     public GroqStructuredClient(
             @Qualifier("groqRestTemplate") RestTemplate restTemplate,
             ObjectMapper objectMapper,
-            @Value("${openai.api.url}") String apiUrl,
-            @Value("${openai.api.key:}") String apiKey,
-            @Value("${openai.api.model}") String apiModel,
-            @Value("${openai.api.max-completion-tokens:4096}") int maxCompletionTokens) {
+            @Value("${groq.api.url}") String apiUrl,
+            @Value("${groq.api.key:}") String apiKey,
+            @Value("${groq.api.model}") String apiModel,
+            @Value("${groq.api.max-completion-tokens:4096}") int maxCompletionTokens) {
         this.restTemplate = restTemplate;
         this.objectMapper = objectMapper;
         this.apiUrl = apiUrl;

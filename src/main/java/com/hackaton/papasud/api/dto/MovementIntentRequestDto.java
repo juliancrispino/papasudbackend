@@ -1,8 +1,7 @@
 package com.hackaton.papasud.api.dto;
 
-import lombok.Data;
+import jakarta.validation.constraints.NotBlank;
 
-@Data
-public class MovementIntentRequestDto {
-    private String text;
+public record MovementIntentRequestDto(
+        @NotBlank(message = "Falta el texto a interpretar.") String text) {
 }

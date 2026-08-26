@@ -42,6 +42,13 @@ public class Lot {
     @Column(name = "harvest_date")
     private LocalDate harvestDate;
 
+    /**
+     * Peso promedio por bolsa. Nullable a proposito: si no hay dato confiable NO se
+     * inventa una conversion bolsas -> kg; la validacion informa que falta el dato.
+     */
+    @Column(name = "avg_kg_per_bag")
+    private java.math.BigDecimal avgKgPerBag;
+
     @Column(nullable = false)
     private Boolean active;
 

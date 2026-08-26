@@ -1,25 +1,23 @@
 package com.hackaton.papasud.api.dto;
 
-import lombok.Builder;
-import lombok.Data;
 import java.util.List;
-import java.math.BigDecimal;
+import lombok.Builder;
 
-@Data
+/**
+ * Resultado del preview. NO escribe nada.
+ *
+ * <p>Si una sola linea falla, {@code valid} es false y ninguna linea puede persistirse:
+ * el movimiento es todo o nada.
+ */
 @Builder
-public class StockTransferPreviewDto {
-    private boolean valid;
-    private List<ValidationErrorDto> errors;
-    private MovementIntentDto intent;
-    private LotDto lot;
-    private LocationDto origin;
-    private LocationDto destination;
-    private OriginStock originStock;
-
-    @Data
-    @Builder
-    public static class OriginStock {
-        private BigDecimal declaredQuantity;
-        private BigDecimal verifiedQuantity;
-    }
+public record StockTransferPreviewDto(
+        boolean valid,
+        List<ValidationErrorDto> errors,
+        MovementIntentDto intent,
+        String remitoNumber,
+        LocationDto origin,
+        LocationDto destination,
+        List<StockTransferLinePreviewDto> lines,
+        LotDto lot,
+        StockSnapshotDto originStock) {
 }
