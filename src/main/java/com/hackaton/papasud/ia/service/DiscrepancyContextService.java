@@ -97,14 +97,14 @@ public class DiscrepancyContextService {
     }
 
     private Optional<Lot> resolveLot(DiscrepancyRequestDto req) {
-        UUID fromStock = req.getStock() != null ? parseUuid(req.getStock().getLotId()) : null;
+        UUID fromStock = req.stock() != null ? parseUuid(req.stock().lotId()) : null;
         if (fromStock != null) {
             Optional<Lot> lot = lotRepository.findById(fromStock);
             if (lot.isPresent()) {
                 return lot;
             }
         }
-        Map<String, Object> lotBody = req.getLot();
+        Map<String, Object> lotBody = req.lot();
         if (lotBody == null) {
             return Optional.empty();
         }
@@ -127,9 +127,9 @@ public class DiscrepancyContextService {
      * the row that actually has a discrepancy, and then to the lot's only row.
      */
     private Optional<StockOverviewProjection> resolveOverview(UUID lotId, DiscrepancyRequestDto req) {
-        UUID locationId = req.getStock() != null ? parseUuid(req.getStock().getLocationId()) : null;
+        UUID locationId = req.stock() != null ? parseUuid(req.stock().locationId()) : null;
         if (locationId != null) {
-            Optional<StockOverviewProjection> exact = stockOverviewRepository.findByLotAndLocation(lotId, locationId);
+            Optional<StockOverviewProjection> exact = stockOverviewRepository.findAnyByLotAndLocation(lotId, locationId);
             if (exact.isPresent()) {
                 return exact;
             }
